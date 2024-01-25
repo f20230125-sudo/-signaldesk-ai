@@ -1,0 +1,8 @@
+* text=auto eol=lf
+data/corpus.json -text
+data/source-manifest.json -text
+data/seed-events.json -text
+data/evaluation/tasks.json -text
+data/evaluation/freeze.json -text
+*.png binary
+*.pdf binary
