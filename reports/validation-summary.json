@@ -23,7 +23,9 @@
     "mode": "browser-reviewed-seed",
     "original_acquisition": "pending"
   },
-  "full_framework_build": "pending_missing_dependencies",
+  "full_framework_build": "passed_github_actions_39029463599",
   "browser_qa": "pending",
-  "public_deployment": "not_published"
+  "public_deployment": "not_published",
+  "framework_typecheck": "passed_github_actions_39029463599",
+  "migration_generation": "passed_github_actions_39029463599"
 }
