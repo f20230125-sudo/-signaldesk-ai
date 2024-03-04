@@ -17,11 +17,13 @@ Supply the free-tier key through secure environment settings, then explicitly en
 
 ```powershell
 $env:SIGNALDESK_LIVE_EVAL='1'
-node --experimental-strip-types tools/evaluate.ts --dev
-node --experimental-strip-types tools/evaluate.ts
+node --env-file=.env.local --experimental-strip-types tools/evaluate.ts --dev
+node --env-file=.env.local --experimental-strip-types tools/evaluate.ts
 ```
 
 Final held-out runs require a complete original-source corpus. Development-only seed runs require the explicit `--allow-seed` flag and remain separate. The runner fingerprints corpus, frozen tasks, model and agent/tool implementations; completed responses resume only within the same fingerprint. Quota interruption stops the run and preserves progress. Service failures and timeouts remain visible.
+
+The GitHub evaluation workflow reads the `GEMINI_API_KEY` Actions secret. Updating that workflow on `main` explicitly starts a development run; other changes and normal verification CI do not call the model. Manual runs select the split, and only development permits the labelled seed option. Calls are paced, with no automatic paid-provider fallback. Development output is saved separately in `reports/development-evaluation.json`; the held-out report is unchanged by a development run.
 
 ## Scoring and review
 
