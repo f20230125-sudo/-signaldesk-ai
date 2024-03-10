@@ -25,6 +25,10 @@ Final held-out runs require a complete original-source corpus. Development-only 
 
 The GitHub evaluation workflow reads the `GEMINI_API_KEY` Actions secret. Updating that workflow on `main` explicitly starts a development run; other changes and normal verification CI do not call the model. Manual runs select the split, and only development permits the labelled seed option. Calls are paced, with no automatic paid-provider fallback. Development output is saved separately in `reports/development-evaluation.json`; the held-out report is unchanged by a development run.
 
+Before inference, the workflow checks model visibility and requests a small structured response. The current default is `gemini-3.5-flash-lite`; Google limits legacy 2.5 access for new users ([model guidance](https://ai.google.dev/gemini-api/docs/deprecations)). The initial 2.5 attempt returned HTTP 404 for all requests and produced no usable answers; its receipts remain in [run 39029936943](https://github.com/f20230125-sudo/-signaldesk-ai/actions/runs/39029936943). A successful workflow exit alone is not evidence of successful inference.
+
+Reruns can restore completed responses from the public report only when its model/code/corpus/task fingerprint matches. Quota-interrupted responses are retried; completed responses are reused. Raw outputs remain available in the workflow artifact.
+
 ## Scoring and review
 
 Automatic checks score exact event sets, product identities, required trial links and evidence coverage. Structured facts come from the corpus, but selecting the correct facts and interpreting them still require evaluation.

@@ -22,6 +22,9 @@ jobs:
       - run: node tools/check-freeze.mjs
       - run: node tools/check-source.mjs
       - run: npm run db:generate
+      - name: Record generated database migration source
+        run: |
+          python -c "import json; from pathlib import Path; print('SIGNALDESK_MIGRATIONS '+json.dumps({p.as_posix():p.read_text() for p in Path('drizzle').rglob('*') if p.is_file() and p.suffix in ('.sql','.json')}))"
       - run: npx tsc --noEmit
       - run: npm run build
       - uses: actions/upload-artifact@v4
