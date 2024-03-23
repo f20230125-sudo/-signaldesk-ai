@@ -2,10 +2,12 @@ import hashlib
 import json
 import os
 import sqlite3
+import shutil
 from pathlib import Path
 
 import pytest
 from tools.build_corpus import parse_html
+from tools import build_corpus
 
 ROOT=Path(__file__).resolve().parents[2]
 
@@ -15,6 +17,18 @@ def test_parser_ignores_navigation_and_scripts():
 
 def test_parser_refuses_changed_page_shape():
     with pytest.raises(ValueError):parse_html(b'<html>Access denied</html>')
+
+
+def test_explicit_seed_build_without_raw_artifact(tmp_path,monkeypatch):
+    (tmp_path/'data').mkdir();(tmp_path/'sql').mkdir()
+    for path in ['data/seed-events.json','data/source-manifest.json','sql/quality.sql']:shutil.copyfile(ROOT/path,tmp_path/path)
+    monkeypatch.setattr(build_corpus,'ROOT',tmp_path)
+    corpus=build_corpus.build(seed_only=True)
+    assert corpus['mode']=='browser-reviewed-seed'
+    assert len(corpus['events'])==29
+    assert not any(t['available'] for t in corpus['trials'])
+    assert not any(p['identity_verified'] for p in corpus['products'])
+    assert not any(e['is_original_excerpt'] for e in corpus['evidence'])
 
 def test_seed_has_unique_real_source_identifiers():
     events=json.loads((ROOT/'data/seed-events.json').read_text(encoding='utf-8'))['events']
