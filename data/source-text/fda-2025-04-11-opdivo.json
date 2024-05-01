@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "event_id": "fda-2025-04-11-opdivo",
+  "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-nivolumab-ipilimumab-unresectable-or-metastatic-hepatocellular-carcinoma",
+  "captured_at": "2026-10-17T12:40:00Z",
+  "capture_format": "browser-extracted-publisher-text",
+  "selection_notice": "Selected verbatim publisher excerpts; browser text normalization, not original HTTP HTML bytes.",
+  "paragraphs": [
+    "On April 11, 2025,",
+    "evaluated in CHECKMATE-9DW (NCT04039607),",
+    "for the first-line treatment of adult patients with unresectable or metastatic hepatocellular carcinoma (HCC)."
+  ],
+  "quoted_word_count": 22,
+  "field_checks": {
+    "approval_date": true,
+    "trial_ids": true,
+    "population_summary": true,
+    "qualifiers": true
+  },
+  "reviewer": "Codex source review (developer; not independent clinical adjudication)",
+  "review_notes": "First-line adult HCC combination indication matches. Liver-function and performance-status requirements stated in the seed concern trial entry. The short saved excerpts prove selected details; review used the longer browser-readable announcement, and the excerpts are not a complete regulatory record."
+}

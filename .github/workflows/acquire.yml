@@ -30,6 +30,8 @@ jobs:
           else
             python tools/build_corpus.py --seed-only
           fi
+      - name: Apply dated publisher field reviews
+        run: python tools/apply_source_reviews.py
       - run: python -m pytest -q tests/python
         env:
           SIGNALDESK_REQUIRE_RAW: '1'
@@ -50,6 +52,6 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/corpus.json data/source-manifest.json reports/source-validation.json reports/data-quality.json
+          git add data/corpus.json data/source-manifest.json data/source-review-manifest.json reports/source-review-validation.json reports/source-validation.json reports/data-quality.json
           git diff --cached --quiet || git commit -m 'Update source acquisition receipts and labelled evidence corpus'
           git push

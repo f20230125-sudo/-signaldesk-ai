@@ -1,0 +1,385 @@
+{
+  "schema_version": 1,
+  "method": "Developer field review against official FDA publisher pages with selected literal proof excerpts",
+  "transport": "Browser-extracted text; original HTTP HTML acquisition remains separate",
+  "review_complete": true,
+  "events": [
+    {
+      "event_id": "fda-2024-01-12-keytruda",
+      "path": "data/source-text/fda-2024-01-12-keytruda.json",
+      "sha256": "568e40b53101fc7a2b64663628991d464ba3163e4f6b5c920b670f6893317925",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-chemoradiotherapy-figo-2014-stage-iii-iva-cervical-cancer",
+      "captured_at": "2026-10-17T12:40:00Z",
+      "field_checks": {
+        "approval_date": true,
+        "trial_ids": true,
+        "population_summary": true,
+        "qualifiers": true
+      }
+    },
+    {
+      "event_id": "fda-2024-03-06-opdivo",
+      "path": "data/source-text/fda-2024-03-06-opdivo.json",
+      "sha256": "545591c72cf611686e0d4bdae61046d975444d1e355d197d94c13950129d6c9b",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-nivolumab-combination-cisplatin-and-gemcitabine-unresectable-or-metastatic-urothelial",
+      "captured_at": "2026-10-17T12:40:00Z",
+      "field_checks": {
+        "approval_date": true,
+        "trial_ids": true,
+        "population_summary": true,
+        "qualifiers": true
+      }
+    },
+    {
+      "event_id": "fda-2024-06-14-imfinzi",
+      "path": "data/source-text/fda-2024-06-14-imfinzi.json",
+      "sha256": "445a5a67575460a595f2809f1a5b0aed0ce136b799e62a3996a34776f80a18bc",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-durvalumab-chemotherapy-mismatch-repair-deficient-primary-advanced-or-recurrent",
+      "captured_at": "2026-10-17T12:40:00Z",
+      "field_checks": {
+        "approval_date": true,
+        "trial_ids": true,
+        "population_summary": true,
+        "qualifiers": true
+      }
+    },
+    {
+      "event_id": "fda-2024-06-17-keytruda",
+      "path": "data/source-text/fda-2024-06-17-keytruda.json",
+      "sha256": "b801a1b47c895febd0c152b584c30e96c7c817b10e67a3dd344de2dbb90e69ec",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-chemotherapy-primary-advanced-or-recurrent-endometrial-carcinoma",
+      "captured_at": "2026-10-17T12:40:00Z",
+      "field_checks": {
+        "approval_date": true,
+        "trial_ids": true,
+        "population_summary": true,
+        "qualifiers": true
+      }
+    },
+    {
+      "event_id": "fda-2024-08-15-imfinzi",
+      "path": "data/source-text/fda-2024-08-15-imfinzi.json",
+      "sha256": "7752ad0816082c18bc091c8b5156f77382cdcbb1f4834d172e183429e73a09b9",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-neoadjuvantadjuvant-durvalumab-resectable-non-small-cell-lung-cancer",
+      "captured_at": "2026-10-17T12:40:00Z",
+      "field_checks": {
+        "approval_date": true,
+        "trial_ids": true,
+        "population_summary": true,
+        "qualifiers": true
+      }
+    },
+    {
+      "event_id": "fda-2024-09-12-tecentriq-hybreza",
+      "path": "data/source-text/fda-2024-09-12-tecentriq-hybreza.json",
+      "sha256": "bb96f8b7c02455a60467a4ab0191ac6a8d251b357eebc1fb2da156b7c78850b1",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-atezolizumab-and-hyaluronidase-tqjs-subcutaneous-injection",
+      "captured_at": "2026-10-17T12:40:00Z",
+      "field_checks": {
+        "approval_date": true,
+        "trial_ids": true,
+        "population_summary": true,
+        "qualifiers": true
+      }
+    },
+    {
+      "event_id": "fda-2024-09-17-keytruda",
+      "path": "data/source-text/fda-2024-09-17-keytruda.json",
+      "sha256": "87acad2e779027505b0644ffb8ca710154ba97821f3cbd6915adc030cfa7c2b5",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-chemotherapy-unresectable-advanced-or-metastatic-malignant-pleural",
+      "captured_at": "2026-10-17T12:40:00Z",
+      "field_checks": {
+        "approval_date": true,
+        "trial_ids": true,
+        "population_summary": true,
+        "qualifiers": true
+      }
+    },
+    {
+      "event_id": "fda-2024-10-03-opdivo",
+      "path": "data/source-text/fda-2024-10-03-opdivo.json",
+      "sha256": "1b40462fedcc4aba7f8531763918344deb951b3106cc6fdf2f8005c54f4e1028",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-neoadjuvantadjuvant-nivolumab-resectable-non-small-cell-lung-cancer",
+      "captured_at": "2026-10-17T12:40:00Z",
+      "field_checks": {
+        "approval_date": true,
+        "trial_ids": true,
+        "population_summary": true,
+        "qualifiers": true
+      }
+    },
+    {
+      "event_id": "fda-2024-12-04-imfinzi",
+      "path": "data/source-text/fda-2024-12-04-imfinzi.json",
+      "sha256": "6d7fcfde77deb7c2698b70b6ed41bec8547483b70cf7f5c407baa881dfa3f2ac",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-durvalumab-limited-stage-small-cell-lung-cancer",
+      "captured_at": "2026-10-17T12:40:00Z",
+      "field_checks": {
+        "approval_date": true,
+        "trial_ids": true,
+        "population_summary": true,
+        "qualifiers": true
+      }
+    },
+    {
+      "event_id": "fda-2024-12-27-opdivo-qvantig",
+      "path": "data/source-text/fda-2024-12-27-opdivo-qvantig.json",
+      "sha256": "8c5b6940469aca411c0b982b5f850493d83c41b9313a900661307b505b9c93e5",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-nivolumab-and-hyaluronidase-nvhy-subcutaneous-injection",
+      "captured_at": "2026-10-17T12:40:00Z",
+      "field_checks": {
+        "approval_date": true,
+        "trial_ids": true,
+        "population_summary": true,
+        "qualifiers": true
+      }
+    },
+    {
+      "event_id": "fda-2025-03-19-keytruda",
+      "path": "data/source-text/fda-2025-03-19-keytruda.json",
+      "sha256": "3e483680fab98111f9badeceb73a81119b9353cbf3b931e619a7c4ebeb8ac7f6",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-her2-positive-gastric-or-gastroesophageal-junction-adenocarcinoma",
+      "captured_at": "2026-10-17T12:40:00Z",
+      "field_checks": {
+        "approval_date": true,
+        "trial_ids": true,
+        "population_summary": true,
+        "qualifiers": true
+      }
+    },
+    {
+      "event_id": "fda-2025-03-28-imfinzi",
+      "path": "data/source-text/fda-2025-03-28-imfinzi.json",
+      "sha256": "e87dba8e2fb17d7ee1bcdae22cfa9159cb6c0f52474b76e65345a5a05e2378ed",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-durvalumab-muscle-invasive-bladder-cancer",
+      "captured_at": "2026-10-17T12:40:00Z",
+      "field_checks": {
+        "approval_date": true,
+        "trial_ids": true,
+        "population_summary": true,
+        "qualifiers": true
+      }
+    },
+    {
+      "event_id": "fda-2025-04-08-opdivo",
+      "path": "data/source-text/fda-2025-04-08-opdivo.json",
+      "sha256": "c2ee09933ba035cefe2a6d0907206bbb340f6c56dc5ae3b733a5a642bfcc66b9",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-nivolumab-ipilimumab-unresectable-or-metastatic-msi-h-or-dmmr-colorectal-cancer",
+      "captured_at": "2026-10-17T12:40:00Z",
+      "field_checks": {
+        "approval_date": true,
+        "trial_ids": true,
+        "population_summary": true,
+        "qualifiers": true
+      }
+    },
+    {
+      "event_id": "fda-2025-04-11-opdivo",
+      "path": "data/source-text/fda-2025-04-11-opdivo.json",
+      "sha256": "69159231cf3f76ea5711d62225927a87369e95ffa4f8910d5b16e4f1048b89f5",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-nivolumab-ipilimumab-unresectable-or-metastatic-hepatocellular-carcinoma",
+      "captured_at": "2026-10-17T12:40:00Z",
+      "field_checks": {
+        "approval_date": true,
+        "trial_ids": true,
+        "population_summary": true,
+        "qualifiers": true
+      }
+    },
+    {
+      "event_id": "fda-2025-06-12-keytruda",
+      "path": "data/source-text/fda-2025-06-12-keytruda.json",
+      "sha256": "4b16b5516c2ee4b7b76f0c2fab3a95a7e3239f4e19ce5d617162578db8f9d1ab",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-neoadjuvant-and-adjuvant-pembrolizumab-resectable-locally-advanced-head-and-neck",
+      "captured_at": "2026-10-17T12:40:00Z",
+      "field_checks": {
+        "approval_date": true,
+        "trial_ids": true,
+        "population_summary": true,
+        "qualifiers": true
+      }
+    },
+    {
+      "event_id": "fda-2025-09-19-keytruda-qlex",
+      "path": "data/source-text/fda-2025-09-19-keytruda-qlex.json",
+      "sha256": "65faa09e6571e24023de90aa5335c691e992954267f557cfc0eedce9f4d02c14",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-and-berahyaluronidase-alfa-pmph-subcutaneous-injection",
+      "captured_at": "2026-10-17T12:40:00Z",
+      "field_checks": {
+        "approval_date": true,
+        "trial_ids": true,
+        "population_summary": true,
+        "qualifiers": true
+      }
+    },
+    {
+      "event_id": "fda-2025-10-02-tecentriq",
+      "path": "data/source-text/fda-2025-10-02-tecentriq.json",
+      "sha256": "9b9479451f47101870ba8071e3625217e96cf779b68f499a0c16d4272daad55d",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-lurbinectedin-combination-atezolizumab-or-atezolizumab-and-hyaluronidase-tqjs-extensive",
+      "captured_at": "2026-10-17T12:40:00Z",
+      "field_checks": {
+        "approval_date": true,
+        "trial_ids": true,
+        "population_summary": true,
+        "qualifiers": true
+      }
+    },
+    {
+      "event_id": "fda-2025-10-08-libtayo",
+      "path": "data/source-text/fda-2025-10-08-libtayo.json",
+      "sha256": "cfe81752e9999d26d74371bc88014924f0af36a1cb31ca73c54e35473d48cc8d",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-cemiplimab-rwlc-adjuvant-treatment-cutaneous-squamous-cell-carcinoma",
+      "captured_at": "2026-10-17T12:40:00Z",
+      "field_checks": {
+        "approval_date": true,
+        "trial_ids": true,
+        "population_summary": true,
+        "qualifiers": true
+      }
+    },
+    {
+      "event_id": "fda-2025-11-21-keytruda",
+      "path": "data/source-text/fda-2025-11-21-keytruda.json",
+      "sha256": "80d502cac7fbeb447e5e6014515f5f16c9df6636565e3fb5e73842fe07238ebd",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-enfortumab-vedotin-ejfv-muscle-invasive-bladder-cancer",
+      "captured_at": "2026-10-17T12:40:00Z",
+      "field_checks": {
+        "approval_date": true,
+        "trial_ids": true,
+        "population_summary": true,
+        "qualifiers": true
+      }
+    },
+    {
+      "event_id": "fda-2025-11-25-imfinzi",
+      "path": "data/source-text/fda-2025-11-25-imfinzi.json",
+      "sha256": "99f5b7f87a9184f900caa29d7b93bd9177e8c3f10abceee346fa7349b12a55ea",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-durvalumab-resectable-gastric-or-gastroesophageal-junction-adenocarcinoma",
+      "captured_at": "2026-10-17T12:40:00Z",
+      "field_checks": {
+        "approval_date": true,
+        "trial_ids": true,
+        "population_summary": true,
+        "qualifiers": true
+      }
+    },
+    {
+      "event_id": "fda-2026-02-10-keytruda",
+      "path": "data/source-text/fda-2026-02-10-keytruda.json",
+      "sha256": "6668d4992d0e1a1204c4ada09d3f93f30663069658fa8f40ec7b589f6c228b24",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-paclitaxel-platinum-resistant-epithelial-ovarian-fallopian-tube-or",
+      "captured_at": "2026-10-17T12:40:00Z",
+      "field_checks": {
+        "approval_date": true,
+        "trial_ids": true,
+        "population_summary": true,
+        "qualifiers": true
+      }
+    },
+    {
+      "event_id": "fda-2026-03-20-opdivo",
+      "path": "data/source-text/fda-2026-03-20-opdivo.json",
+      "sha256": "b9f9ae67c51adc4504050ef5abf82c7481618e8dadfa2b9cebea0fc287a88993",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-nivolumab-chemotherapy-previously-untreated-hodgkin-lymphoma",
+      "captured_at": "2026-10-17T12:40:00Z",
+      "field_checks": {
+        "approval_date": true,
+        "trial_ids": true,
+        "population_summary": true,
+        "qualifiers": true
+      }
+    },
+    {
+      "event_id": "fda-2026-05-15-tecentriq",
+      "path": "data/source-text/fda-2026-05-15-tecentriq.json",
+      "sha256": "a5f4ad9dd4c13ccdc389d86d420134c57bafcbeaecf0430fc2c83e0db249f0fd",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-atezolizumab-adjuvant-treatment-muscle-invasive-bladder-cancer-patients-molecular",
+      "captured_at": "2026-10-17T12:40:00Z",
+      "field_checks": {
+        "approval_date": true,
+        "trial_ids": true,
+        "population_summary": true,
+        "qualifiers": true
+      }
+    },
+    {
+      "event_id": "fda-2026-05-28-imfinzi",
+      "path": "data/source-text/fda-2026-05-28-imfinzi.json",
+      "sha256": "239b44dac53beaedc40b6a6d729fbee4193a059449f8ccd44ebcb2d490eee257",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-durvalumab-combination-bacillus-calmette-guerin-high-risk-non-muscle-invasive-bladder",
+      "captured_at": "2026-10-17T12:40:00Z",
+      "field_checks": {
+        "approval_date": true,
+        "trial_ids": true,
+        "population_summary": true,
+        "qualifiers": true
+      }
+    },
+    {
+      "event_id": "fda-2026-06-12-keytruda",
+      "path": "data/source-text/fda-2026-06-12-keytruda.json",
+      "sha256": "6edd8f11779cfe0e46ad878bd6b6e6909a62e29e1c9e6f2df0ffd7f10a34ffba",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-belzutifan-pembrolizumab-adjuvant-treatment-renal-cell-carcinoma",
+      "captured_at": "2026-10-17T12:40:00Z",
+      "field_checks": {
+        "approval_date": true,
+        "trial_ids": true,
+        "population_summary": true,
+        "qualifiers": true
+      }
+    },
+    {
+      "event_id": "fda-2026-06-24-keytruda",
+      "path": "data/source-text/fda-2026-06-24-keytruda.json",
+      "sha256": "5ac7649a4f69fc3f2948f928912d960b4d196b617cf6c3335b073fa073bf54c8",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-sacituzumab-govitecan-hziy-monotherapy-and-combination-pembrolizumab-first-line",
+      "captured_at": "2026-10-17T12:40:00Z",
+      "field_checks": {
+        "approval_date": true,
+        "trial_ids": true,
+        "population_summary": true,
+        "qualifiers": true
+      }
+    },
+    {
+      "event_id": "fda-2026-07-10-keytruda",
+      "path": "data/source-text/fda-2026-07-10-keytruda.json",
+      "sha256": "74003806d259ace90d68e32c17372011880981f5f58625fecec532ec7feb7449",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-or-pembrolizumab-and-berahyaluronidase-alfa-pmph-each-enfortumab-vedotin",
+      "captured_at": "2026-10-17T12:40:00Z",
+      "field_checks": {
+        "approval_date": true,
+        "trial_ids": true,
+        "population_summary": true,
+        "qualifiers": true
+      }
+    },
+    {
+      "event_id": "fda-2026-08-06-opdivo",
+      "path": "data/source-text/fda-2026-08-06-opdivo.json",
+      "sha256": "5ec89a9bd9dedb17f18900145eaddc6a085d57b4fde8c003271029bea05239a4",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-vusolimogene-oderparepvec-wtpg-combination-nivolumab-melanoma",
+      "captured_at": "2026-10-17T12:40:00Z",
+      "field_checks": {
+        "approval_date": true,
+        "trial_ids": true,
+        "population_summary": true,
+        "qualifiers": true
+      }
+    },
+    {
+      "event_id": "fda-2026-10-08-tecentriq",
+      "path": "data/source-text/fda-2026-10-08-tecentriq.json",
+      "sha256": "d0897abfbe12ad8a016a5ac2f3e97263b1af8835992f354df6018121ec20c810",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-atezolizumab-combination-chemotherapy-stage-iii-mismatch-repair-deficient-colon-cancer",
+      "captured_at": "2026-10-17T12:40:00Z",
+      "field_checks": {
+        "approval_date": true,
+        "trial_ids": true,
+        "population_summary": true,
+        "qualifiers": true
+      }
+    }
+  ]
+}
