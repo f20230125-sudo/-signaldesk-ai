@@ -58,6 +58,13 @@ def apply():
     corpus['collection_notice']='Selected US FDA announcements, developer-reviewed against publisher text; not a complete approval history. Current registry snapshots are separate from event dates. Publisher proof excerpts are selective; original HTTP HTML bytes were not acquired.'
     for path,value in [(ROOT/'data/source-review-manifest.json',manifest),(ROOT/'data/corpus.json',corpus),(ROOT/'reports/source-review-validation.json',dict(**corpus['verification'],quote_budget='At most 25 copied publisher words per announcement',frozen_seed_changed=False))]:
         path.write_text(json.dumps(value,indent=2,ensure_ascii=False),encoding='utf-8',newline='\n')
+    try:from tools.build_corpus import refresh_warehouse
+    except ModuleNotFoundError:from build_corpus import refresh_warehouse
+    refresh_warehouse(corpus,ROOT)
+    validation_path=ROOT/'reports/source-validation.json'
+    validation=json.loads(validation_path.read_text(encoding='utf-8'))
+    validation.update(mode=corpus['mode'],publisher_field_reviews=corpus['verification'],evidence_passages=len(corpus['evidence']))
+    validation_path.write_text(json.dumps(validation,indent=2),encoding='utf-8',newline='\n')
     print(json.dumps(corpus['verification']))
     return corpus
 
