@@ -1,7 +1,5 @@
 name: Authorized production browser QA
 on:
-  push:
-    paths: ['.github/workflows/browser-qa.yml','tools/browser_qa.py','app/workspace.tsx']
   workflow_dispatch:
 permissions:
   contents: write
