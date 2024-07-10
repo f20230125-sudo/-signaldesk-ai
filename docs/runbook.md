@@ -20,6 +20,8 @@ Request allowances fail closed if the database is unavailable. IP addresses are 
 
 ## Hosting
 
+For Vercel, follow [the Vercel deployment guide](vercel.md). Its separate standard Next.js build uses persistent Redis quotas and server-only environment settings. The Sites instructions below apply to the retained Cloudflare target.
+
 The app uses the Sites Vinext starter. Preserve its `sites()` integration and persisted project identity in `.openai/hosting.json`. Build with the supported Sites helper, synchronize the exact source state and publish only the matching saved version. Verify five fresh real-model investigations after publication. An allocated Site URL is not proof of successful deployment.
 
 Current workspace restrictions block outbound sockets and the Sites source synchronization endpoint. Full dependency installation also needs packages absent from the local cache. These are explicit delivery gates; do not mark hosting or browser QA complete without observed results.

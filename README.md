@@ -14,7 +14,7 @@ The collection contains **30 acquired ClinicalTrials.gov snapshots and eight pro
 
 The frozen **20-development / 40-held-out** paired evaluation is complete, including recorded **Codex-assisted source-support review of all 120 responses**. On the held-out set, the agent achieved **17/40 strict successes (42.5%)**, compared with **19/40 (47.5%)** for the same-model BM25 baseline. The prespecified **34/40 target was not met**. This is a research prototype; no superiority or production-readiness claim is made. Reviews are AI-assisted, with no independent human or clinical adjudication. See [benchmark results](docs/benchmark-results.md), [failure analysis](docs/failure-analysis.md), [case-level report](data/evaluation/report.json) and [review decisions](reports/semantic-audit-held-out.json). Earlier diagnostics remain in [evaluation attempts](reports/evaluation-attempts.json).
 
-**Public deployment remains unverified:** the Sites source server is unreachable from this workspace, and no alternative hosting connection is available. The allocated Site address is not advertised as a live demo.
+**Public deployment remains unverified.** A Vercel deployment target and [setup guide](docs/vercel.md) are included alongside the Sites build. A live URL will be added only after successful publication and hosted verification. The allocated Sites address is not advertised as a live demo.
 
 Verification: **24 agent/tool/scoring tests and nine Python checks passed**, with one original-source integrity check explicitly skipped in the source-only checkout. The full framework typecheck, database migration generation and web build passed in [GitHub Actions](https://github.com/f20230125-sudo/-signaldesk-ai/actions). The generated D1 migration is committed and exercised by the quota checks. All **18 production-build browser/API checks passed**, including real Gemini inference, export, mobile layout, keyboard focus, client key exclusion and quota persistence. Public deployment remains pending. See the [validation record](docs/validation.md).
 
@@ -39,6 +39,8 @@ Python prepares the data. The TypeScript agent and its tools run unchanged in th
 The agent has at most four model calls, eight tool executions and a one-minute timeout. The public endpoint uses persistent daily request and model-call limits, origin checking and server-only credentials. There is no silent mock-model fallback.
 
 ## Run locally
+
+For Vercel hosting, see [deployment and server-only settings](docs/vercel.md). The Vercel build uses `npm run build:vercel` with persistent Redis quotas; the original Sites build continues to use D1.
 
 Python 3.11+ and Node 24:
 
