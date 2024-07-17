@@ -49,7 +49,8 @@ test('Portable endpoint keeps origin, payload and filter validation before model
 });
 test('Missing persistent quota prevents any model request',async()=>{
   const response=await handleInvestigation(request({question:'Review Imfinzi approvals'}),runtime);
-  assert.equal(response.status,503);assert.match((await response.json()).error,/Persistent request allowance/);assert.equal(response.headers.get('cache-control'),'no-store');
+  const body=await response.json() as {error:string};
+  assert.equal(response.status,503);assert.match(body.error,/Persistent request allowance/);assert.equal(response.headers.get('cache-control'),'no-store');
 });
 test('Visitor quota is HMAC-hashed and exhaustion prevents model usage',async()=>{
   let observed='';
