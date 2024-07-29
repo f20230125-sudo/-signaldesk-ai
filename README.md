@@ -4,6 +4,8 @@
 
 [Source repository](https://github.com/f20230125-sudo/-signaldesk-ai)
 
+[Live evidence dashboard](https://signaldesk-ai-phi.vercel.app)
+
 Investigate documented FDA developments, resolve product formulations, inspect the cited trials and export a source-backed commercial brief.
 
 The initial collection contains **29 real FDA announcements, eight product formulations and 30 FDA-cited NCT identifiers**, covering January 2024–October 2026. The selected watchlist includes KEYTRUDA, OPDIVO, IMFINZI, TECENTRIQ and LIBTAYO, with separate subcutaneous formulations.
@@ -14,9 +16,9 @@ The collection contains **30 acquired ClinicalTrials.gov snapshots and eight pro
 
 The frozen **20-development / 40-held-out** paired evaluation is complete, including recorded **Codex-assisted source-support review of all 120 responses**. On the held-out set, the agent achieved **17/40 strict successes (42.5%)**, compared with **19/40 (47.5%)** for the same-model BM25 baseline. The prespecified **34/40 target was not met**. This is a research prototype; no superiority or production-readiness claim is made. Reviews are AI-assisted, with no independent human or clinical adjudication. See [benchmark results](docs/benchmark-results.md), [failure analysis](docs/failure-analysis.md), [case-level report](data/evaluation/report.json) and [review decisions](reports/semantic-audit-held-out.json). Earlier diagnostics remain in [evaluation attempts](reports/evaluation-attempts.json).
 
-**Public deployment remains unverified.** A Vercel deployment target and [setup guide](docs/vercel.md) are included alongside the Sites build. A live URL will be added only after successful publication and hosted verification. The allocated Sites address is not advertised as a live demo.
+**The evidence dashboard is live on Vercel:** [open SignalDesk](https://signaldesk-ai-phi.vercel.app). Thirteen public HTTP checks passed, covering the page, assets, icon, request validation and fail-closed behavior. **Live AI investigations are paused** until the production Gemini key, request-protection secret and persistent Redis quota storage are configured. Hosted real-model verification remains pending. See the [deployment guide](docs/vercel.md) and [deployment receipt](reports/deployment-verification.json).
 
-Verification: **31 agent/tool/scoring/hosting tests and nine Python checks passed**, with one original-source integrity check explicitly skipped in the source-only checkout. The full framework typecheck, database migration generation, Cloudflare build and standard Next.js Vercel build passed in [GitHub Actions](https://github.com/f20230125-sudo/-signaldesk-ai/actions/runs/39057789310). The generated D1 migration is committed and exercised by the quota checks. Earlier Cloudflare production-build validation passed **18 browser/API checks**, including real Gemini inference, export, mobile layout, keyboard focus, client key exclusion and quota persistence. Vercel publication and hosted real-model verification remain pending. See the [validation record](docs/validation.md).
+Verification: **31 agent/tool/scoring/hosting tests and nine Python checks passed**, with one original-source integrity check explicitly skipped in the source-only checkout. The full framework typecheck, database migration generation, Cloudflare build and standard Next.js Vercel build passed in [GitHub Actions](https://github.com/f20230125-sudo/-signaldesk-ai/actions/runs/39057789310). The generated D1 migration is committed and exercised by the quota checks. Earlier Cloudflare production-build validation passed **18 browser/API checks**, including real Gemini inference, export, mobile layout, keyboard focus, client key exclusion and quota persistence. Vercel publication and 13 public HTTP checks are complete; hosted real-model verification remains pending. See the [validation record](docs/validation.md).
 
 ## Investigation workflow
 
