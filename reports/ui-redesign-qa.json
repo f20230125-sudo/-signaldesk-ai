@@ -1,0 +1,222 @@
+{
+  "status": "passed",
+  "url": "http://127.0.0.1:3000",
+  "scope": "UI and accessibility checks; all investigation responses intercepted with explicit fixtures; no live inference calls",
+  "checks": [
+    "All 29 source records render",
+    "Eight distinct formulation shortcuts remain available",
+    "Desktop records start above 600 CSS pixels",
+    "Source boundary is visible",
+    "desktop feed: automated WCAG rule scan has no violations",
+    "SC product filtering keeps OPDIVO QVANTIG distinct",
+    "Filter is reflected in URL",
+    "Filtered view survives refresh",
+    "Year filter uses approval dates",
+    "Date sorting reverses the matching records",
+    "Empty search offers working recovery",
+    "Evidence drawer receives keyboard focus",
+    "Official FDA source is available",
+    "Background scrolling is contained",
+    "evidence drawer: automated WCAG rule scan has no violations",
+    "Reverse Tab remains inside evidence dialog",
+    "Forward Tab wraps inside evidence dialog",
+    "Escape restores focus to the inspected record",
+    "View URL identifies evaluation",
+    "Page title identifies active view",
+    "Browser Back restores previous view",
+    "Browser Forward restores active view",
+    "Evaluation limitations stay visible",
+    "Frozen scores preserved",
+    "Forty paired task outcomes are inspectable",
+    "Developer review notes are readable",
+    "evaluation: automated WCAG rule scan has no violations",
+    "Invalid short question explains how to recover",
+    "investigation form: automated WCAG rule scan has no violations",
+    "Keyboard submission starts investigation",
+    "Submitted product scope is explicit",
+    "Question stays read-only while pending",
+    "Product scope is disabled while pending",
+    "Navigation remains available while pending",
+    "Success UI renders the intercepted frozen-result fixture",
+    "brief output fixture: automated WCAG rule scan has no violations",
+    "Export retains sources and evidence limits",
+    "Quota errors have a readable recovery state",
+    "Previous completed brief survives a failed new request",
+    "Retained output shows the original submitted question",
+    "Error recovery returns to evidence browsing",
+    "320px: no horizontal page overflow",
+    "320px: navigation labels remain readable",
+    "390px: no horizontal page overflow",
+    "390px: navigation labels remain readable",
+    "Phone records fit the available width",
+    "phone feed: automated WCAG rule scan has no violations",
+    "768px: no horizontal page overflow",
+    "768px: navigation labels remain readable",
+    "1024px: no horizontal page overflow",
+    "1024px: navigation labels remain readable",
+    "1440px: no horizontal page overflow",
+    "1440px: navigation labels remain readable",
+    "Phone drawer fits the viewport",
+    "Doubled text has no horizontal page overflow",
+    "No browser JavaScript exceptions"
+  ],
+  "check_count": 56,
+  "desktop_table_top_px": 570.65625,
+  "responsive": [
+    {
+      "width": 320,
+      "pageWidth": 320,
+      "tableWidth": 286,
+      "nav": [
+        {
+          "text": "Event feed",
+          "size": 11
+        },
+        {
+          "text": "Investigate",
+          "size": 11
+        },
+        {
+          "text": "Evaluation",
+          "size": 11
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "pageWidth": 390,
+      "tableWidth": 348,
+      "nav": [
+        {
+          "text": "Event feed",
+          "size": 12
+        },
+        {
+          "text": "Investigate",
+          "size": 12
+        },
+        {
+          "text": "Evaluation",
+          "size": 12
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "pageWidth": 768,
+      "tableWidth": 508,
+      "nav": [
+        {
+          "text": "Event feed\n29",
+          "size": 13
+        },
+        {
+          "text": "Investigate",
+          "size": 13
+        },
+        {
+          "text": "Evaluation",
+          "size": 13
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "pageWidth": 1024,
+      "tableWidth": 748,
+      "nav": [
+        {
+          "text": "Event feed\n29",
+          "size": 13
+        },
+        {
+          "text": "Investigate",
+          "size": 13
+        },
+        {
+          "text": "Evaluation",
+          "size": 13
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "pageWidth": 1440,
+      "tableWidth": 1120,
+      "nav": [
+        {
+          "text": "Event feed\n29",
+          "size": 13
+        },
+        {
+          "text": "Investigate",
+          "size": 13
+        },
+        {
+          "text": "Evaluation",
+          "size": 13
+        }
+      ]
+    }
+  ],
+  "accessibility_scans": [
+    {
+      "view": "desktop feed",
+      "violations": [],
+      "passes": 30,
+      "incomplete": 0
+    },
+    {
+      "view": "evidence drawer",
+      "violations": [],
+      "passes": 18,
+      "incomplete": 0
+    },
+    {
+      "view": "evaluation",
+      "violations": [],
+      "passes": 28,
+      "incomplete": 0
+    },
+    {
+      "view": "investigation form",
+      "violations": [],
+      "passes": 28,
+      "incomplete": 0
+    },
+    {
+      "view": "brief output fixture",
+      "violations": [],
+      "passes": 29,
+      "incomplete": 0
+    },
+    {
+      "view": "phone feed",
+      "violations": [],
+      "passes": 31,
+      "incomplete": 0
+    }
+  ],
+  "browser_errors": [],
+  "research": {
+    "started_at": "2026-10-18T05:30:00Z",
+    "implementation_started_after": "2026-10-18T06:00:00Z",
+    "minimum_minutes": 30
+  },
+  "axe_version": "4.14.0",
+  "html_bytes": {
+    "previous_public_next_page": 1917453,
+    "redesigned_local_next_page": 194836,
+    "measurement": "uncompressed HTML bytes, not a load-time metric"
+  },
+  "verified_ui_sha256": {
+    "app/globals.css": "c36db06daaed64085793fe7eea7004d01973172bf392305c96c11952518def81",
+    "app/page.tsx": "e0132af1b8fb7a6c6b1301a93cced0c4a18e8d531127610c744fc12d14c1a1ff",
+    "app/workspace.tsx": "cfe27bd9b4fa3bce216a35b8309a6ca312031fa3d3b16c487ecec13ff9ad9e4f",
+    "app/ui/evaluation-view.tsx": "0de24ab3728dd8a2fcc8edbb8b1603817bb34dcffbbd1a796a4d3b9b4ff73188",
+    "app/ui/evidence-drawer.tsx": "65b5633c0e078c58efc7e9033ec512899780cbacc35af3365420934a33ded8e6",
+    "app/ui/shared.tsx": "1e3cdbc5ac69698a183ef20cf7c5eb2cbc2cbfa1b567821100bcc1311ac744e7",
+    "app/ui/investigation-view.tsx": "a3762c799db852c6107bdbe034c7dde22b25272895e96e9bc8d8aa1fa3077168",
+    "app/ui/event-feed.tsx": "2e1b32d2e98a8d524f2ef7f54873cbd11a4b93753b703ed7e142d18fc4659ad7"
+  }
+}

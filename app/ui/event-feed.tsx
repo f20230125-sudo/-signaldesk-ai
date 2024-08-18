@@ -24,20 +24,20 @@ export function EventFeed({ corpus, events, view, onChange, onInspect, onInvesti
       action={<button className="primary" onClick={onInvestigate}><Icon name="investigate" />Start an investigation<Icon name="arrow" size={16} /></button>} />
 
     <section className="coverage" aria-label="Corpus coverage">
-      <div><strong>{corpus.events.length}</strong><span>Documented events<small>Selected FDA announcements</small></span></div>
-      <div><strong>{corpus.products.length}</strong><span>Product formulations<small>Separate IV and SC identities</small></span></div>
-      <div><strong>{corpus.trials.length}</strong><span>FDA-cited trials<small>{corpus.trials.filter(t => t.available).length} registry snapshots acquired</small></span></div>
-      <div><strong>{reviewed}<span className="coverage-total">/{corpus.events.length}</span></strong><span>Announcement fields reviewed<small>Dated publisher field reviews</small></span></div>
+      <div><strong>{corpus.events.length}</strong><span>FDA events<small>Selected announcements</small></span></div>
+      <div><strong>{corpus.products.length}</strong><span>Formulations<small>Separate IV and SC identities</small></span></div>
+      <div><strong>{corpus.trials.length}</strong><span>Cited trials<small>{corpus.trials.filter(t => t.available).length} registry snapshots acquired</small></span></div>
+      <div><strong>{reviewed}<span className="coverage-total">/{corpus.events.length}</span></strong><span>Field reviews<small>Dated publisher field reviews</small></span></div>
     </section>
 
-    <div className="source-notice"><Icon name="info" size={18} /><div><strong>Selected evidence. Clear boundaries.</strong> FDA fields are developer-reviewed; this collection is not a complete approval history and has no independent clinical adjudication.<details><summary>How the sources were reviewed</summary><p>Approval fields were checked against FDA publisher pages using selected proof excerpts. Full original HTML was not acquired. Trial records are separately acquired registry snapshots; their retrieval dates are distinct from approval dates.</p></details></div></div>
+    <div className="source-notice"><Icon name="info" size={18} /><div><strong>Selected FDA evidence.</strong> Developer-reviewed; incomplete approval history. No independent clinical adjudication.<details><summary>How the sources were reviewed</summary><p>Approval fields were checked against FDA publisher pages using selected proof excerpts. Full original HTML was not acquired. Trial records are separately acquired registry snapshots; their retrieval dates are distinct from approval dates.</p></details></div></div>
 
     <section className="event-section" aria-labelledby="developments-title">
       <div className="section-heading"><div><h2 id="developments-title">Documented developments</h2><p>Approval dates from the announcement body.</p></div><span className="section-kicker">FDA announcements</span></div>
       <div className="filter-toolbar">
-        <label className="filter-label search-label"><span>Search records</span><span className="search-field"><Icon name="search" size={17} /><input type="search" placeholder="Indication or keyword" value={view.search} maxLength={120} onChange={e => onChange({ search: e.target.value })} aria-label="Search event title or population" /></span></label>
+        <label className="filter-label search-label"><span>Search event title or population</span><span className="search-field"><Icon name="search" size={17} /><input type="search" placeholder="Indication or keyword" value={view.search} maxLength={120} onChange={e => onChange({ search: e.target.value })} aria-label="Search event title or population" /></span></label>
         <label className="filter-label"><span>Product</span><select aria-label="Product" value={view.product} onChange={e => onChange({ product: e.target.value })}><option value="all">All formulations</option>{corpus.products.map(product => <option key={product.id} value={product.id}>{product.name}</option>)}</select></label>
-        <label className="filter-label year-filter"><span>Approval year</span><select value={view.year} onChange={e => onChange({ year: e.target.value })}><option value="all">All years</option>{years.map(year => <option key={year}>{year}</option>)}</select></label>
+        <label className="filter-label year-filter"><span>Approval year</span><select aria-label="Approval year" value={view.year} onChange={e => onChange({ year: e.target.value })}><option value="all">All years</option>{years.map(year => <option key={year}>{year}</option>)}</select></label>
       </div>
       <div className="results-toolbar"><p role="status" aria-live="polite" aria-atomic="true"><strong>{events.length}</strong> of {corpus.events.length} developments{filtered ? ' match your filters' : ' in this collection'}</p><label className="sort-control"><span>Sort</span><select aria-label="Sort developments" value={view.sort} onChange={e => onChange({ sort: e.target.value as FeedState['sort'] })}><option value="latest">Newest first</option><option value="oldest">Oldest first</option></select></label></div>
       {filtered && <div className="active-filters" aria-label="Active filters">
