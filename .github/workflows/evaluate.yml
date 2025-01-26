@@ -1,0 +1,39 @@
+name: Run opt-in SignalDesk evaluation
+on:
+  workflow_dispatch:
+    inputs:
+      split:
+        description: Evaluation split
+        type: choice
+        options: [development, held-out]
+        default: development
+permissions:
+  contents: read
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Real model run
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: gemini-2.5-flash-lite
+          SIGNALDESK_LIVE_EVAL: '1'
+          EVALUATION_SPLIT: ${{ inputs.split }}
+        run: |
+          if [ "$EVALUATION_SPLIT" = 'development' ]; then
+            node --experimental-strip-types tools/evaluate.ts --dev
+          else
+            node --experimental-strip-types tools/evaluate.ts
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: signaldesk-real-model-evaluation
+          path: |
+            reports/runs/
+            data/evaluation/report.json

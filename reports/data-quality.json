@@ -1,0 +1,34 @@
+[
+  {
+    "check": "unique_event_grain",
+    "passed": true
+  },
+  {
+    "check": "unique_trial_grain",
+    "passed": true
+  },
+  {
+    "check": "unique_product_grain",
+    "passed": true
+  },
+  {
+    "check": "event_dates_in_snapshot",
+    "passed": true
+  },
+  {
+    "check": "known_product_references",
+    "passed": true
+  },
+  {
+    "check": "known_cited_trial_references",
+    "passed": true
+  },
+  {
+    "check": "evidence_has_event",
+    "passed": true
+  },
+  {
+    "check": "missing_trial_status_not_invented",
+    "passed": true
+  }
+]

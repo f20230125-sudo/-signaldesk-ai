@@ -1,0 +1,14 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+const read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
+const sha=p=>createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+const freeze=read('data/evaluation/freeze.json'),tasks=read('data/evaluation/tasks.json').tasks,seed=read('data/seed-events.json');
+assert.equal(sha('data/evaluation/tasks.json'),freeze.tasks_sha256);
+assert.equal(sha('data/seed-events.json'),freeze.seed_sha256);
+assert.equal(tasks.filter(t=>t.split==='dev').length,20);assert.equal(tasks.filter(t=>t.split==='test').length,40);
+const groups=split=>new Set(tasks.filter(t=>t.split===split).map(t=>t.event_group).filter(Boolean));
+assert(![...groups('dev')].some(g=>groups('test').has(g)));
+const trials=split=>new Set(tasks.filter(t=>t.split===split).flatMap(t=>t.expected.event_ids).flatMap(id=>seed.events.find(e=>e.id===id)?.trial_ids??[]));
+assert(![...trials('dev')].some(id=>trials('test').has(id)));
+console.log('Frozen 20 development / 40 held-out tasks; hashes and related-trial separation verified.');
