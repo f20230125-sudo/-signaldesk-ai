@@ -52,6 +52,8 @@ def main():
               'expected_sources':len(sources),'period_start':seed['period_start'],'period_end':seed['period_end']}
     manifest_path.write_text(json.dumps(manifest,indent=2),encoding='utf-8',newline='\n')
     print(json.dumps({'acquired':len(receipts),'failed':len(failures),'complete':not failures}))
+    for failure in failures:
+        print(json.dumps({'acquisition_failure':failure}), flush=True)
     if failures: raise SystemExit(1)
 
 
