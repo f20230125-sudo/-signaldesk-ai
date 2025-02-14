@@ -1,0 +1,407 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT02784171",
+      "kind": "clinicaltrials",
+      "path": "data/raw/55c15674a2f86226c122.json",
+      "sha256": "2e38bc1b405cc71823daed353c4b6c23f5f1152526e2110e2aadacc5f2129643",
+      "bytes": 185601,
+      "retrieved_at": "2026-10-17T11:44:27.416809+00:00"
+    },
+    {
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT02912559",
+      "kind": "clinicaltrials",
+      "path": "data/raw/80a7d4bd65695e308d93.json",
+      "sha256": "4bb48462f0c78e84db9f7bae95294b6ae20218bce5c2a3f963565689a00bb8ae",
+      "bytes": 373490,
+      "retrieved_at": "2026-10-17T11:44:28.445467+00:00"
+    },
+    {
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT03036098",
+      "kind": "clinicaltrials",
+      "path": "data/raw/6e2ce8fc8f5e0f725a0d.json",
+      "sha256": "9d90bf46e57d942769ab04e52b53d7b9b39f75ebcae98527e238b91dd969c7cd",
+      "bytes": 258518,
+      "retrieved_at": "2026-10-17T11:44:29.476114+00:00"
+    },
+    {
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT03528694",
+      "kind": "clinicaltrials",
+      "path": "data/raw/016c10f118f257461aba.json",
+      "sha256": "4dc1334cd7d1226b6e387c56743bec4ccf3e576f4f7bbbf29e3e88c2a8f1d9bd",
+      "bytes": 41116,
+      "retrieved_at": "2026-10-17T11:44:30.505594+00:00"
+    },
+    {
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT03615326",
+      "kind": "clinicaltrials",
+      "path": "data/raw/bef149fb848a6ab0256a.json",
+      "sha256": "738d2f18cc061bc114c68683839cbde9386aff5f7c2fa6f426fe73f90ccf8d4e",
+      "bytes": 233135,
+      "retrieved_at": "2026-10-17T11:44:31.532155+00:00"
+    },
+    {
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT03703297",
+      "kind": "clinicaltrials",
+      "path": "data/raw/908a73fd19dc1a5145be.json",
+      "sha256": "e92090e53893ddb7882c45de56d806ed6513fe62d13f70bc0dec6682c46f009f",
+      "bytes": 149207,
+      "retrieved_at": "2026-10-17T11:44:32.556320+00:00"
+    },
+    {
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT03732677",
+      "kind": "clinicaltrials",
+      "path": "data/raw/f9c18dd858b030b7a497.json",
+      "sha256": "3bf20a20e2722a22bdb4ac4663eb48008e0f57fa63366075cb149dc04a77d8e3",
+      "bytes": 170784,
+      "retrieved_at": "2026-10-17T11:44:33.580192+00:00"
+    },
+    {
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT03735121",
+      "kind": "clinicaltrials",
+      "path": "data/raw/1d164d0842ab9f409a67.json",
+      "sha256": "68cfc30f458e27db901f01cc47fb8318335f696139c43f51bcf58f7cfa06526d",
+      "bytes": 284722,
+      "retrieved_at": "2026-10-17T11:44:34.604769+00:00"
+    },
+    {
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT03765918",
+      "kind": "clinicaltrials",
+      "path": "data/raw/ab671ae968b592baf5ec.json",
+      "sha256": "888c984ec35c2e0271ba081a1503c6d80f9f0a6b349ce791b0e132cab6bbcdf4",
+      "bytes": 419194,
+      "retrieved_at": "2026-10-17T11:44:35.632277+00:00"
+    },
+    {
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT03767348",
+      "kind": "clinicaltrials",
+      "path": "data/raw/fc28e7b3c4fe7da7a499.json",
+      "sha256": "a4182456a84bc65a9ebeb61c2801cf975924264fe906a23481e5d84df5a9f241",
+      "bytes": 21497,
+      "retrieved_at": "2026-10-17T11:44:36.658093+00:00"
+    },
+    {
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT03800134",
+      "kind": "clinicaltrials",
+      "path": "data/raw/55f76d7a4d25c37a6351.json",
+      "sha256": "7837b0ae02193069efea39688a0ccc1e7a54c3f46bacc83bd7d6ac98d5e9e41b",
+      "bytes": 46902,
+      "retrieved_at": "2026-10-17T11:44:37.679661+00:00"
+    },
+    {
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT03907488",
+      "kind": "clinicaltrials",
+      "path": "data/raw/90d5038532351da83d58.json",
+      "sha256": "2af4a47c8d2bb99ea6c095dc1a799a9427b972a9163948c72228cc605905e83e",
+      "bytes": 279004,
+      "retrieved_at": "2026-10-17T11:44:38.702739+00:00"
+    },
+    {
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT03914612",
+      "kind": "clinicaltrials",
+      "path": "data/raw/79d29fde632d6080efc3.json",
+      "sha256": "ed6bc27f7942876949008d6dd217ab8922439c476df09904f4771bdc65f5c26d",
+      "bytes": 361081,
+      "retrieved_at": "2026-10-17T11:44:39.732724+00:00"
+    },
+    {
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT03924895",
+      "kind": "clinicaltrials",
+      "path": "data/raw/d855b7c06509b2a7b214.json",
+      "sha256": "3d7099711f461c696a84a4ab18fdeccb56e4dd6d677f092f3ef6b7c5cdd07da8",
+      "bytes": 179970,
+      "retrieved_at": "2026-10-17T11:44:40.756233+00:00"
+    },
+    {
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT03969004",
+      "kind": "clinicaltrials",
+      "path": "data/raw/d60ecfe7631571fa23bf.json",
+      "sha256": "be71427ad3e989f34cf1d3deb2cfc5e037343fba3e5f24a12bb4ff9cfd807413",
+      "bytes": 40465,
+      "retrieved_at": "2026-10-17T11:44:41.775314+00:00"
+    },
+    {
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT04008030",
+      "kind": "clinicaltrials",
+      "path": "data/raw/6589f74e1281f09eed6f.json",
+      "sha256": "50d372d7203d0c75215e2417988abe093bc7e9fcb76c0d4654922eb50c15e04f",
+      "bytes": 223835,
+      "retrieved_at": "2026-10-17T11:44:42.800897+00:00"
+    },
+    {
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT04025879",
+      "kind": "clinicaltrials",
+      "path": "data/raw/9a46e1bc754629a2b4df.json",
+      "sha256": "da117a537d8acd6233f09ea2d9c32caa1548df8152a0535677d1ecdd626a4b26",
+      "bytes": 118246,
+      "retrieved_at": "2026-10-17T11:44:43.821845+00:00"
+    },
+    {
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT04039607",
+      "kind": "clinicaltrials",
+      "path": "data/raw/02f7941feb9b2f285488.json",
+      "sha256": "4ad8918a2c6237516ecc92b8f9b6b2a207c963def139edf132151a1f1e3b7ab0",
+      "bytes": 38739,
+      "retrieved_at": "2026-10-17T11:44:44.842771+00:00"
+    },
+    {
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT04221945",
+      "kind": "clinicaltrials",
+      "path": "data/raw/9201585c100b9ac0ef61.json",
+      "sha256": "38d6f58e5218a820f0a706cd931ef7f3710cc00823cc4ce45a42b6517525a366",
+      "bytes": 220623,
+      "retrieved_at": "2026-10-17T11:44:45.870822+00:00"
+    },
+    {
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT04269200",
+      "kind": "clinicaltrials",
+      "path": "data/raw/66f645e9558cbf2e38bd.json",
+      "sha256": "2222d40e3c7315e6014133aa188d0f865f73a9f6eea7580403af1d5632e6f4a2",
+      "bytes": 281258,
+      "retrieved_at": "2026-10-17T11:44:46.899662+00:00"
+    },
+    {
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT04592913",
+      "kind": "clinicaltrials",
+      "path": "data/raw/e60441813d496a4c9b3d.json",
+      "sha256": "277c35813593b5d6162052a78461bcf573c6b411cf450bcb91a39aeb376e2900",
+      "bytes": 28845,
+      "retrieved_at": "2026-10-17T11:44:47.922915+00:00"
+    },
+    {
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT04660344",
+      "kind": "clinicaltrials",
+      "path": "data/raw/2636fc612ad93f245b93.json",
+      "sha256": "cc7f8c429fcff160d002cafcd447e26a6a6a4d9e52837481ca736efa1f255649",
+      "bytes": 100209,
+      "retrieved_at": "2026-10-17T11:44:48.950599+00:00"
+    },
+    {
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT04700124",
+      "kind": "clinicaltrials",
+      "path": "data/raw/fc39522ebb72ff7391cb.json",
+      "sha256": "e42f37d328c56d0fcef7c337593e7d22a83a96d7ba1aa5a0b7b5af4e31baf46b",
+      "bytes": 51785,
+      "retrieved_at": "2026-10-17T11:44:49.973405+00:00"
+    },
+    {
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT04810078",
+      "kind": "clinicaltrials",
+      "path": "data/raw/36b9180de92c8d14a335.json",
+      "sha256": "b0e3c34f1f2c2f28f019681791d30647224378f6b065a36e871ce4752dee33ae",
+      "bytes": 175401,
+      "retrieved_at": "2026-10-17T11:44:50.998783+00:00"
+    },
+    {
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT05091567",
+      "kind": "clinicaltrials",
+      "path": "data/raw/fe6bcba3bdf95f04288b.json",
+      "sha256": "85041ec0a9ea8e0e984c8a35e7ee610acfedf4550f3ea9f5ebc4df1e2435ad4f",
+      "bytes": 144453,
+      "retrieved_at": "2026-10-17T11:44:52.026969+00:00"
+    },
+    {
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT05116189",
+      "kind": "clinicaltrials",
+      "path": "data/raw/392e2c8f0c44d144d43b.json",
+      "sha256": "8685077caa82188d3d7ce55fb087002db6fefa054c8458b7f71f04f3b1afeca4",
+      "bytes": 179026,
+      "retrieved_at": "2026-10-17T11:44:53.057792+00:00"
+    },
+    {
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT05239728",
+      "kind": "clinicaltrials",
+      "path": "data/raw/5bad27f4cd040973d49a.json",
+      "sha256": "56cef41ddd13a52b1a466316c23ed2793c8e71aadcf76664aef0bbcf626ca6d4",
+      "bytes": 68072,
+      "retrieved_at": "2026-10-17T11:44:54.082019+00:00"
+    },
+    {
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT05382286",
+      "kind": "clinicaltrials",
+      "path": "data/raw/a065cab72ce3e1784348.json",
+      "sha256": "62ca9afb59e89b2139ff655bb12b87f39c2947113854975596a445abebf527d6",
+      "bytes": 102101,
+      "retrieved_at": "2026-10-17T11:44:55.112262+00:00"
+    },
+    {
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT05382299",
+      "kind": "clinicaltrials",
+      "path": "data/raw/f4bee7b38a8696d0f31c.json",
+      "sha256": "c67fcdeea8653c8e2fa4501ab0aa63edf9413fec60bf5626f3a183a5e410ed08",
+      "bytes": 73332,
+      "retrieved_at": "2026-10-17T11:44:56.136266+00:00"
+    },
+    {
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT05722015",
+      "kind": "clinicaltrials",
+      "path": "data/raw/14ff966f44335dbbeecd.json",
+      "sha256": "7befebab7c1cd98581683075a55534c2f47ab6798b30be97f4501a8bae0b763d",
+      "bytes": 117285,
+      "retrieved_at": "2026-10-17T11:44:57.162279+00:00"
+    },
+    {
+      "url": "https://api.fda.gov/drug/drugsfda.json?search=products.brand_name:KEYTRUDA&limit=100",
+      "kind": "drugsfda",
+      "path": "data/raw/d0219186061f0a23df02.json",
+      "sha256": "f102ae89b4a3827208432d0475a5e4680d88ef2515076b00fda4d0582e570e4c",
+      "bytes": 130749,
+      "retrieved_at": "2026-10-17T11:44:58.669768+00:00"
+    },
+    {
+      "url": "https://api.fda.gov/drug/drugsfda.json?search=products.brand_name:OPDIVO&limit=100",
+      "kind": "drugsfda",
+      "path": "data/raw/5c9afae45bbcc828a4bc.json",
+      "sha256": "7cae6e95b4bbf620043593b100e643352d09bbc58bc3404d7feebd6ffc791148",
+      "bytes": 94409,
+      "retrieved_at": "2026-10-17T11:44:59.829523+00:00"
+    },
+    {
+      "url": "https://api.fda.gov/drug/drugsfda.json?search=products.brand_name:IMFINZI&limit=100",
+      "kind": "drugsfda",
+      "path": "data/raw/a54edc92c39dc4055182.json",
+      "sha256": "fc88e27377c951d760f3110e8b01a55540cf800028c45a1254a66a45e7f03a5a",
+      "bytes": 26744,
+      "retrieved_at": "2026-10-17T11:45:00.982702+00:00"
+    },
+    {
+      "url": "https://api.fda.gov/drug/drugsfda.json?search=products.brand_name:TECENTRIQ&limit=100",
+      "kind": "drugsfda",
+      "path": "data/raw/310892aab0fe74b63713.json",
+      "sha256": "7c4740a3eacbd1e047457f5676f8e0e775b29445eec4383f984bbdc788dec7dc",
+      "bytes": 46457,
+      "retrieved_at": "2026-10-17T11:45:02.150525+00:00"
+    },
+    {
+      "url": "https://api.fda.gov/drug/drugsfda.json?search=products.brand_name:LIBTAYO&limit=100",
+      "kind": "drugsfda",
+      "path": "data/raw/97c1558fb78122bdf99b.json",
+      "sha256": "16618c78c5660f936114d1c670177b7123a818d5a5d1ccab3af51b533c8839a5",
+      "bytes": 16148,
+      "retrieved_at": "2026-10-17T11:45:03.310764+00:00"
+    }
+  ],
+  "failures": [
+    {
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-chemoradiotherapy-figo-2014-stage-iii-iva-cervical-cancer",
+      "error": "404 Client Error: Not Found for url: https://www.fda.gov/apology_objects/abuse-detection-apology.html"
+    },
+    {
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-nivolumab-combination-cisplatin-and-gemcitabine-unresectable-or-metastatic-urothelial",
+      "error": "404 Client Error: Not Found for url: https://www.fda.gov/apology_objects/abuse-detection-apology.html"
+    },
+    {
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-durvalumab-chemotherapy-mismatch-repair-deficient-primary-advanced-or-recurrent",
+      "error": "404 Client Error: Not Found for url: https://www.fda.gov/apology_objects/abuse-detection-apology.html"
+    },
+    {
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-chemotherapy-primary-advanced-or-recurrent-endometrial-carcinoma",
+      "error": "404 Client Error: Not Found for url: https://www.fda.gov/apology_objects/abuse-detection-apology.html"
+    },
+    {
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-neoadjuvantadjuvant-durvalumab-resectable-non-small-cell-lung-cancer",
+      "error": "404 Client Error: Not Found for url: https://www.fda.gov/apology_objects/abuse-detection-apology.html"
+    },
+    {
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-atezolizumab-and-hyaluronidase-tqjs-subcutaneous-injection",
+      "error": "404 Client Error: Not Found for url: https://www.fda.gov/apology_objects/abuse-detection-apology.html"
+    },
+    {
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-chemotherapy-unresectable-advanced-or-metastatic-malignant-pleural",
+      "error": "404 Client Error: Not Found for url: https://www.fda.gov/apology_objects/abuse-detection-apology.html"
+    },
+    {
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-neoadjuvantadjuvant-nivolumab-resectable-non-small-cell-lung-cancer",
+      "error": "404 Client Error: Not Found for url: https://www.fda.gov/apology_objects/abuse-detection-apology.html"
+    },
+    {
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-durvalumab-limited-stage-small-cell-lung-cancer",
+      "error": "404 Client Error: Not Found for url: https://www.fda.gov/apology_objects/abuse-detection-apology.html"
+    },
+    {
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-nivolumab-and-hyaluronidase-nvhy-subcutaneous-injection",
+      "error": "404 Client Error: Not Found for url: https://www.fda.gov/apology_objects/abuse-detection-apology.html"
+    },
+    {
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-her2-positive-gastric-or-gastroesophageal-junction-adenocarcinoma",
+      "error": "404 Client Error: Not Found for url: https://www.fda.gov/apology_objects/abuse-detection-apology.html"
+    },
+    {
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-durvalumab-muscle-invasive-bladder-cancer",
+      "error": "404 Client Error: Not Found for url: https://www.fda.gov/apology_objects/abuse-detection-apology.html"
+    },
+    {
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-nivolumab-ipilimumab-unresectable-or-metastatic-msi-h-or-dmmr-colorectal-cancer",
+      "error": "404 Client Error: Not Found for url: https://www.fda.gov/apology_objects/abuse-detection-apology.html"
+    },
+    {
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-nivolumab-ipilimumab-unresectable-or-metastatic-hepatocellular-carcinoma",
+      "error": "404 Client Error: Not Found for url: https://www.fda.gov/apology_objects/abuse-detection-apology.html"
+    },
+    {
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-neoadjuvant-and-adjuvant-pembrolizumab-resectable-locally-advanced-head-and-neck",
+      "error": "404 Client Error: Not Found for url: https://www.fda.gov/apology_objects/abuse-detection-apology.html"
+    },
+    {
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-and-berahyaluronidase-alfa-pmph-subcutaneous-injection",
+      "error": "404 Client Error: Not Found for url: https://www.fda.gov/apology_objects/abuse-detection-apology.html"
+    },
+    {
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-lurbinectedin-combination-atezolizumab-or-atezolizumab-and-hyaluronidase-tqjs-extensive",
+      "error": "404 Client Error: Not Found for url: https://www.fda.gov/apology_objects/abuse-detection-apology.html"
+    },
+    {
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-cemiplimab-rwlc-adjuvant-treatment-cutaneous-squamous-cell-carcinoma",
+      "error": "404 Client Error: Not Found for url: https://www.fda.gov/apology_objects/abuse-detection-apology.html"
+    },
+    {
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-enfortumab-vedotin-ejfv-muscle-invasive-bladder-cancer",
+      "error": "404 Client Error: Not Found for url: https://www.fda.gov/apology_objects/abuse-detection-apology.html"
+    },
+    {
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-durvalumab-resectable-gastric-or-gastroesophageal-junction-adenocarcinoma",
+      "error": "404 Client Error: Not Found for url: https://www.fda.gov/apology_objects/abuse-detection-apology.html"
+    },
+    {
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-paclitaxel-platinum-resistant-epithelial-ovarian-fallopian-tube-or",
+      "error": "404 Client Error: Not Found for url: https://www.fda.gov/apology_objects/abuse-detection-apology.html"
+    },
+    {
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-nivolumab-chemotherapy-previously-untreated-hodgkin-lymphoma",
+      "error": "404 Client Error: Not Found for url: https://www.fda.gov/apology_objects/abuse-detection-apology.html"
+    },
+    {
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-atezolizumab-adjuvant-treatment-muscle-invasive-bladder-cancer-patients-molecular",
+      "error": "404 Client Error: Not Found for url: https://www.fda.gov/apology_objects/abuse-detection-apology.html"
+    },
+    {
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-durvalumab-combination-bacillus-calmette-guerin-high-risk-non-muscle-invasive-bladder",
+      "error": "404 Client Error: Not Found for url: https://www.fda.gov/apology_objects/abuse-detection-apology.html"
+    },
+    {
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-belzutifan-pembrolizumab-adjuvant-treatment-renal-cell-carcinoma",
+      "error": "404 Client Error: Not Found for url: https://www.fda.gov/apology_objects/abuse-detection-apology.html"
+    },
+    {
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-sacituzumab-govitecan-hziy-monotherapy-and-combination-pembrolizumab-first-line",
+      "error": "404 Client Error: Not Found for url: https://www.fda.gov/apology_objects/abuse-detection-apology.html"
+    },
+    {
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-or-pembrolizumab-and-berahyaluronidase-alfa-pmph-each-enfortumab-vedotin",
+      "error": "404 Client Error: Not Found for url: https://www.fda.gov/apology_objects/abuse-detection-apology.html"
+    },
+    {
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-vusolimogene-oderparepvec-wtpg-combination-nivolumab-melanoma",
+      "error": "404 Client Error: Not Found for url: https://www.fda.gov/apology_objects/abuse-detection-apology.html"
+    },
+    {
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-atezolizumab-combination-chemotherapy-stage-iii-mismatch-repair-deficient-colon-cancer",
+      "error": "404 Client Error: Not Found for url: https://www.fda.gov/apology_objects/abuse-detection-apology.html"
+    }
+  ],
+  "complete": false,
+  "expected_sources": 64,
+  "period_start": "2024-01-01",
+  "period_end": "2026-10-17"
+}
