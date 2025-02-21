@@ -65,7 +65,7 @@ export async function investigate(corpus:Corpus,question:string,filters:Filters,
   const fallback:Draft={title:'Investigation unavailable',event_ids:[],product_ids:[],evidence_ids:[],trial_ids:[],commercial_relevance:[],follow_up_questions:[],limitations:[error??'The model did not produce a verified brief.']};
   const result=draft??fallback;
   const limitations=[...result.limitations,corpus.collection_notice];
-  if(corpus.mode!=='original-sources')limitations.push('This corpus uses browser-reviewed paraphrases. Original-byte acquisition and registry snapshots are pending.');
+  if(corpus.mode!=='original-sources')limitations.push('FDA announcement summaries are browser-reviewed paraphrases; original-byte checks remain pending. Trial availability is stated separately in each registry record.');
   const selectedTrials=corpus.trials.filter(t=>result.trial_ids.includes(t.id));
   if(selectedTrials.some(t=>!t.available))limitations.push('Some FDA-cited trial identifiers have no acquired registry snapshot; current trial status is unavailable.');
   return {...result,limitations:[...new Set(limitations)],id:crypto.randomUUID(),status:!draft?'unavailable':!result.event_ids.length&&!result.product_ids.length||selectedTrials.some(t=>!t.available)||corpus.mode!=='original-sources'?'partial':'complete',model:model.name,mode,generated_at:new Date().toISOString(),corpus_mode:corpus.mode,cutoff:corpus.cutoff,facts:corpus.events.filter(e=>result.event_ids.includes(e.id)),products:corpus.products.filter(p=>result.product_ids.includes(p.id)),evidence:corpus.evidence.filter(e=>result.evidence_ids.includes(e.id)),trials:selectedTrials,trace,usage:{input_tokens:input,output_tokens:output,model_calls:calls,latency_ms:Date.now()-started},...(!draft&&error?{error}:{})};
