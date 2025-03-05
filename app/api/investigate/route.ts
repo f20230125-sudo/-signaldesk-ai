@@ -13,7 +13,7 @@ export async function POST(request:Request){
     if(!body||typeof body!=='object'||Array.isArray(body)||Object.keys(body).some(k=>!['question','filters'].includes(k)))throw new InputError('Unexpected request fields');
     if(typeof body.question!=='string'||body.question.length<8||body.question.length>1600)throw new InputError('Question must contain 8–1600 characters');
     const filters=validateFilters(body.filters??{},corpus);
-    const model=geminiModel(env.GEMINI_API_KEY??'',env.GEMINI_MODEL??'gemini-2.5-flash-lite');
+    const model=geminiModel(env.GEMINI_API_KEY??'',env.GEMINI_MODEL??'gemini-3.5-flash-lite');
     const now=new Date(),day=now.toISOString().slice(0,10),expires=Math.floor(now.getTime()/1000)+172800;
     const ip=request.headers.get('cf-connecting-ip')??'unknown-shared-visitor';
     const visitor=await visitorKey(ip,env.SIGNALDESK_RATE_SALT??'');

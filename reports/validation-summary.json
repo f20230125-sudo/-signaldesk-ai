@@ -6,7 +6,8 @@
   "python_tests": {
     "passed": 5,
     "skipped": 1,
-    "failed": 0
+    "failed": 0,
+    "acquisition_workflow_passed": 6
   },
   "source_syntax_files": 21,
   "strict_core_modules": 7,
@@ -21,11 +22,16 @@
     "events": 29,
     "cited_trial_ids": 30,
     "mode": "browser-reviewed-seed",
-    "original_acquisition": "pending"
+    "original_acquisition": "partial_fda_announcements_blocked_by_publisher",
+    "registry_snapshots": 30,
+    "product_identities_verified": 8,
+    "original_records_acquired": 35,
+    "original_announcements_verified": 0
   },
   "full_framework_build": "passed_github_actions_39029463599",
   "browser_qa": "pending",
   "public_deployment": "not_published",
   "framework_typecheck": "passed_github_actions_39029463599",
-  "migration_generation": "passed_github_actions_39029463599"
+  "migration_generation": "passed_github_actions_39029463599",
+  "source_acquisition_run": 39029801385
 }

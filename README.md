@@ -10,7 +10,7 @@ The initial collection contains **29 real FDA announcements, eight product formu
 
 ## Current validation status
 
-The source summaries have been browser-reviewed against official FDA announcements. Original-byte acquisition and registry snapshots are **pending**. The app identifies this mode explicitly; summaries are not displayed as original quotations.
+The collection contains **30 acquired ClinicalTrials.gov snapshots and eight product identities matched to Drugs@FDA records**. FDA's announcement site blocked automated downloading; its 29 event summaries remain browser-reviewed paraphrases. Original announcement checks are pending. Every downloaded record has a SHA-256 receipt, and the app states its source limitations.
 
 The agent, evidence tools, public-app source and frozen **20-development / 40-held-out** task set are implemented. **Real-model evaluation has not run**, and no model accuracy result is claimed. The app requires a server-side free-tier Gemini key and persistent request allowance before it enables live investigations. Public deployment is not yet verified.
 

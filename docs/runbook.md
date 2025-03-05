@@ -10,7 +10,7 @@
 
 ## Model and public endpoint
 
-Use a Gemini project without paid billing. Configure `GEMINI_API_KEY`, `GEMINI_MODEL=gemini-2.5-flash-lite`, a random `SIGNALDESK_RATE_SALT`, and model/request daily limits through secure runtime settings. Verify the actual project quota and set the app's allowance below it. Never connect paid billing as an automatic fallback.
+Use a Gemini project without paid billing. Configure `GEMINI_API_KEY`, `GEMINI_MODEL=gemini-3.5-flash-lite`, a random `SIGNALDESK_RATE_SALT`, and model/request daily limits through secure runtime settings. Verify the actual project quota and set the app's allowance below it. Never connect paid billing as an automatic fallback.
 
 The app requires D1 `DB` and its `quotas` table. Generate schema migrations using `npm run db:generate`, inspect the SQL, and apply local migrations using the Sites starter workflow before testing the public endpoint. Sites applies hosted schema migrations during supported publication.
 

@@ -37,6 +37,22 @@ def test_atomic_quota_limit():
     assert db.execute(sql,['global',100,2]).fetchone()==(2,)
     assert db.execute(sql,['global',100,2]).fetchone() is None
 
+def test_available_records_match_acquisition_receipts():
+    corpus=json.loads((ROOT/'data/corpus.json').read_text(encoding='utf-8'))
+    manifest=ROOT/'data/source-manifest.json'
+    sources={s['url']:s for s in json.loads(manifest.read_text(encoding='utf-8'))['sources']} if manifest.exists() else {}
+    for trial in corpus['trials']:
+        if trial['available']:
+            receipt=sources[trial['api_url']]
+            assert receipt['kind']=='clinicaltrials'
+            assert trial['sha256']==receipt['sha256']
+            assert trial['snapshot_at']==receipt['retrieved_at']
+    for product in corpus['products']:
+        if product.get('identity_verified'):
+            assert sources[product['identity_source_url']]['kind']=='drugsfda'
+            assert product['application_numbers']
+
+
 def test_original_checksums_when_acquired():
     manifest=ROOT/'data/source-manifest.json'
     if not manifest.exists():pytest.skip('Original acquisition has not run')

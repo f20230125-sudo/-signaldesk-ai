@@ -2,7 +2,7 @@ import type {Model,ModelInput,ModelReply} from './types.ts';
 import {TOOL_SCHEMA} from './tools.ts';
 
 export class ProviderError extends Error {status:number;constructor(message:string,status=503){super(message);this.status=status;}}
-export function geminiModel(key:string,name='gemini-2.5-flash-lite',fetcher:typeof fetch=fetch):Model{
+export function geminiModel(key:string,name='gemini-3.5-flash-lite',fetcher:typeof fetch=fetch):Model{
   if(!key)throw new ProviderError('Live AI is not configured. A server-side free-tier Gemini key is required.');
   if(!/^[a-zA-Z0-9._-]+$/.test(name))throw new ProviderError('Invalid model configuration');
   return {name,async generate(input:ModelInput,signal:AbortSignal):Promise<ModelReply>{
