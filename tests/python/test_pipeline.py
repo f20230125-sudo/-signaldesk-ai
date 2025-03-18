@@ -31,7 +31,8 @@ def test_corpus_never_marks_unacquired_trial_as_available():
         if e['original_verified']:assert e['source_sha256']
 
 def test_atomic_quota_limit():
-    db=sqlite3.connect(':memory:');db.execute('CREATE TABLE quotas(key TEXT PRIMARY KEY,count INTEGER NOT NULL,expires INTEGER NOT NULL)')
+    db=sqlite3.connect(':memory:')
+    for migration in sorted((ROOT/'drizzle').glob('*.sql')):db.executescript(migration.read_text(encoding='utf-8'))
     sql='INSERT INTO quotas (key,count,expires) VALUES (?,1,?) ON CONFLICT(key) DO UPDATE SET count=count+1 WHERE count < ? RETURNING count'
     assert db.execute(sql,['global',100,2]).fetchone()==(1,)
     assert db.execute(sql,['global',100,2]).fetchone()==(2,)
