@@ -8,6 +8,8 @@
 
 `--seed-only` permits browser-reviewed summaries for development; it never invents trial status or labels a summary as an original quotation. The acquisition workflow retains verified registry and Drugs@FDA records even when announcement downloads fail, and builds with this explicit flag. The corpus stays in `browser-reviewed-seed` mode until all original announcements pass validation. Original-byte checks run against the retained artifact during acquisition; a source-only checkout explicitly skips that integration check.
 
+Source refresh is manual through GitHub Actions so routine code edits do not change the corpus used by an evaluation. A seed rebuild without the raw-source artifact uses only the reviewed summaries and marks registry snapshots and identity verification unavailable. The committed corpus can be explored directly without rebuilding it.
+
 ## Model and public endpoint
 
 Use a Gemini project without paid billing. Configure `GEMINI_API_KEY`, `GEMINI_MODEL=gemini-3.5-flash-lite`, a random `SIGNALDESK_RATE_SALT`, and model/request daily limits through secure runtime settings. Verify the actual project quota and set the app's allowance below it. Never connect paid billing as an automatic fallback.
