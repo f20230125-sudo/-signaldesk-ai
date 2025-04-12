@@ -6,7 +6,7 @@ The seed and tasks are hashed in `data/evaluation/freeze.json`. Run `node tools/
 
 ## Systems
 
-- **Baseline:** BM25 ranks up to 12 evidence passages, then the same model produces one structured response with associated event/trial records. It has no adaptive tool loop.
+- **Baseline:** BM25 ranks up to 12 evidence passages using their text and associated approval-date, product and trial metadata, then the same model produces one structured response with associated event/trial records. It has no adaptive tool loop.
 - **Agent:** the same model selects typed tools and reads their results before returning the structured brief. It has at most four calls and eight tool executions.
 
 The comparison measures the complete systems, including evidence access and call budgets. It does not isolate reasoning alone or establish that additional agent calls cause improvement. Report input/output tokens and elapsed time alongside correctness.
