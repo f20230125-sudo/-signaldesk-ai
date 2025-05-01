@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "event_id": "fda-2024-12-27-opdivo-qvantig",
+  "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-nivolumab-and-hyaluronidase-nvhy-subcutaneous-injection",
+  "captured_at": "2026-10-17T12:40:00Z",
+  "capture_format": "browser-extracted-publisher-text",
+  "selection_notice": "Selected verbatim publisher excerpts; browser text normalization, not original HTTP HTML bytes.",
+  "paragraphs": [
+    "On December 27, 2024,",
+    "evaluated in CHECKMATE-67T (NCT04810078),",
+    "of Opdivo plus Yervoy (ipilimumab) combination therapy, or in combination with chemotherapy or cabozantinib."
+  ],
+  "quoted_word_count": 22,
+  "field_checks": {
+    "approval_date": true,
+    "trial_ids": true,
+    "population_summary": true,
+    "qualifiers": true
+  },
+  "reviewer": "Codex source review (developer; not independent clinical adjudication)",
+  "review_notes": "Subcutaneous Qvantig covers specified adult solid-tumor uses. The body expressly disallows combination with IV ipilimumab. The short saved excerpts prove selected details; review used the longer browser-readable announcement, and the excerpts are not a complete regulatory record."
+}

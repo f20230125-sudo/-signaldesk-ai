@@ -10,7 +10,7 @@ The initial collection contains **29 real FDA announcements, eight product formu
 
 ## Current validation status
 
-The collection contains **30 acquired ClinicalTrials.gov snapshots and eight product identities matched to Drugs@FDA records**. FDA's announcement site blocked automated downloading; its 29 event summaries remain browser-reviewed paraphrases. Original announcement checks are pending. Every downloaded record has a SHA-256 receipt, and the app states its source limitations.
+The collection contains **30 acquired ClinicalTrials.gov snapshots and eight product identities matched to Drugs@FDA records**. All 29 announcement dates, trial links, populations and qualifiers have dated developer field reviews against FDA publisher pages. Saved literal proof excerpts (at most 25 words per announcement) have SHA-256 receipts. These are selective browser-text captures, not full snapshots or original HTTP HTML downloads; original HTML acquisition remains blocked. The 58 paraphrase passages remain labelled separately, and no independent clinical adjudication is claimed.
 
 The agent, evidence tools, public-app source and frozen **20-development / 40-held-out** task set are implemented. **Gemini 3.5 Flash-Lite key access and structured generation are verified.** A first paired development run exposed grounding, formatting and retrieval issues; diagnostic results are retained in [evaluation attempts](reports/evaluation-attempts.json). Development fixes are being checked in a follow-up run. The held-out benchmark and semantic audits remain pending, and no validated accuracy result is claimed. Public deployment is not yet verified.
 

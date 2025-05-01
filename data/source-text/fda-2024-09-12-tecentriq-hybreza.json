@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "event_id": "fda-2024-09-12-tecentriq-hybreza",
+  "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-atezolizumab-and-hyaluronidase-tqjs-subcutaneous-injection",
+  "captured_at": "2026-10-17T12:40:00Z",
+  "capture_format": "browser-extracted-publisher-text",
+  "selection_notice": "Selected verbatim publisher excerpts; browser text normalization, not original HTTP HTML bytes.",
+  "paragraphs": [
+    "On September 12, 2024,",
+    "evaluated in IMscin001 (NCT03735121),",
+    "and alveolar soft part sarcoma (ASPS). See the prescribing information for the specific indications."
+  ],
+  "quoted_word_count": 22,
+  "field_checks": {
+    "approval_date": true,
+    "trial_ids": true,
+    "population_summary": true,
+    "qualifiers": true
+  },
+  "reviewer": "Codex source review (developer; not independent clinical adjudication)",
+  "review_notes": "This is a subcutaneous-formulation decision across specified adult indications. The cited trial primarily supports exposure comparability. The short saved excerpts prove selected details; review used the longer browser-readable announcement, and the excerpts are not a complete regulatory record."
+}
