@@ -37,7 +37,7 @@ for(const mode of ['agent','baseline']){
  report[mode+'_wilson_95']=wilson(success,rows.length);
 }
 report.status='complete';
-report.semantic_audit={path:auditPath,reviewed_at:audit.reviewed_at,review_protocol:audit.review_protocol,independent_clinical_adjudication:false};
-report.summary='Full paired run completed with recorded developer semantic source-support review. This authored portfolio task set has no independent clinical adjudication; its scores do not establish general clinical accuracy.';
+report.semantic_audit={path:auditPath,reviewed_at:audit.reviewed_at,review_protocol:audit.review_protocol,independent_clinical_adjudication:false,human_adjudication:false,review_method:'Codex-assisted developer semantic source-support review'};
+report.summary='Full paired run completed with recorded Codex-assisted developer semantic source-support review. This authored portfolio task set has no independent clinical adjudication; its scores do not establish general clinical accuracy.';
 fs.writeFileSync(reportPath,JSON.stringify(report,null,2));
 console.log(JSON.stringify({split,status:report.status,agent:report.agent_success_rate,baseline:report.baseline_success_rate,paired_tasks:tasks.length}));
