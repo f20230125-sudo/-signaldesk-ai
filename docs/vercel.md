@@ -4,7 +4,7 @@ SignalDesk now has a standard Next.js build for Vercel alongside its retained Si
 
 ## Import
 
-Import `f20230125-sudo/-signaldesk-ai` from GitHub into your own Vercel account, using branch `main`. The tracked `vercel.json` supplies build and installation commands. Keep the default Next.js output directory. An import or generated project URL is not evidence of a successful deployment; wait for Ready and verify the live app.
+Import `f20230125-sudo/-signaldesk-ai` from GitHub into your own Vercel account, using branch `main`. Name the Vercel project `signaldesk-ai`. The tracked `vercel.json` supplies build and installation commands. Keep the default Next.js output directory. An import or generated project URL is not evidence of a successful deployment; wait for Ready and verify the live app.
 
 ## Runtime settings
 
