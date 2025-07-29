@@ -1,0 +1,84 @@
+{
+  "url": "https://signaldesk-ai-phi.vercel.app",
+  "checks": [
+    {
+      "name": "Public home page",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "Static asset 32oh4gtjv3-07.css",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "Static asset 1kbt14nefgsiq.js",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "Static asset 0jo3lv8klof30.js",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "Static asset 275svdy6j8reb.js",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "Static asset turbopack-2oeonlj6yb39u.js",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "Static asset 2corl6wyj4669.js",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "Static asset 1-o8lr4edb9ue.js",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "Static asset 0c0hxoamwjsbw.js",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "App icon",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "Cross-origin investigation rejection",
+      "status": 403,
+      "passed": true
+    },
+    {
+      "name": "Malformed JSON rejection",
+      "status": 400,
+      "passed": true
+    },
+    {
+      "name": "Live AI fails closed until configured",
+      "status": 503,
+      "passed": true,
+      "message": "Live AI is not configured. A server-side free-tier Gemini key is required."
+    }
+  ],
+  "all_passed": true,
+  "model_requests_started": 0,
+  "deployment_id": "dpl_D4DhAVAfJ4quqQTBqjfUrELDPnp6",
+  "commit": "20d5c16d9fd42cd716c347c2734b9802b93f579b",
+  "environment": "production",
+  "deployment_state": "READY",
+  "verification": "Public HTTP checks from a temporary Vercel Sandbox; no authentication bypass was used.",
+  "remaining": [
+    "Production Gemini key and request-protection secret import",
+    "Persistent Upstash Redis configuration",
+    "Hosted real-model and quota persistence checks",
+    "Interactive browser verification on Vercel"
+  ]
+}
