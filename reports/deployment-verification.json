@@ -75,10 +75,12 @@
   "environment": "production",
   "deployment_state": "READY",
   "verification": "Public HTTP checks from a temporary Vercel Sandbox; no authentication bypass was used.",
-  "remaining": [
+  "record_scope": "Initial public deployment before production secrets were imported. See hosted-qa.json for the current configured deployment.",
+  "remaining_at_initial_deployment": [
     "Production Gemini key and request-protection secret import",
     "Persistent Upstash Redis configuration",
     "Hosted real-model and quota persistence checks",
     "Interactive browser verification on Vercel"
-  ]
+  ],
+  "superseded_by": "hosted-qa.json"
 }

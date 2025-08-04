@@ -66,7 +66,7 @@ def main():
             expect(opener).to_be_focused()
             checked('Drawer restores keyboard focus',True)
             page.get_by_role('button',name='Evaluation',exact=True).click()
-            expect(page.get_by_text('no independent clinical adjudication',exact=False)).to_be_visible()
+            expect(page.locator('.method-grid').get_by_text('no independent clinical adjudication',exact=False)).to_be_visible()
             checked('Evaluation limitations visible',True)
             page.get_by_role('button',name='Event feed',exact=False).click()
             page.set_viewport_size({'width':390,'height':844})

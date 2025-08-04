@@ -14,13 +14,15 @@ Source refresh is manual through GitHub Actions so routine code edits do not cha
 
 Use a Gemini project without paid billing. Configure `GEMINI_API_KEY`, `GEMINI_MODEL=gemini-3.5-flash-lite`, a random `SIGNALDESK_RATE_SALT`, and model/request daily limits through secure runtime settings. Verify the actual project quota and set the app's allowance below it. Never connect paid billing as an automatic fallback.
 
-The app requires D1 `DB` and its `quotas` table. Generate schema migrations using `npm run db:generate`, inspect the SQL, and apply local migrations using the Sites starter workflow before testing the public endpoint. Sites applies hosted schema migrations during supported publication.
+The Sites target requires D1 `DB` and its `quotas` table. Generate schema migrations using `npm run db:generate`, inspect the SQL, and apply local migrations using the Sites starter workflow before testing that endpoint. Sites applies hosted schema migrations during supported publication. The Vercel target uses persistent Upstash Redis instead; see [Vercel settings](vercel.md).
 
 Request allowances fail closed if the database is unavailable. IP addresses are HMAC-hashed before use in quota keys. The app does not persist conversations or questions in a public shared database. Daily quota rows contain only a salted identifier, counter and expiry value. Expired counters can be removed by a maintenance command after their retention period; request handling never creates schema.
 
 ## Hosting
 
 For Vercel, follow [the Vercel deployment guide](vercel.md). Its separate standard Next.js build uses persistent Redis quotas and server-only environment settings. The Sites instructions below apply to the retained Cloudflare target.
+
+The Vercel prototype is publicly deployed at https://signaldesk-ai-phi.vercel.app. Hosted Chromium checks and real Gemini inference are recorded in [hosted QA](../reports/hosted-qa.json): two investigations completed, three encountered provider quota errors, and visitor-limit persistence across redeployment passed. Do not turn this integration receipt into a five-success claim or a change to the frozen evaluation.
 
 The app uses the Sites Vinext starter. Preserve its `sites()` integration and persisted project identity in `.openai/hosting.json`. Build with the supported Sites helper, synchronize the exact source state and publish only the matching saved version. Verify five fresh real-model investigations after publication. An allocated Site URL is not proof of successful deployment.
 
