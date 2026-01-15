@@ -1,0 +1,1694 @@
+{
+  "schema_version": 1,
+  "cutoff": "2026-10-17",
+  "period_start": "2024-01-01",
+  "mode": "browser-reviewed-seed",
+  "collection_notice": "Selected FDA announcements; not a complete approval history. Current trial snapshots are separate from event dates.",
+  "products": [
+    {
+      "id": "keytruda",
+      "name": "KEYTRUDA",
+      "ingredient": "pembrolizumab",
+      "company": "Merck & Co. / MSD",
+      "route": "intravenous",
+      "identity_verified": false,
+      "application_numbers": [],
+      "identity_source_url": null,
+      "fda_ingredient_names": []
+    },
+    {
+      "id": "keytruda-qlex",
+      "name": "KEYTRUDA QLEX",
+      "ingredient": "pembrolizumab and berahyaluronidase alfa-pmph",
+      "company": "Merck & Co. / MSD",
+      "route": "subcutaneous",
+      "identity_verified": false,
+      "application_numbers": [],
+      "identity_source_url": null,
+      "fda_ingredient_names": []
+    },
+    {
+      "id": "opdivo",
+      "name": "OPDIVO",
+      "ingredient": "nivolumab",
+      "company": "Bristol Myers Squibb",
+      "route": "intravenous",
+      "identity_verified": false,
+      "application_numbers": [],
+      "identity_source_url": null,
+      "fda_ingredient_names": []
+    },
+    {
+      "id": "opdivo-qvantig",
+      "name": "OPDIVO QVANTIG",
+      "ingredient": "nivolumab and hyaluronidase-nvhy",
+      "company": "Bristol Myers Squibb",
+      "route": "subcutaneous",
+      "identity_verified": false,
+      "application_numbers": [],
+      "identity_source_url": null,
+      "fda_ingredient_names": []
+    },
+    {
+      "id": "imfinzi",
+      "name": "IMFINZI",
+      "ingredient": "durvalumab",
+      "company": "AstraZeneca",
+      "route": "intravenous",
+      "identity_verified": false,
+      "application_numbers": [],
+      "identity_source_url": null,
+      "fda_ingredient_names": []
+    },
+    {
+      "id": "tecentriq",
+      "name": "TECENTRIQ",
+      "ingredient": "atezolizumab",
+      "company": "Genentech / Roche",
+      "route": "intravenous",
+      "identity_verified": false,
+      "application_numbers": [],
+      "identity_source_url": null,
+      "fda_ingredient_names": []
+    },
+    {
+      "id": "tecentriq-hybreza",
+      "name": "TECENTRIQ HYBREZA",
+      "ingredient": "atezolizumab and hyaluronidase-tqjs",
+      "company": "Genentech / Roche",
+      "route": "subcutaneous",
+      "identity_verified": false,
+      "application_numbers": [],
+      "identity_source_url": null,
+      "fda_ingredient_names": []
+    },
+    {
+      "id": "libtayo",
+      "name": "LIBTAYO",
+      "ingredient": "cemiplimab-rwlc",
+      "company": "Regeneron",
+      "route": "intravenous",
+      "identity_verified": false,
+      "application_numbers": [],
+      "identity_source_url": null,
+      "fda_ingredient_names": []
+    }
+  ],
+  "events": [
+    {
+      "id": "fda-2024-01-12-keytruda",
+      "approval_date": "2024-01-12",
+      "product_ids": [
+        "keytruda"
+      ],
+      "title": "Pembrolizumab with chemoradiotherapy for cervical cancer",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-chemoradiotherapy-figo-2014-stage-iii-iva-cervical-cancer",
+      "population_summary": "FIGO 2014 Stage III-IVA cervical cancer; regimen includes chemoradiotherapy.",
+      "trial_ids": [
+        "NCT04221945"
+      ],
+      "trial_names": [
+        "KEYNOTE-A18"
+      ],
+      "evidence_notes": [
+        "The approval population is Stage III-IVA; the supporting trial also enrolled node-positive Stage IB2-IIB patients."
+      ],
+      "extraction_status": "browser-extracted; original-byte acquisition pending",
+      "browser_review_date": "2026-10-17",
+      "jurisdiction": "United States",
+      "evidence_ids": [
+        "fda-2024-01-12-keytruda:p001",
+        "fda-2024-01-12-keytruda:p002"
+      ],
+      "original_verified": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2024-03-06-opdivo",
+      "approval_date": "2024-03-06",
+      "product_ids": [
+        "opdivo"
+      ],
+      "title": "Nivolumab with cisplatin and gemcitabine for urothelial carcinoma",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-nivolumab-combination-cisplatin-and-gemcitabine-unresectable-or-metastatic-urothelial",
+      "population_summary": "Adults receiving first-line treatment for unresectable or metastatic urothelial carcinoma.",
+      "trial_ids": [
+        "NCT03036098"
+      ],
+      "trial_names": [
+        "CHECKMATE-901"
+      ],
+      "evidence_notes": [
+        "FDA index date column says March 7, but the announcement states approval on March 6. Use the body approval date."
+      ],
+      "extraction_status": "browser-extracted; original-byte acquisition pending",
+      "browser_review_date": "2026-10-17",
+      "jurisdiction": "United States",
+      "evidence_ids": [
+        "fda-2024-03-06-opdivo:p001",
+        "fda-2024-03-06-opdivo:p002"
+      ],
+      "original_verified": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2024-06-14-imfinzi",
+      "approval_date": "2024-06-14",
+      "product_ids": [
+        "imfinzi"
+      ],
+      "title": "Durvalumab with chemotherapy for dMMR endometrial cancer",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-durvalumab-chemotherapy-mismatch-repair-deficient-primary-advanced-or-recurrent",
+      "population_summary": "Adults with primary advanced or recurrent endometrial cancer that is mismatch repair deficient; carboplatin and paclitaxel followed by durvalumab alone.",
+      "trial_ids": [
+        "NCT04269200"
+      ],
+      "trial_names": [
+        "DUO-E"
+      ],
+      "evidence_notes": [
+        "dMMR is an approval population restriction."
+      ],
+      "extraction_status": "browser-extracted; original-byte acquisition pending",
+      "browser_review_date": "2026-10-17",
+      "jurisdiction": "United States",
+      "evidence_ids": [
+        "fda-2024-06-14-imfinzi:p001",
+        "fda-2024-06-14-imfinzi:p002"
+      ],
+      "original_verified": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2024-06-17-keytruda",
+      "approval_date": "2024-06-17",
+      "product_ids": [
+        "keytruda"
+      ],
+      "title": "Pembrolizumab with chemotherapy for endometrial carcinoma",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-chemotherapy-primary-advanced-or-recurrent-endometrial-carcinoma",
+      "population_summary": "Adults with primary advanced or recurrent endometrial carcinoma; carboplatin and paclitaxel followed by pembrolizumab alone.",
+      "trial_ids": [
+        "NCT03914612"
+      ],
+      "trial_names": [
+        "KEYNOTE-868/NRG-GY018"
+      ],
+      "evidence_notes": [
+        "Supporting trial enrolled separate dMMR and pMMR cohorts; the approval paragraph does not restrict to dMMR."
+      ],
+      "extraction_status": "browser-extracted; original-byte acquisition pending",
+      "browser_review_date": "2026-10-17",
+      "jurisdiction": "United States",
+      "evidence_ids": [
+        "fda-2024-06-17-keytruda:p001",
+        "fda-2024-06-17-keytruda:p002"
+      ],
+      "original_verified": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2024-08-15-imfinzi",
+      "approval_date": "2024-08-15",
+      "product_ids": [
+        "imfinzi"
+      ],
+      "title": "Perioperative durvalumab for resectable NSCLC",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-neoadjuvantadjuvant-durvalumab-resectable-non-small-cell-lung-cancer",
+      "population_summary": "Adults with resectable NSCLC with tumors at least 4 cm and/or positive nodes; platinum chemotherapy before surgery, followed by durvalumab alone after surgery.",
+      "trial_ids": [
+        "NCT03800134"
+      ],
+      "trial_names": [
+        "AEGEAN"
+      ],
+      "evidence_notes": [
+        "No known EGFR mutations or ALK rearrangements."
+      ],
+      "extraction_status": "browser-extracted; original-byte acquisition pending",
+      "browser_review_date": "2026-10-17",
+      "jurisdiction": "United States",
+      "evidence_ids": [
+        "fda-2024-08-15-imfinzi:p001",
+        "fda-2024-08-15-imfinzi:p002"
+      ],
+      "original_verified": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2024-09-12-tecentriq-hybreza",
+      "approval_date": "2024-09-12",
+      "product_ids": [
+        "tecentriq-hybreza"
+      ],
+      "title": "Atezolizumab and hyaluronidase-tqjs subcutaneous formulation",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-atezolizumab-and-hyaluronidase-tqjs-subcutaneous-injection",
+      "population_summary": "Subcutaneous formulation covering the adult indications of intravenous atezolizumab, subject to the specific prescribing information.",
+      "trial_ids": [
+        "NCT03735121"
+      ],
+      "trial_names": [
+        "IMscin001"
+      ],
+      "evidence_notes": [
+        "Formulation approval is distinct from a new indication. The comparative trial evaluated pharmacokinetic exposure."
+      ],
+      "extraction_status": "browser-extracted; original-byte acquisition pending",
+      "browser_review_date": "2026-10-17",
+      "jurisdiction": "United States",
+      "evidence_ids": [
+        "fda-2024-09-12-tecentriq-hybreza:p001",
+        "fda-2024-09-12-tecentriq-hybreza:p002"
+      ],
+      "original_verified": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2024-09-17-keytruda",
+      "approval_date": "2024-09-17",
+      "product_ids": [
+        "keytruda"
+      ],
+      "title": "Pembrolizumab with chemotherapy for pleural mesothelioma",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-chemotherapy-unresectable-advanced-or-metastatic-malignant-pleural",
+      "population_summary": "First-line treatment of unresectable advanced or metastatic malignant pleural mesothelioma with pemetrexed and platinum chemotherapy.",
+      "trial_ids": [
+        "NCT02784171"
+      ],
+      "trial_names": [
+        "KEYNOTE-483"
+      ],
+      "evidence_notes": [
+        "Pleural mesothelioma; do not broaden this announcement to peritoneal mesothelioma."
+      ],
+      "extraction_status": "browser-extracted; original-byte acquisition pending",
+      "browser_review_date": "2026-10-17",
+      "jurisdiction": "United States",
+      "evidence_ids": [
+        "fda-2024-09-17-keytruda:p001",
+        "fda-2024-09-17-keytruda:p002"
+      ],
+      "original_verified": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2024-10-03-opdivo",
+      "approval_date": "2024-10-03",
+      "product_ids": [
+        "opdivo"
+      ],
+      "title": "Perioperative nivolumab for resectable NSCLC",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-neoadjuvantadjuvant-nivolumab-resectable-non-small-cell-lung-cancer",
+      "population_summary": "Adults with resectable NSCLC with tumors at least 4 cm and/or positive nodes; platinum-doublet chemotherapy before surgery, followed by nivolumab alone after surgery.",
+      "trial_ids": [
+        "NCT04025879"
+      ],
+      "trial_names": [
+        "CHECKMATE-77T"
+      ],
+      "evidence_notes": [
+        "No known EGFR mutations or ALK rearrangements."
+      ],
+      "extraction_status": "browser-extracted; original-byte acquisition pending",
+      "browser_review_date": "2026-10-17",
+      "jurisdiction": "United States",
+      "evidence_ids": [
+        "fda-2024-10-03-opdivo:p001",
+        "fda-2024-10-03-opdivo:p002"
+      ],
+      "original_verified": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2024-12-04-imfinzi",
+      "approval_date": "2024-12-04",
+      "product_ids": [
+        "imfinzi"
+      ],
+      "title": "Durvalumab for limited-stage SCLC",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-durvalumab-limited-stage-small-cell-lung-cancer",
+      "population_summary": "Adults with limited-stage SCLC whose disease has not progressed after concurrent platinum chemotherapy and radiation.",
+      "trial_ids": [
+        "NCT03703297"
+      ],
+      "trial_names": [
+        "ADRIATIC"
+      ],
+      "evidence_notes": [
+        "Limited-stage disease; do not conflate with extensive-stage SCLC."
+      ],
+      "extraction_status": "browser-extracted; original-byte acquisition pending",
+      "browser_review_date": "2026-10-17",
+      "jurisdiction": "United States",
+      "evidence_ids": [
+        "fda-2024-12-04-imfinzi:p001",
+        "fda-2024-12-04-imfinzi:p002"
+      ],
+      "original_verified": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2024-12-27-opdivo-qvantig",
+      "approval_date": "2024-12-27",
+      "product_ids": [
+        "opdivo-qvantig"
+      ],
+      "title": "Nivolumab and hyaluronidase-nvhy subcutaneous formulation",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-nivolumab-and-hyaluronidase-nvhy-subcutaneous-injection",
+      "population_summary": "Subcutaneous formulation across specified approved adult solid-tumor nivolumab indications, including monotherapy, maintenance after nivolumab plus ipilimumab, and specified combinations.",
+      "trial_ids": [
+        "NCT04810078"
+      ],
+      "trial_names": [
+        "CHECKMATE-67T"
+      ],
+      "evidence_notes": [
+        "Opdivo Qvantig is not indicated in combination with intravenous ipilimumab. Formulation is distinct from IV Opdivo."
+      ],
+      "extraction_status": "browser-extracted; original-byte acquisition pending",
+      "browser_review_date": "2026-10-17",
+      "jurisdiction": "United States",
+      "evidence_ids": [
+        "fda-2024-12-27-opdivo-qvantig:p001",
+        "fda-2024-12-27-opdivo-qvantig:p002"
+      ],
+      "original_verified": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2025-03-19-keytruda",
+      "approval_date": "2025-03-19",
+      "product_ids": [
+        "keytruda"
+      ],
+      "title": "Pembrolizumab for HER2-positive gastric or GEJ cancer",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-her2-positive-gastric-or-gastroesophageal-junction-adenocarcinoma",
+      "population_summary": "Traditional approval with trastuzumab and fluoropyrimidine/platinum chemotherapy for first-line adult locally advanced unresectable or metastatic HER2-positive gastric or GEJ adenocarcinoma expressing PD-L1 CPS at least 1.",
+      "trial_ids": [
+        "NCT03615326"
+      ],
+      "trial_names": [
+        "KEYNOTE-811"
+      ],
+      "evidence_notes": [
+        "Conversion from prior accelerated approval; do not count as a first-ever pembrolizumab approval."
+      ],
+      "extraction_status": "browser-extracted; original-byte acquisition pending",
+      "browser_review_date": "2026-10-17",
+      "jurisdiction": "United States",
+      "evidence_ids": [
+        "fda-2025-03-19-keytruda:p001",
+        "fda-2025-03-19-keytruda:p002"
+      ],
+      "original_verified": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2025-03-28-imfinzi",
+      "approval_date": "2025-03-28",
+      "product_ids": [
+        "imfinzi"
+      ],
+      "title": "Perioperative durvalumab for muscle-invasive bladder cancer",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-durvalumab-muscle-invasive-bladder-cancer",
+      "population_summary": "Adults with muscle-invasive bladder cancer; gemcitabine and cisplatin with durvalumab before radical cystectomy, followed by durvalumab alone.",
+      "trial_ids": [
+        "NCT03732677"
+      ],
+      "trial_names": [
+        "NIAGARA"
+      ],
+      "evidence_notes": [
+        "The supporting trial enrolled radical-cystectomy candidates without prior systemic bladder-cancer treatment."
+      ],
+      "extraction_status": "browser-extracted; original-byte acquisition pending",
+      "browser_review_date": "2026-10-17",
+      "jurisdiction": "United States",
+      "evidence_ids": [
+        "fda-2025-03-28-imfinzi:p001",
+        "fda-2025-03-28-imfinzi:p002"
+      ],
+      "original_verified": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2025-04-08-opdivo",
+      "approval_date": "2025-04-08",
+      "product_ids": [
+        "opdivo"
+      ],
+      "title": "Nivolumab plus ipilimumab for MSI-H or dMMR colorectal cancer",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-nivolumab-ipilimumab-unresectable-or-metastatic-msi-h-or-dmmr-colorectal-cancer",
+      "population_summary": "Adults and children aged at least 12 years with unresectable or metastatic MSI-H or dMMR colorectal cancer; nivolumab plus ipilimumab.",
+      "trial_ids": [
+        "NCT04008030"
+      ],
+      "trial_names": [
+        "CHECKMATE-8HW"
+      ],
+      "evidence_notes": [
+        "The announcement also converts specified single-agent nivolumab metastatic colorectal cancer accelerated approval to regular approval."
+      ],
+      "extraction_status": "browser-extracted; original-byte acquisition pending",
+      "browser_review_date": "2026-10-17",
+      "jurisdiction": "United States",
+      "evidence_ids": [
+        "fda-2025-04-08-opdivo:p001",
+        "fda-2025-04-08-opdivo:p002"
+      ],
+      "original_verified": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2025-04-11-opdivo",
+      "approval_date": "2025-04-11",
+      "product_ids": [
+        "opdivo"
+      ],
+      "title": "Nivolumab plus ipilimumab for hepatocellular carcinoma",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-nivolumab-ipilimumab-unresectable-or-metastatic-hepatocellular-carcinoma",
+      "population_summary": "Adults receiving first-line treatment for unresectable or metastatic hepatocellular carcinoma.",
+      "trial_ids": [
+        "NCT04039607"
+      ],
+      "trial_names": [
+        "CHECKMATE-9DW"
+      ],
+      "evidence_notes": [
+        "The supporting trial required Child Pugh A and ECOG 0 or 1; distinguish trial criteria from the indication paragraph."
+      ],
+      "extraction_status": "browser-extracted; original-byte acquisition pending",
+      "browser_review_date": "2026-10-17",
+      "jurisdiction": "United States",
+      "evidence_ids": [
+        "fda-2025-04-11-opdivo:p001",
+        "fda-2025-04-11-opdivo:p002"
+      ],
+      "original_verified": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2025-06-12-keytruda",
+      "approval_date": "2025-06-12",
+      "product_ids": [
+        "keytruda"
+      ],
+      "title": "Perioperative pembrolizumab for resectable HNSCC",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-neoadjuvant-and-adjuvant-pembrolizumab-resectable-locally-advanced-head-and-neck",
+      "population_summary": "Adults with resectable locally advanced HNSCC with PD-L1 CPS at least 1; pembrolizumab before surgery, then with radiotherapy with or without cisplatin, followed by pembrolizumab alone.",
+      "trial_ids": [
+        "NCT03765918"
+      ],
+      "trial_names": [
+        "KEYNOTE-689"
+      ],
+      "evidence_notes": [
+        "Do not remove the PD-L1 CPS restriction."
+      ],
+      "extraction_status": "browser-extracted; original-byte acquisition pending",
+      "browser_review_date": "2026-10-17",
+      "jurisdiction": "United States",
+      "evidence_ids": [
+        "fda-2025-06-12-keytruda:p001",
+        "fda-2025-06-12-keytruda:p002"
+      ],
+      "original_verified": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2025-09-19-keytruda-qlex",
+      "approval_date": "2025-09-19",
+      "product_ids": [
+        "keytruda-qlex"
+      ],
+      "title": "Pembrolizumab and berahyaluronidase alfa-pmph subcutaneous formulation",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-and-berahyaluronidase-alfa-pmph-subcutaneous-injection",
+      "population_summary": "Subcutaneous formulation for adult and pediatric patients aged at least 12 years in solid-tumor indications approved for IV pembrolizumab; consult specific labeling.",
+      "trial_ids": [
+        "NCT05722015"
+      ],
+      "trial_names": [
+        "MK-3475A-D77"
+      ],
+      "evidence_notes": [
+        "Supporting trial excludes EGFR, ALK, and ROS1 aberrations; that trial criterion is not a universal statement for every approved Qlex indication."
+      ],
+      "extraction_status": "browser-extracted; original-byte acquisition pending",
+      "browser_review_date": "2026-10-17",
+      "jurisdiction": "United States",
+      "evidence_ids": [
+        "fda-2025-09-19-keytruda-qlex:p001",
+        "fda-2025-09-19-keytruda-qlex:p002"
+      ],
+      "original_verified": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2025-10-02-tecentriq",
+      "approval_date": "2025-10-02",
+      "product_ids": [
+        "tecentriq",
+        "tecentriq-hybreza"
+      ],
+      "title": "Lurbinectedin plus atezolizumab maintenance for extensive-stage SCLC",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-lurbinectedin-combination-atezolizumab-or-atezolizumab-and-hyaluronidase-tqjs-extensive",
+      "population_summary": "Adults with extensive-stage SCLC without progression after first-line induction with atezolizumab or Hybreza plus carboplatin and etoposide; maintenance with lurbinectedin plus either formulation.",
+      "trial_ids": [
+        "NCT05091567"
+      ],
+      "trial_names": [
+        "IMforte"
+      ],
+      "evidence_notes": [
+        "The cited randomized maintenance trial used IV atezolizumab; the approved announcement includes both formulations."
+      ],
+      "extraction_status": "browser-extracted; original-byte acquisition pending",
+      "browser_review_date": "2026-10-17",
+      "jurisdiction": "United States",
+      "evidence_ids": [
+        "fda-2025-10-02-tecentriq:p001",
+        "fda-2025-10-02-tecentriq:p002"
+      ],
+      "original_verified": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2025-10-08-libtayo",
+      "approval_date": "2025-10-08",
+      "product_ids": [
+        "libtayo"
+      ],
+      "title": "Adjuvant cemiplimab for cutaneous squamous cell carcinoma",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-cemiplimab-rwlc-adjuvant-treatment-cutaneous-squamous-cell-carcinoma",
+      "population_summary": "Adults with cutaneous squamous cell carcinoma at high recurrence risk after surgery and radiation.",
+      "trial_ids": [
+        "NCT03969004"
+      ],
+      "trial_names": [
+        "C-POST"
+      ],
+      "evidence_notes": [
+        "Trial exclusions include specified autoimmune/immunosuppression and transplantation histories; these are trial criteria."
+      ],
+      "extraction_status": "browser-extracted; original-byte acquisition pending",
+      "browser_review_date": "2026-10-17",
+      "jurisdiction": "United States",
+      "evidence_ids": [
+        "fda-2025-10-08-libtayo:p001",
+        "fda-2025-10-08-libtayo:p002"
+      ],
+      "original_verified": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2025-11-21-keytruda",
+      "approval_date": "2025-11-21",
+      "product_ids": [
+        "keytruda",
+        "keytruda-qlex"
+      ],
+      "title": "Pembrolizumab plus enfortumab vedotin for cisplatin-ineligible MIBC",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-enfortumab-vedotin-ejfv-muscle-invasive-bladder-cancer",
+      "population_summary": "Cisplatin-ineligible adults with muscle-invasive bladder cancer; pembrolizumab or Qlex with enfortumab vedotin before surgery and after cystectomy.",
+      "trial_ids": [
+        "NCT03924895"
+      ],
+      "trial_names": [
+        "KEYNOTE-905/EV-303"
+      ],
+      "evidence_notes": [
+        "Supporting trial also allowed patients who declined cisplatin, but the approval paragraph specifies cisplatin ineligibility."
+      ],
+      "extraction_status": "browser-extracted; original-byte acquisition pending",
+      "browser_review_date": "2026-10-17",
+      "jurisdiction": "United States",
+      "evidence_ids": [
+        "fda-2025-11-21-keytruda:p001",
+        "fda-2025-11-21-keytruda:p002"
+      ],
+      "original_verified": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2025-11-25-imfinzi",
+      "approval_date": "2025-11-25",
+      "product_ids": [
+        "imfinzi"
+      ],
+      "title": "Perioperative durvalumab for resectable gastric or GEJ adenocarcinoma",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-durvalumab-resectable-gastric-or-gastroesophageal-junction-adenocarcinoma",
+      "population_summary": "Adults with resectable gastric or GEJ adenocarcinoma; durvalumab with FLOT chemotherapy before and after surgery, followed by durvalumab alone.",
+      "trial_ids": [
+        "NCT04592913"
+      ],
+      "trial_names": [
+        "MATTERHORN"
+      ],
+      "evidence_notes": [
+        "Trial was not designed to isolate the effect of durvalumab in the neoadjuvant versus adjuvant phase."
+      ],
+      "extraction_status": "browser-extracted; original-byte acquisition pending",
+      "browser_review_date": "2026-10-17",
+      "jurisdiction": "United States",
+      "evidence_ids": [
+        "fda-2025-11-25-imfinzi:p001",
+        "fda-2025-11-25-imfinzi:p002"
+      ],
+      "original_verified": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2026-02-10-keytruda",
+      "approval_date": "2026-02-10",
+      "product_ids": [
+        "keytruda",
+        "keytruda-qlex"
+      ],
+      "title": "Pembrolizumab plus paclitaxel for platinum-resistant ovarian-related carcinoma",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-paclitaxel-platinum-resistant-epithelial-ovarian-fallopian-tube-or",
+      "population_summary": "Adults with platinum-resistant epithelial ovarian, fallopian-tube, or primary-peritoneal carcinoma expressing PD-L1 CPS at least 1 after one or two prior systemic regimens; paclitaxel with or without bevacizumab.",
+      "trial_ids": [
+        "NCT05116189"
+      ],
+      "trial_names": [
+        "KEYNOTE-B96"
+      ],
+      "evidence_notes": [
+        "Both IV pembrolizumab and Qlex are named."
+      ],
+      "extraction_status": "browser-extracted; original-byte acquisition pending",
+      "browser_review_date": "2026-10-17",
+      "jurisdiction": "United States",
+      "evidence_ids": [
+        "fda-2026-02-10-keytruda:p001",
+        "fda-2026-02-10-keytruda:p002"
+      ],
+      "original_verified": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2026-03-20-opdivo",
+      "approval_date": "2026-03-20",
+      "product_ids": [
+        "opdivo"
+      ],
+      "title": "Nivolumab plus AVD for previously untreated classical Hodgkin lymphoma",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-nivolumab-chemotherapy-previously-untreated-hodgkin-lymphoma",
+      "population_summary": "Adults and children aged at least 12 years with previously untreated Stage III or IV classical Hodgkin lymphoma; nivolumab with doxorubicin, vinblastine, and dacarbazine.",
+      "trial_ids": [
+        "NCT03907488"
+      ],
+      "trial_names": [
+        "CA209-8UT/SWOG 1826"
+      ],
+      "evidence_notes": [
+        "The announcement separately grants traditional approval for specified relapsed/refractory adult cHL indications. This hematologic indication should not be inherited by Qvantig from solid-tumor formulation approval."
+      ],
+      "extraction_status": "browser-extracted; original-byte acquisition pending",
+      "browser_review_date": "2026-10-17",
+      "jurisdiction": "United States",
+      "evidence_ids": [
+        "fda-2026-03-20-opdivo:p001",
+        "fda-2026-03-20-opdivo:p002"
+      ],
+      "original_verified": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2026-05-15-tecentriq",
+      "approval_date": "2026-05-15",
+      "product_ids": [
+        "tecentriq",
+        "tecentriq-hybreza"
+      ],
+      "title": "Adjuvant atezolizumab for MIBC with ctDNA molecular residual disease",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-atezolizumab-adjuvant-treatment-muscle-invasive-bladder-cancer-patients-molecular",
+      "population_summary": "Adults with muscle-invasive bladder cancer after cystectomy and ctDNA molecular residual disease determined by an FDA-authorized test; IV atezolizumab or Hybreza.",
+      "trial_ids": [
+        "NCT04660344"
+      ],
+      "trial_names": [
+        "IMvigor011"
+      ],
+      "evidence_notes": [
+        "A companion-diagnostic selection requirement appears in the approval."
+      ],
+      "extraction_status": "browser-extracted; original-byte acquisition pending",
+      "browser_review_date": "2026-10-17",
+      "jurisdiction": "United States",
+      "evidence_ids": [
+        "fda-2026-05-15-tecentriq:p001",
+        "fda-2026-05-15-tecentriq:p002"
+      ],
+      "original_verified": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2026-05-28-imfinzi",
+      "approval_date": "2026-05-28",
+      "product_ids": [
+        "imfinzi"
+      ],
+      "title": "Durvalumab plus BCG for high-risk NMIBC",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-durvalumab-combination-bacillus-calmette-guerin-high-risk-non-muscle-invasive-bladder",
+      "population_summary": "Adults with BCG-naive high-risk non-muscle-invasive bladder cancer; durvalumab plus Bacillus Calmette-Guerin.",
+      "trial_ids": [
+        "NCT03528694"
+      ],
+      "trial_names": [
+        "POTOMAC"
+      ],
+      "evidence_notes": [
+        "BCG-naive population; do not relabel as BCG-unresponsive."
+      ],
+      "extraction_status": "browser-extracted; original-byte acquisition pending",
+      "browser_review_date": "2026-10-17",
+      "jurisdiction": "United States",
+      "evidence_ids": [
+        "fda-2026-05-28-imfinzi:p001",
+        "fda-2026-05-28-imfinzi:p002"
+      ],
+      "original_verified": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2026-06-12-keytruda",
+      "approval_date": "2026-06-12",
+      "product_ids": [
+        "keytruda",
+        "keytruda-qlex"
+      ],
+      "title": "Belzutifan plus pembrolizumab for adjuvant clear-cell RCC",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-belzutifan-pembrolizumab-adjuvant-treatment-renal-cell-carcinoma",
+      "population_summary": "Adults with RCC with a clear-cell component and intermediate-high or high recurrence risk after nephrectomy, including specified resected metastatic lesions; belzutifan with pembrolizumab or Qlex.",
+      "trial_ids": [
+        "NCT05239728"
+      ],
+      "trial_names": [
+        "LITESPARK-022"
+      ],
+      "evidence_notes": [
+        "Overall-survival data were immature at the protocol prespecified interim analysis."
+      ],
+      "extraction_status": "browser-extracted; original-byte acquisition pending",
+      "browser_review_date": "2026-10-17",
+      "jurisdiction": "United States",
+      "evidence_ids": [
+        "fda-2026-06-12-keytruda:p001",
+        "fda-2026-06-12-keytruda:p002"
+      ],
+      "original_verified": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2026-06-24-keytruda",
+      "approval_date": "2026-06-24",
+      "product_ids": [
+        "keytruda",
+        "keytruda-qlex"
+      ],
+      "title": "Sacituzumab govitecan plus pembrolizumab for first-line TNBC",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-sacituzumab-govitecan-hziy-monotherapy-and-combination-pembrolizumab-first-line",
+      "population_summary": "Combination indication: adults with unresectable locally advanced or metastatic TNBC expressing PD-L1 CPS at least 10; sacituzumab govitecan with pembrolizumab or Qlex.",
+      "trial_ids": [
+        "NCT05382299",
+        "NCT05382286"
+      ],
+      "trial_names": [
+        "ASCENT-03",
+        "ASCENT-04/KEYNOTE-D19"
+      ],
+      "evidence_notes": [
+        "This page announces two indications. ASCENT-03 supports sacituzumab monotherapy in patients unsuitable for PD-1/PD-L1 therapy; ASCENT-04 supports the pembrolizumab combination."
+      ],
+      "extraction_status": "browser-extracted; original-byte acquisition pending",
+      "browser_review_date": "2026-10-17",
+      "jurisdiction": "United States",
+      "evidence_ids": [
+        "fda-2026-06-24-keytruda:p001",
+        "fda-2026-06-24-keytruda:p002"
+      ],
+      "original_verified": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2026-07-10-keytruda",
+      "approval_date": "2026-07-10",
+      "product_ids": [
+        "keytruda",
+        "keytruda-qlex"
+      ],
+      "title": "Pembrolizumab plus enfortumab vedotin expands perioperative MIBC eligibility",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-or-pembrolizumab-and-berahyaluronidase-alfa-pmph-each-enfortumab-vedotin",
+      "population_summary": "Adults with muscle-invasive bladder cancer who are cystectomy candidates; pembrolizumab or Qlex plus enfortumab vedotin before and after surgery.",
+      "trial_ids": [
+        "NCT04700124"
+      ],
+      "trial_names": [
+        "KEYNOTE-B15/EV-304"
+      ],
+      "evidence_notes": [
+        "Extends the prior cisplatin-ineligible approval to all MIBC patients who are candidates for cystectomy. Supporting trial enrolled cisplatin-eligible patients."
+      ],
+      "extraction_status": "browser-extracted; original-byte acquisition pending",
+      "browser_review_date": "2026-10-17",
+      "jurisdiction": "United States",
+      "evidence_ids": [
+        "fda-2026-07-10-keytruda:p001",
+        "fda-2026-07-10-keytruda:p002"
+      ],
+      "original_verified": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2026-08-06-opdivo",
+      "approval_date": "2026-08-06",
+      "product_ids": [
+        "opdivo"
+      ],
+      "title": "Vusolimogene oderparepvec plus nivolumab for melanoma",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-vusolimogene-oderparepvec-wtpg-combination-nivolumab-melanoma",
+      "population_summary": "Adults with unresectable advanced cutaneous melanoma progressing on a PD-1-blocking antibody regimen; vusolimogene oderparepvec with nivolumab.",
+      "trial_ids": [
+        "NCT03767348"
+      ],
+      "trial_names": [
+        "IGNYTE"
+      ],
+      "evidence_notes": [
+        "Accelerated approval; confirmatory verification of clinical benefit is required."
+      ],
+      "extraction_status": "browser-extracted; original-byte acquisition pending",
+      "browser_review_date": "2026-10-17",
+      "jurisdiction": "United States",
+      "evidence_ids": [
+        "fda-2026-08-06-opdivo:p001",
+        "fda-2026-08-06-opdivo:p002"
+      ],
+      "original_verified": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2026-10-08-tecentriq",
+      "approval_date": "2026-10-08",
+      "product_ids": [
+        "tecentriq",
+        "tecentriq-hybreza"
+      ],
+      "title": "Adjuvant atezolizumab plus chemotherapy for Stage III dMMR colon cancer",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-atezolizumab-combination-chemotherapy-stage-iii-mismatch-repair-deficient-colon-cancer",
+      "population_summary": "IV atezolizumab with fluoropyrimidine/oxaliplatin for adults and children aged at least 2 years with Stage III dMMR colon cancer; Hybreza combination for adults and children aged at least 12 years weighing at least 40 kg.",
+      "trial_ids": [
+        "NCT02912559"
+      ],
+      "trial_names": [
+        "ATOMIC/ML39057"
+      ],
+      "evidence_notes": [
+        "Different pediatric age and weight restrictions apply to the IV and SC formulations."
+      ],
+      "extraction_status": "browser-extracted; original-byte acquisition pending",
+      "browser_review_date": "2026-10-17",
+      "jurisdiction": "United States",
+      "evidence_ids": [
+        "fda-2026-10-08-tecentriq:p001",
+        "fda-2026-10-08-tecentriq:p002"
+      ],
+      "original_verified": false,
+      "source_sha256": null
+    }
+  ],
+  "evidence": [
+    {
+      "id": "fda-2024-01-12-keytruda:p001",
+      "event_id": "fda-2024-01-12-keytruda",
+      "text": "FIGO 2014 Stage III-IVA cervical cancer; regimen includes chemoradiotherapy.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-chemoradiotherapy-figo-2014-stage-iii-iva-cervical-cancer",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2024-01-12-keytruda:p002",
+      "event_id": "fda-2024-01-12-keytruda",
+      "text": "The approval population is Stage III-IVA; the supporting trial also enrolled node-positive Stage IB2-IIB patients.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-chemoradiotherapy-figo-2014-stage-iii-iva-cervical-cancer",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2024-03-06-opdivo:p001",
+      "event_id": "fda-2024-03-06-opdivo",
+      "text": "Adults receiving first-line treatment for unresectable or metastatic urothelial carcinoma.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-nivolumab-combination-cisplatin-and-gemcitabine-unresectable-or-metastatic-urothelial",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2024-03-06-opdivo:p002",
+      "event_id": "fda-2024-03-06-opdivo",
+      "text": "FDA index date column says March 7, but the announcement states approval on March 6. Use the body approval date.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-nivolumab-combination-cisplatin-and-gemcitabine-unresectable-or-metastatic-urothelial",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2024-06-14-imfinzi:p001",
+      "event_id": "fda-2024-06-14-imfinzi",
+      "text": "Adults with primary advanced or recurrent endometrial cancer that is mismatch repair deficient; carboplatin and paclitaxel followed by durvalumab alone.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-durvalumab-chemotherapy-mismatch-repair-deficient-primary-advanced-or-recurrent",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2024-06-14-imfinzi:p002",
+      "event_id": "fda-2024-06-14-imfinzi",
+      "text": "dMMR is an approval population restriction.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-durvalumab-chemotherapy-mismatch-repair-deficient-primary-advanced-or-recurrent",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2024-06-17-keytruda:p001",
+      "event_id": "fda-2024-06-17-keytruda",
+      "text": "Adults with primary advanced or recurrent endometrial carcinoma; carboplatin and paclitaxel followed by pembrolizumab alone.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-chemotherapy-primary-advanced-or-recurrent-endometrial-carcinoma",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2024-06-17-keytruda:p002",
+      "event_id": "fda-2024-06-17-keytruda",
+      "text": "Supporting trial enrolled separate dMMR and pMMR cohorts; the approval paragraph does not restrict to dMMR.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-chemotherapy-primary-advanced-or-recurrent-endometrial-carcinoma",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2024-08-15-imfinzi:p001",
+      "event_id": "fda-2024-08-15-imfinzi",
+      "text": "Adults with resectable NSCLC with tumors at least 4 cm and/or positive nodes; platinum chemotherapy before surgery, followed by durvalumab alone after surgery.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-neoadjuvantadjuvant-durvalumab-resectable-non-small-cell-lung-cancer",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2024-08-15-imfinzi:p002",
+      "event_id": "fda-2024-08-15-imfinzi",
+      "text": "No known EGFR mutations or ALK rearrangements.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-neoadjuvantadjuvant-durvalumab-resectable-non-small-cell-lung-cancer",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2024-09-12-tecentriq-hybreza:p001",
+      "event_id": "fda-2024-09-12-tecentriq-hybreza",
+      "text": "Subcutaneous formulation covering the adult indications of intravenous atezolizumab, subject to the specific prescribing information.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-atezolizumab-and-hyaluronidase-tqjs-subcutaneous-injection",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2024-09-12-tecentriq-hybreza:p002",
+      "event_id": "fda-2024-09-12-tecentriq-hybreza",
+      "text": "Formulation approval is distinct from a new indication. The comparative trial evaluated pharmacokinetic exposure.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-atezolizumab-and-hyaluronidase-tqjs-subcutaneous-injection",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2024-09-17-keytruda:p001",
+      "event_id": "fda-2024-09-17-keytruda",
+      "text": "First-line treatment of unresectable advanced or metastatic malignant pleural mesothelioma with pemetrexed and platinum chemotherapy.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-chemotherapy-unresectable-advanced-or-metastatic-malignant-pleural",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2024-09-17-keytruda:p002",
+      "event_id": "fda-2024-09-17-keytruda",
+      "text": "Pleural mesothelioma; do not broaden this announcement to peritoneal mesothelioma.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-chemotherapy-unresectable-advanced-or-metastatic-malignant-pleural",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2024-10-03-opdivo:p001",
+      "event_id": "fda-2024-10-03-opdivo",
+      "text": "Adults with resectable NSCLC with tumors at least 4 cm and/or positive nodes; platinum-doublet chemotherapy before surgery, followed by nivolumab alone after surgery.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-neoadjuvantadjuvant-nivolumab-resectable-non-small-cell-lung-cancer",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2024-10-03-opdivo:p002",
+      "event_id": "fda-2024-10-03-opdivo",
+      "text": "No known EGFR mutations or ALK rearrangements.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-neoadjuvantadjuvant-nivolumab-resectable-non-small-cell-lung-cancer",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2024-12-04-imfinzi:p001",
+      "event_id": "fda-2024-12-04-imfinzi",
+      "text": "Adults with limited-stage SCLC whose disease has not progressed after concurrent platinum chemotherapy and radiation.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-durvalumab-limited-stage-small-cell-lung-cancer",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2024-12-04-imfinzi:p002",
+      "event_id": "fda-2024-12-04-imfinzi",
+      "text": "Limited-stage disease; do not conflate with extensive-stage SCLC.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-durvalumab-limited-stage-small-cell-lung-cancer",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2024-12-27-opdivo-qvantig:p001",
+      "event_id": "fda-2024-12-27-opdivo-qvantig",
+      "text": "Subcutaneous formulation across specified approved adult solid-tumor nivolumab indications, including monotherapy, maintenance after nivolumab plus ipilimumab, and specified combinations.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-nivolumab-and-hyaluronidase-nvhy-subcutaneous-injection",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2024-12-27-opdivo-qvantig:p002",
+      "event_id": "fda-2024-12-27-opdivo-qvantig",
+      "text": "Opdivo Qvantig is not indicated in combination with intravenous ipilimumab. Formulation is distinct from IV Opdivo.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-nivolumab-and-hyaluronidase-nvhy-subcutaneous-injection",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2025-03-19-keytruda:p001",
+      "event_id": "fda-2025-03-19-keytruda",
+      "text": "Traditional approval with trastuzumab and fluoropyrimidine/platinum chemotherapy for first-line adult locally advanced unresectable or metastatic HER2-positive gastric or GEJ adenocarcinoma expressing PD-L1 CPS at least 1.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-her2-positive-gastric-or-gastroesophageal-junction-adenocarcinoma",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2025-03-19-keytruda:p002",
+      "event_id": "fda-2025-03-19-keytruda",
+      "text": "Conversion from prior accelerated approval; do not count as a first-ever pembrolizumab approval.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-her2-positive-gastric-or-gastroesophageal-junction-adenocarcinoma",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2025-03-28-imfinzi:p001",
+      "event_id": "fda-2025-03-28-imfinzi",
+      "text": "Adults with muscle-invasive bladder cancer; gemcitabine and cisplatin with durvalumab before radical cystectomy, followed by durvalumab alone.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-durvalumab-muscle-invasive-bladder-cancer",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2025-03-28-imfinzi:p002",
+      "event_id": "fda-2025-03-28-imfinzi",
+      "text": "The supporting trial enrolled radical-cystectomy candidates without prior systemic bladder-cancer treatment.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-durvalumab-muscle-invasive-bladder-cancer",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2025-04-08-opdivo:p001",
+      "event_id": "fda-2025-04-08-opdivo",
+      "text": "Adults and children aged at least 12 years with unresectable or metastatic MSI-H or dMMR colorectal cancer; nivolumab plus ipilimumab.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-nivolumab-ipilimumab-unresectable-or-metastatic-msi-h-or-dmmr-colorectal-cancer",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2025-04-08-opdivo:p002",
+      "event_id": "fda-2025-04-08-opdivo",
+      "text": "The announcement also converts specified single-agent nivolumab metastatic colorectal cancer accelerated approval to regular approval.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-nivolumab-ipilimumab-unresectable-or-metastatic-msi-h-or-dmmr-colorectal-cancer",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2025-04-11-opdivo:p001",
+      "event_id": "fda-2025-04-11-opdivo",
+      "text": "Adults receiving first-line treatment for unresectable or metastatic hepatocellular carcinoma.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-nivolumab-ipilimumab-unresectable-or-metastatic-hepatocellular-carcinoma",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2025-04-11-opdivo:p002",
+      "event_id": "fda-2025-04-11-opdivo",
+      "text": "The supporting trial required Child Pugh A and ECOG 0 or 1; distinguish trial criteria from the indication paragraph.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-nivolumab-ipilimumab-unresectable-or-metastatic-hepatocellular-carcinoma",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2025-06-12-keytruda:p001",
+      "event_id": "fda-2025-06-12-keytruda",
+      "text": "Adults with resectable locally advanced HNSCC with PD-L1 CPS at least 1; pembrolizumab before surgery, then with radiotherapy with or without cisplatin, followed by pembrolizumab alone.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-neoadjuvant-and-adjuvant-pembrolizumab-resectable-locally-advanced-head-and-neck",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2025-06-12-keytruda:p002",
+      "event_id": "fda-2025-06-12-keytruda",
+      "text": "Do not remove the PD-L1 CPS restriction.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-neoadjuvant-and-adjuvant-pembrolizumab-resectable-locally-advanced-head-and-neck",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2025-09-19-keytruda-qlex:p001",
+      "event_id": "fda-2025-09-19-keytruda-qlex",
+      "text": "Subcutaneous formulation for adult and pediatric patients aged at least 12 years in solid-tumor indications approved for IV pembrolizumab; consult specific labeling.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-and-berahyaluronidase-alfa-pmph-subcutaneous-injection",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2025-09-19-keytruda-qlex:p002",
+      "event_id": "fda-2025-09-19-keytruda-qlex",
+      "text": "Supporting trial excludes EGFR, ALK, and ROS1 aberrations; that trial criterion is not a universal statement for every approved Qlex indication.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-and-berahyaluronidase-alfa-pmph-subcutaneous-injection",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2025-10-02-tecentriq:p001",
+      "event_id": "fda-2025-10-02-tecentriq",
+      "text": "Adults with extensive-stage SCLC without progression after first-line induction with atezolizumab or Hybreza plus carboplatin and etoposide; maintenance with lurbinectedin plus either formulation.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-lurbinectedin-combination-atezolizumab-or-atezolizumab-and-hyaluronidase-tqjs-extensive",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2025-10-02-tecentriq:p002",
+      "event_id": "fda-2025-10-02-tecentriq",
+      "text": "The cited randomized maintenance trial used IV atezolizumab; the approved announcement includes both formulations.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-lurbinectedin-combination-atezolizumab-or-atezolizumab-and-hyaluronidase-tqjs-extensive",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2025-10-08-libtayo:p001",
+      "event_id": "fda-2025-10-08-libtayo",
+      "text": "Adults with cutaneous squamous cell carcinoma at high recurrence risk after surgery and radiation.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-cemiplimab-rwlc-adjuvant-treatment-cutaneous-squamous-cell-carcinoma",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2025-10-08-libtayo:p002",
+      "event_id": "fda-2025-10-08-libtayo",
+      "text": "Trial exclusions include specified autoimmune/immunosuppression and transplantation histories; these are trial criteria.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-cemiplimab-rwlc-adjuvant-treatment-cutaneous-squamous-cell-carcinoma",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2025-11-21-keytruda:p001",
+      "event_id": "fda-2025-11-21-keytruda",
+      "text": "Cisplatin-ineligible adults with muscle-invasive bladder cancer; pembrolizumab or Qlex with enfortumab vedotin before surgery and after cystectomy.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-enfortumab-vedotin-ejfv-muscle-invasive-bladder-cancer",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2025-11-21-keytruda:p002",
+      "event_id": "fda-2025-11-21-keytruda",
+      "text": "Supporting trial also allowed patients who declined cisplatin, but the approval paragraph specifies cisplatin ineligibility.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-enfortumab-vedotin-ejfv-muscle-invasive-bladder-cancer",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2025-11-25-imfinzi:p001",
+      "event_id": "fda-2025-11-25-imfinzi",
+      "text": "Adults with resectable gastric or GEJ adenocarcinoma; durvalumab with FLOT chemotherapy before and after surgery, followed by durvalumab alone.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-durvalumab-resectable-gastric-or-gastroesophageal-junction-adenocarcinoma",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2025-11-25-imfinzi:p002",
+      "event_id": "fda-2025-11-25-imfinzi",
+      "text": "Trial was not designed to isolate the effect of durvalumab in the neoadjuvant versus adjuvant phase.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-durvalumab-resectable-gastric-or-gastroesophageal-junction-adenocarcinoma",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2026-02-10-keytruda:p001",
+      "event_id": "fda-2026-02-10-keytruda",
+      "text": "Adults with platinum-resistant epithelial ovarian, fallopian-tube, or primary-peritoneal carcinoma expressing PD-L1 CPS at least 1 after one or two prior systemic regimens; paclitaxel with or without bevacizumab.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-paclitaxel-platinum-resistant-epithelial-ovarian-fallopian-tube-or",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2026-02-10-keytruda:p002",
+      "event_id": "fda-2026-02-10-keytruda",
+      "text": "Both IV pembrolizumab and Qlex are named.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-paclitaxel-platinum-resistant-epithelial-ovarian-fallopian-tube-or",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2026-03-20-opdivo:p001",
+      "event_id": "fda-2026-03-20-opdivo",
+      "text": "Adults and children aged at least 12 years with previously untreated Stage III or IV classical Hodgkin lymphoma; nivolumab with doxorubicin, vinblastine, and dacarbazine.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-nivolumab-chemotherapy-previously-untreated-hodgkin-lymphoma",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2026-03-20-opdivo:p002",
+      "event_id": "fda-2026-03-20-opdivo",
+      "text": "The announcement separately grants traditional approval for specified relapsed/refractory adult cHL indications. This hematologic indication should not be inherited by Qvantig from solid-tumor formulation approval.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-nivolumab-chemotherapy-previously-untreated-hodgkin-lymphoma",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2026-05-15-tecentriq:p001",
+      "event_id": "fda-2026-05-15-tecentriq",
+      "text": "Adults with muscle-invasive bladder cancer after cystectomy and ctDNA molecular residual disease determined by an FDA-authorized test; IV atezolizumab or Hybreza.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-atezolizumab-adjuvant-treatment-muscle-invasive-bladder-cancer-patients-molecular",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2026-05-15-tecentriq:p002",
+      "event_id": "fda-2026-05-15-tecentriq",
+      "text": "A companion-diagnostic selection requirement appears in the approval.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-atezolizumab-adjuvant-treatment-muscle-invasive-bladder-cancer-patients-molecular",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2026-05-28-imfinzi:p001",
+      "event_id": "fda-2026-05-28-imfinzi",
+      "text": "Adults with BCG-naive high-risk non-muscle-invasive bladder cancer; durvalumab plus Bacillus Calmette-Guerin.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-durvalumab-combination-bacillus-calmette-guerin-high-risk-non-muscle-invasive-bladder",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2026-05-28-imfinzi:p002",
+      "event_id": "fda-2026-05-28-imfinzi",
+      "text": "BCG-naive population; do not relabel as BCG-unresponsive.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-durvalumab-combination-bacillus-calmette-guerin-high-risk-non-muscle-invasive-bladder",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2026-06-12-keytruda:p001",
+      "event_id": "fda-2026-06-12-keytruda",
+      "text": "Adults with RCC with a clear-cell component and intermediate-high or high recurrence risk after nephrectomy, including specified resected metastatic lesions; belzutifan with pembrolizumab or Qlex.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-belzutifan-pembrolizumab-adjuvant-treatment-renal-cell-carcinoma",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2026-06-12-keytruda:p002",
+      "event_id": "fda-2026-06-12-keytruda",
+      "text": "Overall-survival data were immature at the protocol prespecified interim analysis.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-belzutifan-pembrolizumab-adjuvant-treatment-renal-cell-carcinoma",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2026-06-24-keytruda:p001",
+      "event_id": "fda-2026-06-24-keytruda",
+      "text": "Combination indication: adults with unresectable locally advanced or metastatic TNBC expressing PD-L1 CPS at least 10; sacituzumab govitecan with pembrolizumab or Qlex.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-sacituzumab-govitecan-hziy-monotherapy-and-combination-pembrolizumab-first-line",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2026-06-24-keytruda:p002",
+      "event_id": "fda-2026-06-24-keytruda",
+      "text": "This page announces two indications. ASCENT-03 supports sacituzumab monotherapy in patients unsuitable for PD-1/PD-L1 therapy; ASCENT-04 supports the pembrolizumab combination.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-sacituzumab-govitecan-hziy-monotherapy-and-combination-pembrolizumab-first-line",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2026-07-10-keytruda:p001",
+      "event_id": "fda-2026-07-10-keytruda",
+      "text": "Adults with muscle-invasive bladder cancer who are cystectomy candidates; pembrolizumab or Qlex plus enfortumab vedotin before and after surgery.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-or-pembrolizumab-and-berahyaluronidase-alfa-pmph-each-enfortumab-vedotin",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2026-07-10-keytruda:p002",
+      "event_id": "fda-2026-07-10-keytruda",
+      "text": "Extends the prior cisplatin-ineligible approval to all MIBC patients who are candidates for cystectomy. Supporting trial enrolled cisplatin-eligible patients.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-or-pembrolizumab-and-berahyaluronidase-alfa-pmph-each-enfortumab-vedotin",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2026-08-06-opdivo:p001",
+      "event_id": "fda-2026-08-06-opdivo",
+      "text": "Adults with unresectable advanced cutaneous melanoma progressing on a PD-1-blocking antibody regimen; vusolimogene oderparepvec with nivolumab.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-vusolimogene-oderparepvec-wtpg-combination-nivolumab-melanoma",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2026-08-06-opdivo:p002",
+      "event_id": "fda-2026-08-06-opdivo",
+      "text": "Accelerated approval; confirmatory verification of clinical benefit is required.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-vusolimogene-oderparepvec-wtpg-combination-nivolumab-melanoma",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2026-10-08-tecentriq:p001",
+      "event_id": "fda-2026-10-08-tecentriq",
+      "text": "IV atezolizumab with fluoropyrimidine/oxaliplatin for adults and children aged at least 2 years with Stage III dMMR colon cancer; Hybreza combination for adults and children aged at least 12 years weighing at least 40 kg.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-atezolizumab-combination-chemotherapy-stage-iii-mismatch-repair-deficient-colon-cancer",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    },
+    {
+      "id": "fda-2026-10-08-tecentriq:p002",
+      "event_id": "fda-2026-10-08-tecentriq",
+      "text": "Different pediatric age and weight restrictions apply to the IV and SC formulations.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-atezolizumab-combination-chemotherapy-stage-iii-mismatch-repair-deficient-colon-cancer",
+      "is_original_excerpt": false,
+      "source_sha256": null
+    }
+  ],
+  "trials": [
+    {
+      "id": "NCT02784171",
+      "source_url": "https://clinicaltrials.gov/study/NCT02784171",
+      "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT02784171",
+      "linked_event_ids": [
+        "fda-2024-09-17-keytruda"
+      ],
+      "available": false,
+      "snapshot_at": null
+    },
+    {
+      "id": "NCT02912559",
+      "source_url": "https://clinicaltrials.gov/study/NCT02912559",
+      "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT02912559",
+      "linked_event_ids": [
+        "fda-2026-10-08-tecentriq"
+      ],
+      "available": false,
+      "snapshot_at": null
+    },
+    {
+      "id": "NCT03036098",
+      "source_url": "https://clinicaltrials.gov/study/NCT03036098",
+      "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT03036098",
+      "linked_event_ids": [
+        "fda-2024-03-06-opdivo"
+      ],
+      "available": false,
+      "snapshot_at": null
+    },
+    {
+      "id": "NCT03528694",
+      "source_url": "https://clinicaltrials.gov/study/NCT03528694",
+      "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT03528694",
+      "linked_event_ids": [
+        "fda-2026-05-28-imfinzi"
+      ],
+      "available": false,
+      "snapshot_at": null
+    },
+    {
+      "id": "NCT03615326",
+      "source_url": "https://clinicaltrials.gov/study/NCT03615326",
+      "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT03615326",
+      "linked_event_ids": [
+        "fda-2025-03-19-keytruda"
+      ],
+      "available": false,
+      "snapshot_at": null
+    },
+    {
+      "id": "NCT03703297",
+      "source_url": "https://clinicaltrials.gov/study/NCT03703297",
+      "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT03703297",
+      "linked_event_ids": [
+        "fda-2024-12-04-imfinzi"
+      ],
+      "available": false,
+      "snapshot_at": null
+    },
+    {
+      "id": "NCT03732677",
+      "source_url": "https://clinicaltrials.gov/study/NCT03732677",
+      "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT03732677",
+      "linked_event_ids": [
+        "fda-2025-03-28-imfinzi"
+      ],
+      "available": false,
+      "snapshot_at": null
+    },
+    {
+      "id": "NCT03735121",
+      "source_url": "https://clinicaltrials.gov/study/NCT03735121",
+      "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT03735121",
+      "linked_event_ids": [
+        "fda-2024-09-12-tecentriq-hybreza"
+      ],
+      "available": false,
+      "snapshot_at": null
+    },
+    {
+      "id": "NCT03765918",
+      "source_url": "https://clinicaltrials.gov/study/NCT03765918",
+      "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT03765918",
+      "linked_event_ids": [
+        "fda-2025-06-12-keytruda"
+      ],
+      "available": false,
+      "snapshot_at": null
+    },
+    {
+      "id": "NCT03767348",
+      "source_url": "https://clinicaltrials.gov/study/NCT03767348",
+      "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT03767348",
+      "linked_event_ids": [
+        "fda-2026-08-06-opdivo"
+      ],
+      "available": false,
+      "snapshot_at": null
+    },
+    {
+      "id": "NCT03800134",
+      "source_url": "https://clinicaltrials.gov/study/NCT03800134",
+      "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT03800134",
+      "linked_event_ids": [
+        "fda-2024-08-15-imfinzi"
+      ],
+      "available": false,
+      "snapshot_at": null
+    },
+    {
+      "id": "NCT03907488",
+      "source_url": "https://clinicaltrials.gov/study/NCT03907488",
+      "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT03907488",
+      "linked_event_ids": [
+        "fda-2026-03-20-opdivo"
+      ],
+      "available": false,
+      "snapshot_at": null
+    },
+    {
+      "id": "NCT03914612",
+      "source_url": "https://clinicaltrials.gov/study/NCT03914612",
+      "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT03914612",
+      "linked_event_ids": [
+        "fda-2024-06-17-keytruda"
+      ],
+      "available": false,
+      "snapshot_at": null
+    },
+    {
+      "id": "NCT03924895",
+      "source_url": "https://clinicaltrials.gov/study/NCT03924895",
+      "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT03924895",
+      "linked_event_ids": [
+        "fda-2025-11-21-keytruda"
+      ],
+      "available": false,
+      "snapshot_at": null
+    },
+    {
+      "id": "NCT03969004",
+      "source_url": "https://clinicaltrials.gov/study/NCT03969004",
+      "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT03969004",
+      "linked_event_ids": [
+        "fda-2025-10-08-libtayo"
+      ],
+      "available": false,
+      "snapshot_at": null
+    },
+    {
+      "id": "NCT04008030",
+      "source_url": "https://clinicaltrials.gov/study/NCT04008030",
+      "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT04008030",
+      "linked_event_ids": [
+        "fda-2025-04-08-opdivo"
+      ],
+      "available": false,
+      "snapshot_at": null
+    },
+    {
+      "id": "NCT04025879",
+      "source_url": "https://clinicaltrials.gov/study/NCT04025879",
+      "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT04025879",
+      "linked_event_ids": [
+        "fda-2024-10-03-opdivo"
+      ],
+      "available": false,
+      "snapshot_at": null
+    },
+    {
+      "id": "NCT04039607",
+      "source_url": "https://clinicaltrials.gov/study/NCT04039607",
+      "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT04039607",
+      "linked_event_ids": [
+        "fda-2025-04-11-opdivo"
+      ],
+      "available": false,
+      "snapshot_at": null
+    },
+    {
+      "id": "NCT04221945",
+      "source_url": "https://clinicaltrials.gov/study/NCT04221945",
+      "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT04221945",
+      "linked_event_ids": [
+        "fda-2024-01-12-keytruda"
+      ],
+      "available": false,
+      "snapshot_at": null
+    },
+    {
+      "id": "NCT04269200",
+      "source_url": "https://clinicaltrials.gov/study/NCT04269200",
+      "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT04269200",
+      "linked_event_ids": [
+        "fda-2024-06-14-imfinzi"
+      ],
+      "available": false,
+      "snapshot_at": null
+    },
+    {
+      "id": "NCT04592913",
+      "source_url": "https://clinicaltrials.gov/study/NCT04592913",
+      "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT04592913",
+      "linked_event_ids": [
+        "fda-2025-11-25-imfinzi"
+      ],
+      "available": false,
+      "snapshot_at": null
+    },
+    {
+      "id": "NCT04660344",
+      "source_url": "https://clinicaltrials.gov/study/NCT04660344",
+      "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT04660344",
+      "linked_event_ids": [
+        "fda-2026-05-15-tecentriq"
+      ],
+      "available": false,
+      "snapshot_at": null
+    },
+    {
+      "id": "NCT04700124",
+      "source_url": "https://clinicaltrials.gov/study/NCT04700124",
+      "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT04700124",
+      "linked_event_ids": [
+        "fda-2026-07-10-keytruda"
+      ],
+      "available": false,
+      "snapshot_at": null
+    },
+    {
+      "id": "NCT04810078",
+      "source_url": "https://clinicaltrials.gov/study/NCT04810078",
+      "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT04810078",
+      "linked_event_ids": [
+        "fda-2024-12-27-opdivo-qvantig"
+      ],
+      "available": false,
+      "snapshot_at": null
+    },
+    {
+      "id": "NCT05091567",
+      "source_url": "https://clinicaltrials.gov/study/NCT05091567",
+      "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT05091567",
+      "linked_event_ids": [
+        "fda-2025-10-02-tecentriq"
+      ],
+      "available": false,
+      "snapshot_at": null
+    },
+    {
+      "id": "NCT05116189",
+      "source_url": "https://clinicaltrials.gov/study/NCT05116189",
+      "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT05116189",
+      "linked_event_ids": [
+        "fda-2026-02-10-keytruda"
+      ],
+      "available": false,
+      "snapshot_at": null
+    },
+    {
+      "id": "NCT05239728",
+      "source_url": "https://clinicaltrials.gov/study/NCT05239728",
+      "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT05239728",
+      "linked_event_ids": [
+        "fda-2026-06-12-keytruda"
+      ],
+      "available": false,
+      "snapshot_at": null
+    },
+    {
+      "id": "NCT05382286",
+      "source_url": "https://clinicaltrials.gov/study/NCT05382286",
+      "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT05382286",
+      "linked_event_ids": [
+        "fda-2026-06-24-keytruda"
+      ],
+      "available": false,
+      "snapshot_at": null
+    },
+    {
+      "id": "NCT05382299",
+      "source_url": "https://clinicaltrials.gov/study/NCT05382299",
+      "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT05382299",
+      "linked_event_ids": [
+        "fda-2026-06-24-keytruda"
+      ],
+      "available": false,
+      "snapshot_at": null
+    },
+    {
+      "id": "NCT05722015",
+      "source_url": "https://clinicaltrials.gov/study/NCT05722015",
+      "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT05722015",
+      "linked_event_ids": [
+        "fda-2025-09-19-keytruda-qlex"
+      ],
+      "available": false,
+      "snapshot_at": null
+    }
+  ],
+  "acquisition": {
+    "expected": 0,
+    "acquired": 0,
+    "complete": false
+  }
+}
