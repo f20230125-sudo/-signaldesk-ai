@@ -14,7 +14,7 @@ The source summaries have been browser-reviewed against official FDA announcemen
 
 The agent, evidence tools, public-app source and frozen **20-development / 40-held-out** task set are implemented. **Real-model evaluation has not run**, and no model accuracy result is claimed. The app requires a server-side free-tier Gemini key and persistent request allowance before it enables live investigations. Public deployment is not yet verified.
 
-Local verification: **21 agent/tool/scoring tests and five Python checks passed**, with one original-source integrity check explicitly skipped. Seven core modules passed strict TypeScript checks; the full framework build and browser QA still require complete dependencies. See the [validation record](docs/validation.md).
+Verification: **21 agent/tool/scoring tests and five Python checks passed**, with one original-source integrity check explicitly skipped in the source-only checkout. The full framework typecheck, database migration generation and web build passed in [GitHub Actions](https://github.com/f20230125-sudo/-signaldesk-ai/actions/runs/39029463599). Browser QA and public deployment remain pending. See the [validation record](docs/validation.md).
 
 ## Investigation workflow
 
