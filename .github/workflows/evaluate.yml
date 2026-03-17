@@ -1,9 +1,5 @@
 name: Run opt-in SignalDesk evaluation
 on:
-  # Updating this workflow on main explicitly starts a development run.
-  push:
-    branches: [main]
-    paths: [.github/workflows/evaluate.yml]
   workflow_dispatch:
     inputs:
       split:
@@ -17,6 +13,9 @@ on:
         default: true
 permissions:
   contents: write
+concurrency:
+  group: signaldesk-real-model-evaluation
+  cancel-in-progress: false
 jobs:
   evaluate:
     runs-on: ubuntu-latest
@@ -39,7 +38,7 @@ jobs:
           GEMINI_MODEL: gemini-3.5-flash-lite
           SIGNALDESK_LIVE_EVAL: '1'
           EVALUATION_SPLIT: ${{ inputs.split || 'development' }}
-          ALLOW_SEED: ${{ github.event_name == 'push' || inputs.allow_seed }}
+          ALLOW_SEED: ${{ inputs.allow_seed }}
         run: |
           if [ "$EVALUATION_SPLIT" = 'development' ]; then
             if [ "$ALLOW_SEED" = 'true' ]; then
