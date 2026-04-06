@@ -1,22 +1,24 @@
 {
   "node_tests": {
-    "passed": 21,
+    "passed": 23,
     "failed": 0
   },
   "python_tests": {
-    "passed": 5,
+    "passed": 7,
     "skipped": 1,
     "failed": 0,
     "acquisition_workflow_passed": 6
   },
-  "source_syntax_files": 21,
+  "source_syntax_files": 22,
   "strict_core_modules": 7,
   "sql_quality_checks": 8,
   "benchmark": {
     "development": 20,
     "held_out": 40,
     "freeze_check": "passed",
-    "real_model_status": "not_run"
+    "real_model_status": "gemini_3_5_access_verified_development_diagnostic",
+    "held_out_status": "not_run_pending_original_announcements",
+    "development_run": 39030337100
   },
   "source_corpus": {
     "events": 29,
@@ -32,6 +34,6 @@
   "browser_qa": "pending",
   "public_deployment": "not_published",
   "framework_typecheck": "passed_github_actions_39029463599",
-  "migration_generation": "passed_github_actions_39029463599",
+  "migration_generation": "generated_and_committed",
   "source_acquisition_run": 39029801385
 }
