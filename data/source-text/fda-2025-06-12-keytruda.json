@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "event_id": "fda-2025-06-12-keytruda",
+  "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-neoadjuvant-and-adjuvant-pembrolizumab-resectable-locally-advanced-head-and-neck",
+  "captured_at": "2026-10-17T12:40:00Z",
+  "capture_format": "browser-extracted-publisher-text",
+  "selection_notice": "Selected verbatim publisher excerpts; browser text normalization, not original HTTP HTML bytes.",
+  "paragraphs": [
+    "On June 12, 2025,",
+    "evaluated in KEYNOTE-689 (NCT03765918),",
+    "radiotherapy (RT) with or without cisplatin after surgery, and then as a single agent."
+  ],
+  "quoted_word_count": 22,
+  "field_checks": {
+    "approval_date": true,
+    "trial_ids": true,
+    "population_summary": true,
+    "qualifiers": true
+  },
+  "reviewer": "Codex source review (developer; not independent clinical adjudication)",
+  "review_notes": "The perioperative HNSCC indication requires PD-L1 CPS of at least one. Radiotherapy may include cisplatin after surgery. The short saved excerpts prove selected details; review used the longer browser-readable announcement, and the excerpts are not a complete regulatory record."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "cutoff": "2026-10-17",
   "period_start": "2024-01-01",
-  "mode": "browser-reviewed-seed",
-  "collection_notice": "Selected FDA announcements; not a complete approval history. Current trial snapshots are separate from event dates.",
+  "mode": "source-reviewed",
+  "collection_notice": "Selected US FDA announcements, developer-reviewed against publisher text; not a complete approval history. Current registry snapshots are separate from event dates. Publisher proof excerpts are selective; original HTTP HTML bytes were not acquired.",
   "products": [
     {
       "id": "keytruda",
@@ -155,10 +155,15 @@
       "jurisdiction": "United States",
       "evidence_ids": [
         "fda-2024-01-12-keytruda:p001",
-        "fda-2024-01-12-keytruda:p002"
+        "fda-2024-01-12-keytruda:p002",
+        "fda-2024-01-12-keytruda:publisher-proof"
       ],
       "original_verified": false,
-      "source_sha256": null
+      "source_sha256": null,
+      "source_reviewed": true,
+      "source_review_sha256": "568e40b53101fc7a2b64663628991d464ba3163e4f6b5c920b670f6893317925",
+      "source_review_path": "data/source-text/fda-2024-01-12-keytruda.json",
+      "source_reviewed_at": "2026-10-17T12:40:00Z"
     },
     {
       "id": "fda-2024-03-06-opdivo",
@@ -183,10 +188,15 @@
       "jurisdiction": "United States",
       "evidence_ids": [
         "fda-2024-03-06-opdivo:p001",
-        "fda-2024-03-06-opdivo:p002"
+        "fda-2024-03-06-opdivo:p002",
+        "fda-2024-03-06-opdivo:publisher-proof"
       ],
       "original_verified": false,
-      "source_sha256": null
+      "source_sha256": null,
+      "source_reviewed": true,
+      "source_review_sha256": "545591c72cf611686e0d4bdae61046d975444d1e355d197d94c13950129d6c9b",
+      "source_review_path": "data/source-text/fda-2024-03-06-opdivo.json",
+      "source_reviewed_at": "2026-10-17T12:40:00Z"
     },
     {
       "id": "fda-2024-06-14-imfinzi",
@@ -211,10 +221,15 @@
       "jurisdiction": "United States",
       "evidence_ids": [
         "fda-2024-06-14-imfinzi:p001",
-        "fda-2024-06-14-imfinzi:p002"
+        "fda-2024-06-14-imfinzi:p002",
+        "fda-2024-06-14-imfinzi:publisher-proof"
       ],
       "original_verified": false,
-      "source_sha256": null
+      "source_sha256": null,
+      "source_reviewed": true,
+      "source_review_sha256": "445a5a67575460a595f2809f1a5b0aed0ce136b799e62a3996a34776f80a18bc",
+      "source_review_path": "data/source-text/fda-2024-06-14-imfinzi.json",
+      "source_reviewed_at": "2026-10-17T12:40:00Z"
     },
     {
       "id": "fda-2024-06-17-keytruda",
@@ -239,10 +254,15 @@
       "jurisdiction": "United States",
       "evidence_ids": [
         "fda-2024-06-17-keytruda:p001",
-        "fda-2024-06-17-keytruda:p002"
+        "fda-2024-06-17-keytruda:p002",
+        "fda-2024-06-17-keytruda:publisher-proof"
       ],
       "original_verified": false,
-      "source_sha256": null
+      "source_sha256": null,
+      "source_reviewed": true,
+      "source_review_sha256": "b801a1b47c895febd0c152b584c30e96c7c817b10e67a3dd344de2dbb90e69ec",
+      "source_review_path": "data/source-text/fda-2024-06-17-keytruda.json",
+      "source_reviewed_at": "2026-10-17T12:40:00Z"
     },
     {
       "id": "fda-2024-08-15-imfinzi",
@@ -267,10 +287,15 @@
       "jurisdiction": "United States",
       "evidence_ids": [
         "fda-2024-08-15-imfinzi:p001",
-        "fda-2024-08-15-imfinzi:p002"
+        "fda-2024-08-15-imfinzi:p002",
+        "fda-2024-08-15-imfinzi:publisher-proof"
       ],
       "original_verified": false,
-      "source_sha256": null
+      "source_sha256": null,
+      "source_reviewed": true,
+      "source_review_sha256": "7752ad0816082c18bc091c8b5156f77382cdcbb1f4834d172e183429e73a09b9",
+      "source_review_path": "data/source-text/fda-2024-08-15-imfinzi.json",
+      "source_reviewed_at": "2026-10-17T12:40:00Z"
     },
     {
       "id": "fda-2024-09-12-tecentriq-hybreza",
@@ -295,10 +320,15 @@
       "jurisdiction": "United States",
       "evidence_ids": [
         "fda-2024-09-12-tecentriq-hybreza:p001",
-        "fda-2024-09-12-tecentriq-hybreza:p002"
+        "fda-2024-09-12-tecentriq-hybreza:p002",
+        "fda-2024-09-12-tecentriq-hybreza:publisher-proof"
       ],
       "original_verified": false,
-      "source_sha256": null
+      "source_sha256": null,
+      "source_reviewed": true,
+      "source_review_sha256": "bb96f8b7c02455a60467a4ab0191ac6a8d251b357eebc1fb2da156b7c78850b1",
+      "source_review_path": "data/source-text/fda-2024-09-12-tecentriq-hybreza.json",
+      "source_reviewed_at": "2026-10-17T12:40:00Z"
     },
     {
       "id": "fda-2024-09-17-keytruda",
@@ -323,10 +353,15 @@
       "jurisdiction": "United States",
       "evidence_ids": [
         "fda-2024-09-17-keytruda:p001",
-        "fda-2024-09-17-keytruda:p002"
+        "fda-2024-09-17-keytruda:p002",
+        "fda-2024-09-17-keytruda:publisher-proof"
       ],
       "original_verified": false,
-      "source_sha256": null
+      "source_sha256": null,
+      "source_reviewed": true,
+      "source_review_sha256": "87acad2e779027505b0644ffb8ca710154ba97821f3cbd6915adc030cfa7c2b5",
+      "source_review_path": "data/source-text/fda-2024-09-17-keytruda.json",
+      "source_reviewed_at": "2026-10-17T12:40:00Z"
     },
     {
       "id": "fda-2024-10-03-opdivo",
@@ -351,10 +386,15 @@
       "jurisdiction": "United States",
       "evidence_ids": [
         "fda-2024-10-03-opdivo:p001",
-        "fda-2024-10-03-opdivo:p002"
+        "fda-2024-10-03-opdivo:p002",
+        "fda-2024-10-03-opdivo:publisher-proof"
       ],
       "original_verified": false,
-      "source_sha256": null
+      "source_sha256": null,
+      "source_reviewed": true,
+      "source_review_sha256": "1b40462fedcc4aba7f8531763918344deb951b3106cc6fdf2f8005c54f4e1028",
+      "source_review_path": "data/source-text/fda-2024-10-03-opdivo.json",
+      "source_reviewed_at": "2026-10-17T12:40:00Z"
     },
     {
       "id": "fda-2024-12-04-imfinzi",
@@ -379,10 +419,15 @@
       "jurisdiction": "United States",
       "evidence_ids": [
         "fda-2024-12-04-imfinzi:p001",
-        "fda-2024-12-04-imfinzi:p002"
+        "fda-2024-12-04-imfinzi:p002",
+        "fda-2024-12-04-imfinzi:publisher-proof"
       ],
       "original_verified": false,
-      "source_sha256": null
+      "source_sha256": null,
+      "source_reviewed": true,
+      "source_review_sha256": "6d7fcfde77deb7c2698b70b6ed41bec8547483b70cf7f5c407baa881dfa3f2ac",
+      "source_review_path": "data/source-text/fda-2024-12-04-imfinzi.json",
+      "source_reviewed_at": "2026-10-17T12:40:00Z"
     },
     {
       "id": "fda-2024-12-27-opdivo-qvantig",
@@ -407,10 +452,15 @@
       "jurisdiction": "United States",
       "evidence_ids": [
         "fda-2024-12-27-opdivo-qvantig:p001",
-        "fda-2024-12-27-opdivo-qvantig:p002"
+        "fda-2024-12-27-opdivo-qvantig:p002",
+        "fda-2024-12-27-opdivo-qvantig:publisher-proof"
       ],
       "original_verified": false,
-      "source_sha256": null
+      "source_sha256": null,
+      "source_reviewed": true,
+      "source_review_sha256": "8c5b6940469aca411c0b982b5f850493d83c41b9313a900661307b505b9c93e5",
+      "source_review_path": "data/source-text/fda-2024-12-27-opdivo-qvantig.json",
+      "source_reviewed_at": "2026-10-17T12:40:00Z"
     },
     {
       "id": "fda-2025-03-19-keytruda",
@@ -435,10 +485,15 @@
       "jurisdiction": "United States",
       "evidence_ids": [
         "fda-2025-03-19-keytruda:p001",
-        "fda-2025-03-19-keytruda:p002"
+        "fda-2025-03-19-keytruda:p002",
+        "fda-2025-03-19-keytruda:publisher-proof"
       ],
       "original_verified": false,
-      "source_sha256": null
+      "source_sha256": null,
+      "source_reviewed": true,
+      "source_review_sha256": "3e483680fab98111f9badeceb73a81119b9353cbf3b931e619a7c4ebeb8ac7f6",
+      "source_review_path": "data/source-text/fda-2025-03-19-keytruda.json",
+      "source_reviewed_at": "2026-10-17T12:40:00Z"
     },
     {
       "id": "fda-2025-03-28-imfinzi",
@@ -463,10 +518,15 @@
       "jurisdiction": "United States",
       "evidence_ids": [
         "fda-2025-03-28-imfinzi:p001",
-        "fda-2025-03-28-imfinzi:p002"
+        "fda-2025-03-28-imfinzi:p002",
+        "fda-2025-03-28-imfinzi:publisher-proof"
       ],
       "original_verified": false,
-      "source_sha256": null
+      "source_sha256": null,
+      "source_reviewed": true,
+      "source_review_sha256": "e87dba8e2fb17d7ee1bcdae22cfa9159cb6c0f52474b76e65345a5a05e2378ed",
+      "source_review_path": "data/source-text/fda-2025-03-28-imfinzi.json",
+      "source_reviewed_at": "2026-10-17T12:40:00Z"
     },
     {
       "id": "fda-2025-04-08-opdivo",
@@ -491,10 +551,15 @@
       "jurisdiction": "United States",
       "evidence_ids": [
         "fda-2025-04-08-opdivo:p001",
-        "fda-2025-04-08-opdivo:p002"
+        "fda-2025-04-08-opdivo:p002",
+        "fda-2025-04-08-opdivo:publisher-proof"
       ],
       "original_verified": false,
-      "source_sha256": null
+      "source_sha256": null,
+      "source_reviewed": true,
+      "source_review_sha256": "c2ee09933ba035cefe2a6d0907206bbb340f6c56dc5ae3b733a5a642bfcc66b9",
+      "source_review_path": "data/source-text/fda-2025-04-08-opdivo.json",
+      "source_reviewed_at": "2026-10-17T12:40:00Z"
     },
     {
       "id": "fda-2025-04-11-opdivo",
@@ -519,10 +584,15 @@
       "jurisdiction": "United States",
       "evidence_ids": [
         "fda-2025-04-11-opdivo:p001",
-        "fda-2025-04-11-opdivo:p002"
+        "fda-2025-04-11-opdivo:p002",
+        "fda-2025-04-11-opdivo:publisher-proof"
       ],
       "original_verified": false,
-      "source_sha256": null
+      "source_sha256": null,
+      "source_reviewed": true,
+      "source_review_sha256": "69159231cf3f76ea5711d62225927a87369e95ffa4f8910d5b16e4f1048b89f5",
+      "source_review_path": "data/source-text/fda-2025-04-11-opdivo.json",
+      "source_reviewed_at": "2026-10-17T12:40:00Z"
     },
     {
       "id": "fda-2025-06-12-keytruda",
@@ -547,10 +617,15 @@
       "jurisdiction": "United States",
       "evidence_ids": [
         "fda-2025-06-12-keytruda:p001",
-        "fda-2025-06-12-keytruda:p002"
+        "fda-2025-06-12-keytruda:p002",
+        "fda-2025-06-12-keytruda:publisher-proof"
       ],
       "original_verified": false,
-      "source_sha256": null
+      "source_sha256": null,
+      "source_reviewed": true,
+      "source_review_sha256": "4b16b5516c2ee4b7b76f0c2fab3a95a7e3239f4e19ce5d617162578db8f9d1ab",
+      "source_review_path": "data/source-text/fda-2025-06-12-keytruda.json",
+      "source_reviewed_at": "2026-10-17T12:40:00Z"
     },
     {
       "id": "fda-2025-09-19-keytruda-qlex",
@@ -575,10 +650,15 @@
       "jurisdiction": "United States",
       "evidence_ids": [
         "fda-2025-09-19-keytruda-qlex:p001",
-        "fda-2025-09-19-keytruda-qlex:p002"
+        "fda-2025-09-19-keytruda-qlex:p002",
+        "fda-2025-09-19-keytruda-qlex:publisher-proof"
       ],
       "original_verified": false,
-      "source_sha256": null
+      "source_sha256": null,
+      "source_reviewed": true,
+      "source_review_sha256": "65faa09e6571e24023de90aa5335c691e992954267f557cfc0eedce9f4d02c14",
+      "source_review_path": "data/source-text/fda-2025-09-19-keytruda-qlex.json",
+      "source_reviewed_at": "2026-10-17T12:40:00Z"
     },
     {
       "id": "fda-2025-10-02-tecentriq",
@@ -604,10 +684,15 @@
       "jurisdiction": "United States",
       "evidence_ids": [
         "fda-2025-10-02-tecentriq:p001",
-        "fda-2025-10-02-tecentriq:p002"
+        "fda-2025-10-02-tecentriq:p002",
+        "fda-2025-10-02-tecentriq:publisher-proof"
       ],
       "original_verified": false,
-      "source_sha256": null
+      "source_sha256": null,
+      "source_reviewed": true,
+      "source_review_sha256": "9b9479451f47101870ba8071e3625217e96cf779b68f499a0c16d4272daad55d",
+      "source_review_path": "data/source-text/fda-2025-10-02-tecentriq.json",
+      "source_reviewed_at": "2026-10-17T12:40:00Z"
     },
     {
       "id": "fda-2025-10-08-libtayo",
@@ -632,10 +717,15 @@
       "jurisdiction": "United States",
       "evidence_ids": [
         "fda-2025-10-08-libtayo:p001",
-        "fda-2025-10-08-libtayo:p002"
+        "fda-2025-10-08-libtayo:p002",
+        "fda-2025-10-08-libtayo:publisher-proof"
       ],
       "original_verified": false,
-      "source_sha256": null
+      "source_sha256": null,
+      "source_reviewed": true,
+      "source_review_sha256": "cfe81752e9999d26d74371bc88014924f0af36a1cb31ca73c54e35473d48cc8d",
+      "source_review_path": "data/source-text/fda-2025-10-08-libtayo.json",
+      "source_reviewed_at": "2026-10-17T12:40:00Z"
     },
     {
       "id": "fda-2025-11-21-keytruda",
@@ -661,10 +751,15 @@
       "jurisdiction": "United States",
       "evidence_ids": [
         "fda-2025-11-21-keytruda:p001",
-        "fda-2025-11-21-keytruda:p002"
+        "fda-2025-11-21-keytruda:p002",
+        "fda-2025-11-21-keytruda:publisher-proof"
       ],
       "original_verified": false,
-      "source_sha256": null
+      "source_sha256": null,
+      "source_reviewed": true,
+      "source_review_sha256": "80d502cac7fbeb447e5e6014515f5f16c9df6636565e3fb5e73842fe07238ebd",
+      "source_review_path": "data/source-text/fda-2025-11-21-keytruda.json",
+      "source_reviewed_at": "2026-10-17T12:40:00Z"
     },
     {
       "id": "fda-2025-11-25-imfinzi",
@@ -689,10 +784,15 @@
       "jurisdiction": "United States",
       "evidence_ids": [
         "fda-2025-11-25-imfinzi:p001",
-        "fda-2025-11-25-imfinzi:p002"
+        "fda-2025-11-25-imfinzi:p002",
+        "fda-2025-11-25-imfinzi:publisher-proof"
       ],
       "original_verified": false,
-      "source_sha256": null
+      "source_sha256": null,
+      "source_reviewed": true,
+      "source_review_sha256": "99f5b7f87a9184f900caa29d7b93bd9177e8c3f10abceee346fa7349b12a55ea",
+      "source_review_path": "data/source-text/fda-2025-11-25-imfinzi.json",
+      "source_reviewed_at": "2026-10-17T12:40:00Z"
     },
     {
       "id": "fda-2026-02-10-keytruda",
@@ -718,10 +818,15 @@
       "jurisdiction": "United States",
       "evidence_ids": [
         "fda-2026-02-10-keytruda:p001",
-        "fda-2026-02-10-keytruda:p002"
+        "fda-2026-02-10-keytruda:p002",
+        "fda-2026-02-10-keytruda:publisher-proof"
       ],
       "original_verified": false,
-      "source_sha256": null
+      "source_sha256": null,
+      "source_reviewed": true,
+      "source_review_sha256": "6668d4992d0e1a1204c4ada09d3f93f30663069658fa8f40ec7b589f6c228b24",
+      "source_review_path": "data/source-text/fda-2026-02-10-keytruda.json",
+      "source_reviewed_at": "2026-10-17T12:40:00Z"
     },
     {
       "id": "fda-2026-03-20-opdivo",
@@ -746,10 +851,15 @@
       "jurisdiction": "United States",
       "evidence_ids": [
         "fda-2026-03-20-opdivo:p001",
-        "fda-2026-03-20-opdivo:p002"
+        "fda-2026-03-20-opdivo:p002",
+        "fda-2026-03-20-opdivo:publisher-proof"
       ],
       "original_verified": false,
-      "source_sha256": null
+      "source_sha256": null,
+      "source_reviewed": true,
+      "source_review_sha256": "b9f9ae67c51adc4504050ef5abf82c7481618e8dadfa2b9cebea0fc287a88993",
+      "source_review_path": "data/source-text/fda-2026-03-20-opdivo.json",
+      "source_reviewed_at": "2026-10-17T12:40:00Z"
     },
     {
       "id": "fda-2026-05-15-tecentriq",
@@ -775,10 +885,15 @@
       "jurisdiction": "United States",
       "evidence_ids": [
         "fda-2026-05-15-tecentriq:p001",
-        "fda-2026-05-15-tecentriq:p002"
+        "fda-2026-05-15-tecentriq:p002",
+        "fda-2026-05-15-tecentriq:publisher-proof"
       ],
       "original_verified": false,
-      "source_sha256": null
+      "source_sha256": null,
+      "source_reviewed": true,
+      "source_review_sha256": "a5f4ad9dd4c13ccdc389d86d420134c57bafcbeaecf0430fc2c83e0db249f0fd",
+      "source_review_path": "data/source-text/fda-2026-05-15-tecentriq.json",
+      "source_reviewed_at": "2026-10-17T12:40:00Z"
     },
     {
       "id": "fda-2026-05-28-imfinzi",
@@ -803,10 +918,15 @@
       "jurisdiction": "United States",
       "evidence_ids": [
         "fda-2026-05-28-imfinzi:p001",
-        "fda-2026-05-28-imfinzi:p002"
+        "fda-2026-05-28-imfinzi:p002",
+        "fda-2026-05-28-imfinzi:publisher-proof"
       ],
       "original_verified": false,
-      "source_sha256": null
+      "source_sha256": null,
+      "source_reviewed": true,
+      "source_review_sha256": "239b44dac53beaedc40b6a6d729fbee4193a059449f8ccd44ebcb2d490eee257",
+      "source_review_path": "data/source-text/fda-2026-05-28-imfinzi.json",
+      "source_reviewed_at": "2026-10-17T12:40:00Z"
     },
     {
       "id": "fda-2026-06-12-keytruda",
@@ -832,10 +952,15 @@
       "jurisdiction": "United States",
       "evidence_ids": [
         "fda-2026-06-12-keytruda:p001",
-        "fda-2026-06-12-keytruda:p002"
+        "fda-2026-06-12-keytruda:p002",
+        "fda-2026-06-12-keytruda:publisher-proof"
       ],
       "original_verified": false,
-      "source_sha256": null
+      "source_sha256": null,
+      "source_reviewed": true,
+      "source_review_sha256": "6edd8f11779cfe0e46ad878bd6b6e6909a62e29e1c9e6f2df0ffd7f10a34ffba",
+      "source_review_path": "data/source-text/fda-2026-06-12-keytruda.json",
+      "source_reviewed_at": "2026-10-17T12:40:00Z"
     },
     {
       "id": "fda-2026-06-24-keytruda",
@@ -863,10 +988,15 @@
       "jurisdiction": "United States",
       "evidence_ids": [
         "fda-2026-06-24-keytruda:p001",
-        "fda-2026-06-24-keytruda:p002"
+        "fda-2026-06-24-keytruda:p002",
+        "fda-2026-06-24-keytruda:publisher-proof"
       ],
       "original_verified": false,
-      "source_sha256": null
+      "source_sha256": null,
+      "source_reviewed": true,
+      "source_review_sha256": "5ac7649a4f69fc3f2948f928912d960b4d196b617cf6c3335b073fa073bf54c8",
+      "source_review_path": "data/source-text/fda-2026-06-24-keytruda.json",
+      "source_reviewed_at": "2026-10-17T12:40:00Z"
     },
     {
       "id": "fda-2026-07-10-keytruda",
@@ -892,10 +1022,15 @@
       "jurisdiction": "United States",
       "evidence_ids": [
         "fda-2026-07-10-keytruda:p001",
-        "fda-2026-07-10-keytruda:p002"
+        "fda-2026-07-10-keytruda:p002",
+        "fda-2026-07-10-keytruda:publisher-proof"
       ],
       "original_verified": false,
-      "source_sha256": null
+      "source_sha256": null,
+      "source_reviewed": true,
+      "source_review_sha256": "74003806d259ace90d68e32c17372011880981f5f58625fecec532ec7feb7449",
+      "source_review_path": "data/source-text/fda-2026-07-10-keytruda.json",
+      "source_reviewed_at": "2026-10-17T12:40:00Z"
     },
     {
       "id": "fda-2026-08-06-opdivo",
@@ -920,10 +1055,15 @@
       "jurisdiction": "United States",
       "evidence_ids": [
         "fda-2026-08-06-opdivo:p001",
-        "fda-2026-08-06-opdivo:p002"
+        "fda-2026-08-06-opdivo:p002",
+        "fda-2026-08-06-opdivo:publisher-proof"
       ],
       "original_verified": false,
-      "source_sha256": null
+      "source_sha256": null,
+      "source_reviewed": true,
+      "source_review_sha256": "5ec89a9bd9dedb17f18900145eaddc6a085d57b4fde8c003271029bea05239a4",
+      "source_review_path": "data/source-text/fda-2026-08-06-opdivo.json",
+      "source_reviewed_at": "2026-10-17T12:40:00Z"
     },
     {
       "id": "fda-2026-10-08-tecentriq",
@@ -949,10 +1089,15 @@
       "jurisdiction": "United States",
       "evidence_ids": [
         "fda-2026-10-08-tecentriq:p001",
-        "fda-2026-10-08-tecentriq:p002"
+        "fda-2026-10-08-tecentriq:p002",
+        "fda-2026-10-08-tecentriq:publisher-proof"
       ],
       "original_verified": false,
-      "source_sha256": null
+      "source_sha256": null,
+      "source_reviewed": true,
+      "source_review_sha256": "d0897abfbe12ad8a016a5ac2f3e97263b1af8835992f354df6018121ec20c810",
+      "source_review_path": "data/source-text/fda-2026-10-08-tecentriq.json",
+      "source_reviewed_at": "2026-10-17T12:40:00Z"
     }
   ],
   "evidence": [
@@ -1419,6 +1564,296 @@
       "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-atezolizumab-combination-chemotherapy-stage-iii-mismatch-repair-deficient-colon-cancer",
       "is_original_excerpt": false,
       "source_sha256": null
+    },
+    {
+      "id": "fda-2024-01-12-keytruda:publisher-proof",
+      "event_id": "fda-2024-01-12-keytruda",
+      "text": "On January 12, 2024, evaluated in KEYNOTE-A18 (NCT04221945), (Keytruda, Merck) with chemoradiotherapy (CRT) for patients with FIGO 2014 Stage III-IVA cervical cancer.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-chemoradiotherapy-figo-2014-stage-iii-iva-cervical-cancer",
+      "is_original_excerpt": true,
+      "source_sha256": "568e40b53101fc7a2b64663628991d464ba3163e4f6b5c920b670f6893317925",
+      "source_format": "selected-browser-publisher-text",
+      "excerpt_notice": "Selected literal publisher proof. Hash identifies the saved review capture, not HTTP HTML bytes."
+    },
+    {
+      "id": "fda-2024-03-06-opdivo:publisher-proof",
+      "event_id": "fda-2024-03-06-opdivo",
+      "text": "On March 6, 2024, evaluated in CHECKMATE-901 (NCT03036098), gemcitabine for first-line treatment of adult patients with unresectable or metastatic urothelial carcinoma (UC).",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-nivolumab-combination-cisplatin-and-gemcitabine-unresectable-or-metastatic-urothelial",
+      "is_original_excerpt": true,
+      "source_sha256": "545591c72cf611686e0d4bdae61046d975444d1e355d197d94c13950129d6c9b",
+      "source_format": "selected-browser-publisher-text",
+      "excerpt_notice": "Selected literal publisher proof. Hash identifies the saved review capture, not HTTP HTML bytes."
+    },
+    {
+      "id": "fda-2024-06-14-imfinzi:publisher-proof",
+      "event_id": "fda-2024-06-14-imfinzi",
+      "text": "On June 14, 2024, evaluated in DUO-E (NCT04269200), patients with primary advanced or recurrent endometrial cancer that is mismatch repair deficient (dMMR).",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-durvalumab-chemotherapy-mismatch-repair-deficient-primary-advanced-or-recurrent",
+      "is_original_excerpt": true,
+      "source_sha256": "445a5a67575460a595f2809f1a5b0aed0ce136b799e62a3996a34776f80a18bc",
+      "source_format": "selected-browser-publisher-text",
+      "excerpt_notice": "Selected literal publisher proof. Hash identifies the saved review capture, not HTTP HTML bytes."
+    },
+    {
+      "id": "fda-2024-06-17-keytruda:publisher-proof",
+      "event_id": "fda-2024-06-17-keytruda",
+      "text": "On June 17, 2024, evaluated in KEYNOTE-868/NRG-GY018 (NCT03914612), followed by single-agent pembrolizumab, for adult patients with primary advanced or recurrent endometrial carcinoma.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-chemotherapy-primary-advanced-or-recurrent-endometrial-carcinoma",
+      "is_original_excerpt": true,
+      "source_sha256": "b801a1b47c895febd0c152b584c30e96c7c817b10e67a3dd344de2dbb90e69ec",
+      "source_format": "selected-browser-publisher-text",
+      "excerpt_notice": "Selected literal publisher proof. Hash identifies the saved review capture, not HTTP HTML bytes."
+    },
+    {
+      "id": "fda-2024-08-15-imfinzi:publisher-proof",
+      "event_id": "fda-2024-08-15-imfinzi",
+      "text": "On August 15, 2024, evaluated in AEGEAN (NCT03800134), no known epidermal growth factor receptor (EGFR) mutations or anaplastic lymphoma kinase (ALK) rearrangements.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-neoadjuvantadjuvant-durvalumab-resectable-non-small-cell-lung-cancer",
+      "is_original_excerpt": true,
+      "source_sha256": "7752ad0816082c18bc091c8b5156f77382cdcbb1f4834d172e183429e73a09b9",
+      "source_format": "selected-browser-publisher-text",
+      "excerpt_notice": "Selected literal publisher proof. Hash identifies the saved review capture, not HTTP HTML bytes."
+    },
+    {
+      "id": "fda-2024-09-12-tecentriq-hybreza:publisher-proof",
+      "event_id": "fda-2024-09-12-tecentriq-hybreza",
+      "text": "On September 12, 2024, evaluated in IMscin001 (NCT03735121), and alveolar soft part sarcoma (ASPS). See the prescribing information for the specific indications.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-atezolizumab-and-hyaluronidase-tqjs-subcutaneous-injection",
+      "is_original_excerpt": true,
+      "source_sha256": "bb96f8b7c02455a60467a4ab0191ac6a8d251b357eebc1fb2da156b7c78850b1",
+      "source_format": "selected-browser-publisher-text",
+      "excerpt_notice": "Selected literal publisher proof. Hash identifies the saved review capture, not HTTP HTML bytes."
+    },
+    {
+      "id": "fda-2024-09-17-keytruda:publisher-proof",
+      "event_id": "fda-2024-09-17-keytruda",
+      "text": "On September 17, 2024, investigated in KEYNOTE-483 (NCT02784171), platinum chemotherapy as first-line treatment of unresectable advanced or metastatic malignant pleural mesothelioma (MPM).",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-chemotherapy-unresectable-advanced-or-metastatic-malignant-pleural",
+      "is_original_excerpt": true,
+      "source_sha256": "87acad2e779027505b0644ffb8ca710154ba97821f3cbd6915adc030cfa7c2b5",
+      "source_format": "selected-browser-publisher-text",
+      "excerpt_notice": "Selected literal publisher proof. Hash identifies the saved review capture, not HTTP HTML bytes."
+    },
+    {
+      "id": "fda-2024-10-03-opdivo:publisher-proof",
+      "event_id": "fda-2024-10-03-opdivo",
+      "text": "On October 3, 2024, evaluated in CHECKMATE-77T (NCT04025879), no known epidermal growth factor receptor (EGFR) mutations or anaplastic lymphoma kinase (ALK) rearrangements.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-neoadjuvantadjuvant-nivolumab-resectable-non-small-cell-lung-cancer",
+      "is_original_excerpt": true,
+      "source_sha256": "1b40462fedcc4aba7f8531763918344deb951b3106cc6fdf2f8005c54f4e1028",
+      "source_format": "selected-browser-publisher-text",
+      "excerpt_notice": "Selected literal publisher proof. Hash identifies the saved review capture, not HTTP HTML bytes."
+    },
+    {
+      "id": "fda-2024-12-04-imfinzi:publisher-proof",
+      "event_id": "fda-2024-12-04-imfinzi",
+      "text": "On December 4, 2024, evaluated in ADRIATIC (NCT03703297), cancer (LS-SCLC) whose disease has not progressed following concurrent platinum-based chemotherapy and radiation therapy.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-durvalumab-limited-stage-small-cell-lung-cancer",
+      "is_original_excerpt": true,
+      "source_sha256": "6d7fcfde77deb7c2698b70b6ed41bec8547483b70cf7f5c407baa881dfa3f2ac",
+      "source_format": "selected-browser-publisher-text",
+      "excerpt_notice": "Selected literal publisher proof. Hash identifies the saved review capture, not HTTP HTML bytes."
+    },
+    {
+      "id": "fda-2024-12-27-opdivo-qvantig:publisher-proof",
+      "event_id": "fda-2024-12-27-opdivo-qvantig",
+      "text": "On December 27, 2024, evaluated in CHECKMATE-67T (NCT04810078), of Opdivo plus Yervoy (ipilimumab) combination therapy, or in combination with chemotherapy or cabozantinib.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-nivolumab-and-hyaluronidase-nvhy-subcutaneous-injection",
+      "is_original_excerpt": true,
+      "source_sha256": "8c5b6940469aca411c0b982b5f850493d83c41b9313a900661307b505b9c93e5",
+      "source_format": "selected-browser-publisher-text",
+      "excerpt_notice": "Selected literal publisher proof. Hash identifies the saved review capture, not HTTP HTML bytes."
+    },
+    {
+      "id": "fda-2025-03-19-keytruda:publisher-proof",
+      "event_id": "fda-2025-03-19-keytruda",
+      "text": "On March 19, 2025, evaluated in KEYNOTE-811 (NCT03615326), metastatic HER2-positive gastric or gastroesophageal junction (GEJ) adenocarcinoma whose tumors express PD-L1 (CPS ≥1).",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-her2-positive-gastric-or-gastroesophageal-junction-adenocarcinoma",
+      "is_original_excerpt": true,
+      "source_sha256": "3e483680fab98111f9badeceb73a81119b9353cbf3b931e619a7c4ebeb8ac7f6",
+      "source_format": "selected-browser-publisher-text",
+      "excerpt_notice": "Selected literal publisher proof. Hash identifies the saved review capture, not HTTP HTML bytes."
+    },
+    {
+      "id": "fda-2025-03-28-imfinzi:publisher-proof",
+      "event_id": "fda-2025-03-28-imfinzi",
+      "text": "On March 28, 2025, evaluated in NIAGARA (NCT03732677), as adjuvant treatment following radical cystectomy, for adults with muscle invasive bladder cancer (MIBC).",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-durvalumab-muscle-invasive-bladder-cancer",
+      "is_original_excerpt": true,
+      "source_sha256": "e87dba8e2fb17d7ee1bcdae22cfa9159cb6c0f52474b76e65345a5a05e2378ed",
+      "source_format": "selected-browser-publisher-text",
+      "excerpt_notice": "Selected literal publisher proof. Hash identifies the saved review capture, not HTTP HTML bytes."
+    },
+    {
+      "id": "fda-2025-04-08-opdivo:publisher-proof",
+      "event_id": "fda-2025-04-08-opdivo",
+      "text": "On April 8, 2025, evaluated in CHECKMATE-8HW (NCT04008030), unresectable or metastatic microsatellite instability-high (MSI-H) or mismatch repair deficient (dMMR) colorectal cancer (CRC).",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-nivolumab-ipilimumab-unresectable-or-metastatic-msi-h-or-dmmr-colorectal-cancer",
+      "is_original_excerpt": true,
+      "source_sha256": "c2ee09933ba035cefe2a6d0907206bbb340f6c56dc5ae3b733a5a642bfcc66b9",
+      "source_format": "selected-browser-publisher-text",
+      "excerpt_notice": "Selected literal publisher proof. Hash identifies the saved review capture, not HTTP HTML bytes."
+    },
+    {
+      "id": "fda-2025-04-11-opdivo:publisher-proof",
+      "event_id": "fda-2025-04-11-opdivo",
+      "text": "On April 11, 2025, evaluated in CHECKMATE-9DW (NCT04039607), for the first-line treatment of adult patients with unresectable or metastatic hepatocellular carcinoma (HCC).",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-nivolumab-ipilimumab-unresectable-or-metastatic-hepatocellular-carcinoma",
+      "is_original_excerpt": true,
+      "source_sha256": "69159231cf3f76ea5711d62225927a87369e95ffa4f8910d5b16e4f1048b89f5",
+      "source_format": "selected-browser-publisher-text",
+      "excerpt_notice": "Selected literal publisher proof. Hash identifies the saved review capture, not HTTP HTML bytes."
+    },
+    {
+      "id": "fda-2025-06-12-keytruda:publisher-proof",
+      "event_id": "fda-2025-06-12-keytruda",
+      "text": "On June 12, 2025, evaluated in KEYNOTE-689 (NCT03765918), radiotherapy (RT) with or without cisplatin after surgery, and then as a single agent.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-neoadjuvant-and-adjuvant-pembrolizumab-resectable-locally-advanced-head-and-neck",
+      "is_original_excerpt": true,
+      "source_sha256": "4b16b5516c2ee4b7b76f0c2fab3a95a7e3239f4e19ce5d617162578db8f9d1ab",
+      "source_format": "selected-browser-publisher-text",
+      "excerpt_notice": "Selected literal publisher proof. Hash identifies the saved review capture, not HTTP HTML bytes."
+    },
+    {
+      "id": "fda-2025-09-19-keytruda-qlex:publisher-proof",
+      "event_id": "fda-2025-09-19-keytruda-qlex",
+      "text": "On September 19, 2025, in Study MK-3475A-D77 (NCT05722015), intravenous formulation of pembrolizumab (Keytruda, Merck). See the prescribing information for the specific indications.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-and-berahyaluronidase-alfa-pmph-subcutaneous-injection",
+      "is_original_excerpt": true,
+      "source_sha256": "65faa09e6571e24023de90aa5335c691e992954267f557cfc0eedce9f4d02c14",
+      "source_format": "selected-browser-publisher-text",
+      "excerpt_notice": "Selected literal publisher proof. Hash identifies the saved review capture, not HTTP HTML bytes."
+    },
+    {
+      "id": "fda-2025-10-02-tecentriq:publisher-proof",
+      "event_id": "fda-2025-10-02-tecentriq",
+      "text": "On October 2, 2025, evaluated in IMforte (NCT05091567), progressed after first-line induction therapy with atezolizumab or atezolizumab and hyaluronidase-tqjs, carboplatin, and etoposide.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-lurbinectedin-combination-atezolizumab-or-atezolizumab-and-hyaluronidase-tqjs-extensive",
+      "is_original_excerpt": true,
+      "source_sha256": "9b9479451f47101870ba8071e3625217e96cf779b68f499a0c16d4272daad55d",
+      "source_format": "selected-browser-publisher-text",
+      "excerpt_notice": "Selected literal publisher proof. Hash identifies the saved review capture, not HTTP HTML bytes."
+    },
+    {
+      "id": "fda-2025-10-08-libtayo:publisher-proof",
+      "event_id": "fda-2025-10-08-libtayo",
+      "text": "On October 8, 2025, evaluated in C-POST (NCT03969004), cutaneous squamous cell carcinoma (CSCC) at high risk of recurrence after surgery and radiation.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-cemiplimab-rwlc-adjuvant-treatment-cutaneous-squamous-cell-carcinoma",
+      "is_original_excerpt": true,
+      "source_sha256": "cfe81752e9999d26d74371bc88014924f0af36a1cb31ca73c54e35473d48cc8d",
+      "source_format": "selected-browser-publisher-text",
+      "excerpt_notice": "Selected literal publisher proof. Hash identifies the saved review capture, not HTTP HTML bytes."
+    },
+    {
+      "id": "fda-2025-11-21-keytruda:publisher-proof",
+      "event_id": "fda-2025-11-21-keytruda",
+      "text": "On November 21, 2025, evaluated in KEYNOTE-905/EV-303 (NCT03924895), cystectomy for adults with muscle invasive bladder cancer (MIBC) who are ineligible for cisplatin.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-enfortumab-vedotin-ejfv-muscle-invasive-bladder-cancer",
+      "is_original_excerpt": true,
+      "source_sha256": "80d502cac7fbeb447e5e6014515f5f16c9df6636565e3fb5e73842fe07238ebd",
+      "source_format": "selected-browser-publisher-text",
+      "excerpt_notice": "Selected literal publisher proof. Hash identifies the saved review capture, not HTTP HTML bytes."
+    },
+    {
+      "id": "fda-2025-11-25-imfinzi:publisher-proof",
+      "event_id": "fda-2025-11-25-imfinzi",
+      "text": "On November 25, 2025, evaluated in MATTERHORN (NCT04592913), by single agent durvalumab, for adults with resectable gastric or gastroesophageal junction adenocarcinoma (GC/GEJC).",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-durvalumab-resectable-gastric-or-gastroesophageal-junction-adenocarcinoma",
+      "is_original_excerpt": true,
+      "source_sha256": "99f5b7f87a9184f900caa29d7b93bd9177e8c3f10abceee346fa7349b12a55ea",
+      "source_format": "selected-browser-publisher-text",
+      "excerpt_notice": "Selected literal publisher proof. Hash identifies the saved review capture, not HTTP HTML bytes."
+    },
+    {
+      "id": "fda-2026-02-10-keytruda:publisher-proof",
+      "event_id": "fda-2026-02-10-keytruda",
+      "text": "On February 10, 2026, evaluated in KEYNOTE-B96 (NCT05116189), an FDA-authorized test, and who have received one or two prior systemic treatment regimens.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-paclitaxel-platinum-resistant-epithelial-ovarian-fallopian-tube-or",
+      "is_original_excerpt": true,
+      "source_sha256": "6668d4992d0e1a1204c4ada09d3f93f30663069658fa8f40ec7b589f6c228b24",
+      "source_format": "selected-browser-publisher-text",
+      "excerpt_notice": "Selected literal publisher proof. Hash identifies the saved review capture, not HTTP HTML bytes."
+    },
+    {
+      "id": "fda-2026-03-20-opdivo:publisher-proof",
+      "event_id": "fda-2026-03-20-opdivo",
+      "text": "On March 20, 2026, CA209-8UT (SWOG 1826; NCT03907488), approval to nivolumab for the following indications in adults with relapsed or refractory cHL:",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-nivolumab-chemotherapy-previously-untreated-hodgkin-lymphoma",
+      "is_original_excerpt": true,
+      "source_sha256": "b9f9ae67c51adc4504050ef5abf82c7481618e8dadfa2b9cebea0fc287a88993",
+      "source_format": "selected-browser-publisher-text",
+      "excerpt_notice": "Selected literal publisher proof. Hash identifies the saved review capture, not HTTP HTML bytes."
+    },
+    {
+      "id": "fda-2026-05-15-tecentriq:publisher-proof",
+      "event_id": "fda-2026-05-15-tecentriq",
+      "text": "On May 15, 2026, evaluated in IMvigor011 (NCT04660344), circulating tumor DNA molecular residual disease (ctDNA MRD) as determined by an FDA-authorized test.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-atezolizumab-adjuvant-treatment-muscle-invasive-bladder-cancer-patients-molecular",
+      "is_original_excerpt": true,
+      "source_sha256": "a5f4ad9dd4c13ccdc389d86d420134c57bafcbeaecf0430fc2c83e0db249f0fd",
+      "source_format": "selected-browser-publisher-text",
+      "excerpt_notice": "Selected literal publisher proof. Hash identifies the saved review capture, not HTTP HTML bytes."
+    },
+    {
+      "id": "fda-2026-05-28-imfinzi:publisher-proof",
+      "event_id": "fda-2026-05-28-imfinzi",
+      "text": "On May 28, 2026, the POTOMAC study (NCT03528694), for the treatment of adult patients with BCG-naïve, high-risk non-muscle invasive bladder cancer (NMIBC).",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-durvalumab-combination-bacillus-calmette-guerin-high-risk-non-muscle-invasive-bladder",
+      "is_original_excerpt": true,
+      "source_sha256": "239b44dac53beaedc40b6a6d729fbee4193a059449f8ccd44ebcb2d490eee257",
+      "source_format": "selected-browser-publisher-text",
+      "excerpt_notice": "Selected literal publisher proof. Hash identifies the saved review capture, not HTTP HTML bytes."
+    },
+    {
+      "id": "fda-2026-06-12-keytruda:publisher-proof",
+      "event_id": "fda-2026-06-12-keytruda",
+      "text": "On June 12, 2026, evaluated in LITESPARK-022 (NCT05239728), high risk of recurrence following nephrectomy, or following nephrectomy and resection of metastatic lesions.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-belzutifan-pembrolizumab-adjuvant-treatment-renal-cell-carcinoma",
+      "is_original_excerpt": true,
+      "source_sha256": "6edd8f11779cfe0e46ad878bd6b6e6909a62e29e1c9e6f2df0ffd7f10a34ffba",
+      "source_format": "selected-browser-publisher-text",
+      "excerpt_notice": "Selected literal publisher proof. Hash identifies the saved review capture, not HTTP HTML bytes."
+    },
+    {
+      "id": "fda-2026-06-24-keytruda:publisher-proof",
+      "event_id": "fda-2026-06-24-keytruda",
+      "text": "On June 24, 2026, evaluated in ASCENT-03 (NCT05382299), evaluated in ASCENT-04/KEYNOTE-D19 (NCT05382286), or metastatic TNBC who are not candidates for PD-1 or PD-L1 inhibitor-based therapy.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-sacituzumab-govitecan-hziy-monotherapy-and-combination-pembrolizumab-first-line",
+      "is_original_excerpt": true,
+      "source_sha256": "5ac7649a4f69fc3f2948f928912d960b4d196b617cf6c3335b073fa073bf54c8",
+      "source_format": "selected-browser-publisher-text",
+      "excerpt_notice": "Selected literal publisher proof. Hash identifies the saved review capture, not HTTP HTML bytes."
+    },
+    {
+      "id": "fda-2026-07-10-keytruda:publisher-proof",
+      "event_id": "fda-2026-07-10-keytruda",
+      "text": "On July 10, 2026, evaluated in KEYNOTE-B15/EV-304 (NCT04700124), cystectomy (surgery to remove the bladder) for adults with muscle invasive bladder cancer (MIBC).",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-or-pembrolizumab-and-berahyaluronidase-alfa-pmph-each-enfortumab-vedotin",
+      "is_original_excerpt": true,
+      "source_sha256": "74003806d259ace90d68e32c17372011880981f5f58625fecec532ec7feb7449",
+      "source_format": "selected-browser-publisher-text",
+      "excerpt_notice": "Selected literal publisher proof. Hash identifies the saved review capture, not HTTP HTML bytes."
+    },
+    {
+      "id": "fda-2026-08-06-opdivo:publisher-proof",
+      "event_id": "fda-2026-08-06-opdivo",
+      "text": "On August 6, 2026, evaluated in IGNYTE (NCT03767348), cutaneous melanoma who experienced disease progression on a programmed death receptor-1 (PD-1)-blocking antibody-based regimen.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-vusolimogene-oderparepvec-wtpg-combination-nivolumab-melanoma",
+      "is_original_excerpt": true,
+      "source_sha256": "5ec89a9bd9dedb17f18900145eaddc6a085d57b4fde8c003271029bea05239a4",
+      "source_format": "selected-browser-publisher-text",
+      "excerpt_notice": "Selected literal publisher proof. Hash identifies the saved review capture, not HTTP HTML bytes."
+    },
+    {
+      "id": "fda-2026-10-08-tecentriq:publisher-proof",
+      "event_id": "fda-2026-10-08-tecentriq",
+      "text": "On October 8, 2026, evaluated in ATOMIC/ML39057 (NCT02912559), years of age and older with Stage III mismatch repair deficient (dMMR) colon cancer.",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-atezolizumab-combination-chemotherapy-stage-iii-mismatch-repair-deficient-colon-cancer",
+      "is_original_excerpt": true,
+      "source_sha256": "d0897abfbe12ad8a016a5ac2f3e97263b1af8835992f354df6018121ec20c810",
+      "source_format": "selected-browser-publisher-text",
+      "excerpt_notice": "Selected literal publisher proof. Hash identifies the saved review capture, not HTTP HTML bytes."
     }
   ],
   "trials": [
@@ -2214,5 +2649,14 @@
     "expected": 64,
     "acquired": 35,
     "complete": false
+  },
+  "verification": {
+    "review_complete": true,
+    "reviewed_events": 29,
+    "registry_snapshots": 30,
+    "product_identities": 8,
+    "original_html_verified": 0,
+    "method": "Developer field review against official FDA publisher pages with selected literal proof excerpts",
+    "clinical_adjudication": "No independent clinical adjudication"
   }
 }

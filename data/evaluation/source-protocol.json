@@ -1,0 +1,12 @@
+{
+  "version": "source-verification-v2",
+  "frozen_tasks_and_labels": "Unchanged v1 seed and task hashes",
+  "accepted_corpus_modes": ["original-sources", "source-reviewed"],
+  "source_review_requirements": [
+    "All FDA approval dates, trial identifiers, population summaries and qualifiers reviewed against official publisher pages",
+    "Saved, dated selected publisher proof excerpts and SHA-256 capture receipts for every event",
+    "Acquired ClinicalTrials.gov snapshots and Drugs@FDA identity receipts",
+    "Original HTTP HTML acquisition status retained separately"
+  ],
+  "limitation": "Developer-authored references and developer source reviews; no independent clinical adjudication. Selected proof excerpts are not complete source documents or original HTTP HTML bytes."
+}

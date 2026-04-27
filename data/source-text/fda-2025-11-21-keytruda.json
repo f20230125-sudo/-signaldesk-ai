@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "event_id": "fda-2025-11-21-keytruda",
+  "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-enfortumab-vedotin-ejfv-muscle-invasive-bladder-cancer",
+  "captured_at": "2026-10-17T12:40:00Z",
+  "capture_format": "browser-extracted-publisher-text",
+  "selection_notice": "Selected verbatim publisher excerpts; browser text normalization, not original HTTP HTML bytes.",
+  "paragraphs": [
+    "On November 21, 2025,",
+    "evaluated in KEYNOTE-905/EV-303 (NCT03924895),",
+    "cystectomy for adults with muscle invasive bladder cancer (MIBC) who are ineligible for cisplatin."
+  ],
+  "quoted_word_count": 22,
+  "field_checks": {
+    "approval_date": true,
+    "trial_ids": true,
+    "population_summary": true,
+    "qualifiers": true
+  },
+  "reviewer": "Codex source review (developer; not independent clinical adjudication)",
+  "review_notes": "The indicated population is cisplatin-ineligible MIBC. Broader trial enrollment also accepted patients declining cisplatin; that distinction is preserved. The short saved excerpts prove selected details; review used the longer browser-readable announcement, and the excerpts are not a complete regulatory record."
+}

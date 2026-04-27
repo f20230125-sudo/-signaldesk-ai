@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "event_id": "fda-2024-01-12-keytruda",
+  "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-chemoradiotherapy-figo-2014-stage-iii-iva-cervical-cancer",
+  "captured_at": "2026-10-17T12:40:00Z",
+  "capture_format": "browser-extracted-publisher-text",
+  "selection_notice": "Selected verbatim publisher excerpts; browser text normalization, not original HTTP HTML bytes.",
+  "paragraphs": [
+    "On January 12, 2024,",
+    "evaluated in KEYNOTE-A18 (NCT04221945),",
+    "(Keytruda, Merck) with chemoradiotherapy (CRT) for patients with FIGO 2014 Stage III-IVA cervical cancer."
+  ],
+  "quoted_word_count": 22,
+  "field_checks": {
+    "approval_date": true,
+    "trial_ids": true,
+    "population_summary": true,
+    "qualifiers": true
+  },
+  "reviewer": "Codex source review (developer; not independent clinical adjudication)",
+  "review_notes": "Approval covers FIGO 2014 III-IVA cervical cancer. Broader enrollment in the supporting study does not extend the approved population. The short saved excerpts prove selected details; review used the longer browser-readable announcement, and the excerpts are not a complete regulatory record."
+}
