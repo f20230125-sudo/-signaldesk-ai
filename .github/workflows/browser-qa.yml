@@ -1,0 +1,54 @@
+name: Authorized production browser QA
+on:
+  push:
+    paths: ['.github/workflows/browser-qa.yml','tools/browser_qa.py']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm ci
+      - run: npm run build
+      - run: pip install playwright
+      - run: python -m playwright install --with-deps chromium
+      - name: Configure ephemeral local runtime secrets
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python - <<'PY'
+          import json,os,secrets
+          from pathlib import Path
+          values={'GEMINI_API_KEY':os.environ['GEMINI_API_KEY'],'GEMINI_MODEL':'gemini-3.5-flash-lite','SIGNALDESK_RATE_SALT':secrets.token_hex(32),'SIGNALDESK_VISITOR_REQUEST_LIMIT':'1'}
+          Path('dist/server/.dev.vars').write_text('\n'.join(key+'='+json.dumps(value) for key,value in values.items()))
+          PY
+      - run: npx wrangler d1 execute DB --local --config dist/server/wrangler.json --persist-to .wrangler/state --file drizzle/0000_dazzling_stature.sql
+      - name: Exercise production build and real model through Chromium
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python tools/browser_qa.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: signaldesk-production-browser-qa
+          path: |
+            reports/browser-qa/
+            reports/browser-qa.json
+      - name: Save QA receipt
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/browser-qa.json
+          git commit -m 'Record local production browser QA; public deployment remains separate'
+          git pull --rebase origin main
+          git push
