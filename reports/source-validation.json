@@ -4,5 +4,15 @@
   "original_events_verified": 0,
   "product_identities_verified": 8,
   "checks": [],
-  "mode": "browser-reviewed-seed"
+  "mode": "source-reviewed",
+  "publisher_field_reviews": {
+    "review_complete": true,
+    "reviewed_events": 29,
+    "registry_snapshots": 30,
+    "product_identities": 8,
+    "original_html_verified": 0,
+    "method": "Developer field review against official FDA publisher pages with selected literal proof excerpts",
+    "clinical_adjudication": "No independent clinical adjudication"
+  },
+  "evidence_passages": 87
 }

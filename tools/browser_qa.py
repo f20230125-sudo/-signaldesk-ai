@@ -11,7 +11,7 @@ from importlib.metadata import version
 from pathlib import Path
 from urllib.request import urlopen
 
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import sync_playwright,expect
 
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'reports/browser-qa';OUT.mkdir(parents=True,exist_ok=True)
@@ -52,18 +52,22 @@ def main():
             checked('Feed renders all 29 announcements',page.locator('tbody tr').count()==29)
             checked('Source-review label visible',page.get_by_text('Dated publisher field reviews',exact=True).is_visible())
             page.screenshot(path=OUT/'desktop.png',full_page=True)
-            page.get_by_label('Product',exact=True).select_option('keytruda-qlex')
-            checked('SC formulation filter remains distinct',page.locator('tbody tr').count()==1)
+            page.get_by_label('Product',exact=True).select_option('opdivo-qvantig')
+            expect(page.locator('tbody tr')).to_have_count(1)
+            checked('SC formulation filter remains distinct',True)
             page.get_by_role('button',name='Reset',exact=True).click()
             page.get_by_label('Approval year').select_option('2024')
-            checked('Approval-year filter uses event dates',page.locator('tbody tr').count()==10)
+            expect(page.locator('tbody tr')).to_have_count(10)
+            checked('Approval-year filter uses event dates',True)
             page.get_by_role('button',name='Reset',exact=True).click()
             opener=page.locator('.event-title').first;opener.click()
             checked('Evidence drawer and official link available',page.get_by_role('dialog').is_visible() and page.get_by_role('link',name='Read the FDA announcement').get_attribute('href').startswith('https://www.fda.gov/'))
             page.keyboard.press('Escape')
-            checked('Drawer restores keyboard focus',opener.evaluate('(element)=>document.activeElement===element'))
+            expect(opener).to_be_focused()
+            checked('Drawer restores keyboard focus',True)
             page.get_by_role('button',name='Evaluation',exact=True).click()
-            checked('Evaluation limitations visible',page.get_by_text('no independent clinical adjudication',exact=False).is_visible())
+            expect(page.get_by_text('no independent clinical adjudication',exact=False)).to_be_visible()
+            checked('Evaluation limitations visible',True)
             page.get_by_role('button',name='Event feed',exact=False).click()
             page.set_viewport_size({'width':390,'height':844})
             checked('Mobile page avoids horizontal viewport overflow',page.evaluate('document.documentElement.scrollWidth<=window.innerWidth'))
