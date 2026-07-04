@@ -10,7 +10,7 @@ on:
       allow_seed:
         description: Allow clearly labelled browser-reviewed summaries for development only
         type: boolean
-        default: true
+        default: false
 permissions:
   contents: write
 concurrency:

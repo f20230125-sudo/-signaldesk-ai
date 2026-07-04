@@ -12,7 +12,9 @@ The initial collection contains **29 real FDA announcements, eight product formu
 
 The collection contains **30 acquired ClinicalTrials.gov snapshots and eight product identities matched to Drugs@FDA records**. All 29 announcement dates, trial links, populations and qualifiers have dated developer field reviews against FDA publisher pages. Saved literal proof excerpts (at most 25 words per announcement) have SHA-256 receipts. These are selective browser-text captures, not full snapshots or original HTTP HTML downloads; original HTML acquisition remains blocked. The 58 paraphrase passages remain labelled separately, and no independent clinical adjudication is claimed.
 
-The agent, evidence tools, public-app source and frozen **20-development / 40-held-out** task set are implemented. **Gemini 3.5 Flash-Lite key access and structured generation are verified.** A first paired development run exposed grounding, formatting and retrieval issues; diagnostic results are retained in [evaluation attempts](reports/evaluation-attempts.json). The frozen 20-development / 40-held-out paired run is [in progress](https://github.com/f20230125-sudo/-signaldesk-ai/actions/runs/39033933026). Semantic audits follow the run; no validated accuracy result is claimed yet. Public deployment is not yet verified.
+The frozen **20-development / 40-held-out** paired evaluation is complete, including recorded **Codex-assisted source-support review of all 120 responses**. On the held-out set, the agent achieved **17/40 strict successes (42.5%)**, compared with **19/40 (47.5%)** for the same-model BM25 baseline. The prespecified **34/40 target was not met**. This is a research prototype; no superiority or production-readiness claim is made. Reviews are AI-assisted, with no independent human or clinical adjudication. See [benchmark results](docs/benchmark-results.md), [failure analysis](docs/failure-analysis.md), [case-level report](data/evaluation/report.json) and [review decisions](reports/semantic-audit-held-out.json). Earlier diagnostics remain in [evaluation attempts](reports/evaluation-attempts.json).
+
+**Public deployment remains unverified:** the Sites source server is unreachable from this workspace, and no alternative hosting connection is available. The allocated Site address is not advertised as a live demo.
 
 Verification: **24 agent/tool/scoring tests and nine Python checks passed**, with one original-source integrity check explicitly skipped in the source-only checkout. The full framework typecheck, database migration generation and web build passed in [GitHub Actions](https://github.com/f20230125-sudo/-signaldesk-ai/actions). The generated D1 migration is committed and exercised by the quota checks. All **18 production-build browser/API checks passed**, including real Gemini inference, export, mobile layout, keyboard focus, client key exclusion and quota persistence. Public deployment remains pending. See the [validation record](docs/validation.md).
 
@@ -52,7 +54,7 @@ node tools/check-freeze.mjs
 npm run dev
 ```
 
-To inspect the reviewed summaries before network acquisition, use `python tools/build_corpus.py --seed-only`. This mode is clearly labelled and is not accepted for the final held-out benchmark.
+The committed reviewed corpus runs without reacquiring sources. To validate its saved publisher reviews and rebuild the DuckDB warehouse, run `python tools/apply_source_reviews.py`. To inspect the summaries without acquired provenance, use `python tools/build_corpus.py --seed-only`. This mode is clearly labelled and is not accepted for the final held-out benchmark.
 
 Copy `.env.example` to an ignored local environment file and configure the free-tier model key. Production runtime values belong in secure hosting settings. No keys belong in Git, the browser bundle or a portfolio archive. See [runbook](docs/runbook.md).
 
