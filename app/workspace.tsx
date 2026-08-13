@@ -1,87 +1,147 @@
 'use client';
-import {useEffect,useMemo,useRef,useState} from 'react';
-import type {Corpus,Event,Investigation} from '@/lib/types';
-import {findEvents} from '@/lib/tools';
-import {exportBrief} from '@/lib/agent';
 
-type Evaluation={status:string;development_tasks:number;held_out_tasks:number;completed_agent_tasks:number;completed_baseline_tasks:number;summary:string;cases:unknown[];agent_success_rate?:number;baseline_success_rate?:number};
-const date=(s:string)=>new Date(s+'T00:00:00Z').toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric',timeZone:'UTC'});
-const starters=[
- 'Compare the 2024 Imfinzi and Opdivo approvals for resectable NSCLC. Include the approved populations, exclusions and supporting trial IDs. What cannot be concluded from separate trials?',
- 'Which subcutaneous formulations appear in this collection? Keep KEYTRUDA QLEX, OPDIVO QVANTIG and TECENTRIQ HYBREZA distinct from the intravenous products.',
- 'Which KEYTRUDA developments are documented during 2025? Show the event dates, populations and FDA-cited trial identifiers.'
-];
-function Icon({name,size=18}:{name:string;size?:number}){
- const paths:Record<string,React.ReactNode>={
-  arrow:<><path d="M5 12h14M13 6l6 6-6 6"/></>,external:<><path d="M14 3h7v7M10 14 21 3M21 14v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h6"/></>,
-  search:<><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></>,layers:<><path d="m12 3 10 6-10 6L2 9l10-6ZM2 14l10 6 10-6M2 19l10 6 10-6"/></>,
-  close:<path d="m6 6 12 12M18 6 6 18"/>,download:<><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></>,check:<path d="m5 12 4 4L19 6"/>,
-  signal:<><path d="M3 19v-3m6 3V9m6 10V4m6 15v-8"/></>,spark:<><path d="m12 2 2.8 7.2L22 12l-7.2 2.8L12 22l-2.8-7.2L2 12l7.2-2.8L12 2Z"/></>,
-  book:<><path d="M3 4h7l2 2 2-2h7v16h-7l-2 2-2-2H3V4Zm9 2v16"/></>,clock:<><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></>
- };
- return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.55" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{paths[name]??paths.signal}</svg>;
+import { useEffect, useMemo, useRef, useState } from 'react';
+import type { Corpus, Event, Investigation } from '@/lib/types';
+import { findEvents } from '@/lib/tools';
+import { exportBrief } from '@/lib/agent';
+import { EventFeed } from './ui/event-feed';
+import { EvidenceDrawer } from './ui/evidence-drawer';
+import { InvestigationView } from './ui/investigation-view';
+import { EvaluationView, type Evaluation } from './ui/evaluation-view';
+import { formatDate, Icon, initialView, repository, starters, viewLabels, type FeedState, type View } from './ui/shared';
+
+function readView(corpus: Corpus): FeedState {
+  const params = new URLSearchParams(window.location.search);
+  const tab = params.get('view');
+  const product = params.get('product') ?? 'all';
+  const year = params.get('year') ?? 'all';
+  return {
+    tab: tab === 'investigate' || tab === 'evaluation' ? tab : 'feed',
+    product: corpus.products.some(item => item.id === product) ? product : 'all',
+    year: corpus.events.some(item => item.approval_date.startsWith(year + '-')) ? year : 'all',
+    search: (params.get('search') ?? '').slice(0, 120),
+    sort: params.get('sort') === 'oldest' ? 'oldest' : 'latest',
+  };
 }
-export default function Workspace({corpus,evaluation}:{corpus:Corpus;evaluation:Evaluation}){
- const [tab,setTab]=useState<'feed'|'investigate'|'evaluation'>('feed');const [product,setProduct]=useState('all');
- const [year,setYear]=useState('all');const [search,setSearch]=useState('');const [selected,setSelected]=useState<Event|null>(null);
- const [question,setQuestion]=useState(starters[0]);const [busy,setBusy]=useState(false);const [result,setResult]=useState<Investigation|null>(null);const [error,setError]=useState('');
- const opener=useRef<HTMLElement|null>(null);
- const inspect=(event:Event)=>{opener.current=document.activeElement as HTMLElement;setSelected(event);};
- useEffect(()=>{if(!selected&&opener.current){opener.current.focus();opener.current=null;}},[selected]);
- const events=useMemo(()=>findEvents(corpus,{...(product!=='all'?{products:[product]}:{}),...(year!=='all'?{start:year+'-01-01',end:year+'-12-31'}:{}),...(search.trim()?{condition:search.trim()}:{})}),[corpus,product,year,search]);
- const original=corpus.events.filter(e=>e.original_verified).length;
- const reviewed=corpus.events.filter(e=>e.source_reviewed||e.original_verified).length;
- const openInvestigation=(q:string)=>{setQuestion(q);setTab('investigate');setError('');};
- async function run(){setBusy(true);setError('');setResult(null);
-  try{const response=await fetch('/api/investigate',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({question,filters:{...(product!=='all'?{products:[product]}:{})}}),signal:AbortSignal.timeout(65000)});
-   const data:unknown=await response.json();
-   if(!response.ok){const message=data&&typeof data==='object'&&'error' in data&&typeof data.error==='string'?data.error:'Live investigations are currently unavailable.';throw new Error(message);}
-   if(!data||typeof data!=='object'||!('facts' in data)||!Array.isArray(data.facts)||!('status' in data))throw new Error('The investigation returned an invalid response.');
-   setResult(data as Investigation);
-  }catch(e){setError(e instanceof Error?e.message:'The investigation could not complete.');}finally{setBusy(false);}
- }
- function download(){if(!result)return;const url=URL.createObjectURL(new Blob([exportBrief(result)],{type:'text/markdown;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='SignalDesk-Brief.md';a.click();URL.revokeObjectURL(url);}
- return <div className="shell">
-  <aside className="sidebar" inert={selected ? true : undefined}>
-   <a href="/" className="brand" aria-label="SignalDesk home"><span className="brand-mark"><Icon name="signal" size={22}/></span><span>SignalDesk<span className="brand-ai">AI</span></span></a>
-   <div className="sidebar-label">INTELLIGENCE WORKSPACE</div>
-   <nav aria-label="Main navigation">{([['feed','signal','Event feed'],['investigate','spark','Investigate'],['evaluation','check','Evaluation']] as const).map(([id,icon,label])=><button key={id} className={'nav-button '+(tab===id?'active':'')} onClick={()=>{setTab(id);setSelected(null);}} aria-current={tab===id?'page':undefined}><Icon name={icon}/>{label}{id==='feed'&&<span className="nav-count">{corpus.events.length}</span>}</button>)}</nav>
-   <div className="watchlist"><div className="sidebar-label">CHECKPOINT WATCHLIST</div>{['keytruda','opdivo','imfinzi','tecentriq','libtayo'].map(id=>{const p=corpus.products.find(p=>p.id===id)!;return <button key={id} onClick={()=>{setProduct(id);setTab('feed');}} className={'watch-item '+(product===id?'chosen':'')}><span className={'product-dot '+id}/><span>{p.name}<small>{p.company}</small></span><span className="watch-count">{corpus.events.filter(e=>e.product_ids.includes(id)).length}</span></button>;})}<button className="reset-watch" onClick={()=>setProduct('all')}>View all formulations <Icon name="arrow" size={14}/></button></div>
-   <div className="sidebar-bottom"><span className="live-dot"/> PUBLIC EVIDENCE · US<div>Independent research project<br/>Snapshot {date(corpus.cutoff)}</div></div>
-  </aside>
-  <div className="main-shell" inert={selected ? true : undefined}>
-   <header className="topbar"><div className="breadcrumb">Workspace <span>/</span> <strong>{tab==='feed'?'Event feed':tab==='investigate'?'Investigation':'Evaluation'}</strong></div><div className="topbar-right"><span className="jurisdiction">US oncology</span><span className="snapshot"><Icon name="clock" size={14}/> {date(corpus.cutoff)}</span></div></header>
-   <main id="main-content">
-    {tab==='feed'&&<>
-     <section className="intro"><div><div className="eyebrow"><span/> ONCOLOGY COMPETITIVE INTELLIGENCE</div><h1>Regulatory signals.<br/><em>Connected to evidence.</em></h1><p>Track documented developments, inspect the supporting trials,<br className="desktop-break"/> and turn a question into a source-backed brief.</p></div><button className="primary hero-action" onClick={()=>openInvestigation(starters[0])}>Start an investigation <Icon name="arrow"/></button></section>
-     <section className="stats" aria-label="Corpus coverage"><div><span>Documented events</span><strong>{corpus.events.length.toString().padStart(2,'0')}<Icon name="signal"/></strong><small>Selected FDA announcements</small></div><div><span>Product formulations</span><strong>{corpus.products.length.toString().padStart(2,'0')}<Icon name="layers"/></strong><small>Distinct identities preserved</small></div><div><span>FDA-cited trials</span><strong>{corpus.trials.length.toString().padStart(2,'0')}<Icon name="book"/></strong><small>{corpus.trials.filter(t=>t.available).length} acquired registry snapshots</small></div><div><span>Announcement fields reviewed</span><strong>{reviewed.toString().padStart(2,'0')}<Icon name="check"/></strong><small>{reviewed===corpus.events.length?'Dated publisher field reviews':`${original} original HTML records verified`}</small></div></section>
-     {corpus.mode!=='original-sources'&&<div className="source-notice"><Icon name="book"/><span><strong>Developer-reviewed FDA evidence.</strong> Approval fields were checked against publisher pages with selected proof excerpts. Full original HTML was not acquired; this is not independent clinical adjudication. Registry records are separately acquired snapshots.</span></div>}
-     <section className="event-section"><div className="section-heading"><div><h2>Latest developments <span>{events.length}</span></h2><p>Approval dates come from the announcement body.</p></div><span className="collection-tag">FDA ANNOUNCEMENTS</span></div>
-      <div className="filters"><label className="search-field"><Icon name="search"/><input aria-label="Search event title or population" placeholder="Search indication or keyword…" value={search} maxLength={120} onChange={e=>setSearch(e.target.value)}/></label><label><span className="sr-only">Product</span><select aria-label="Product" value={product} onChange={e=>setProduct(e.target.value)}><option value="all">All products</option>{corpus.products.map(p=><option key={p.id} value={p.id}>{p.name}</option>)}</select></label><label><span className="sr-only">Approval year</span><select aria-label="Approval year" value={year} onChange={e=>setYear(e.target.value)}><option value="all">All years</option>{['2026','2025','2024'].map(y=><option key={y}>{y}</option>)}</select></label>{(product!=='all'||year!=='all'||search)&&<button className="text-button" onClick={()=>{setProduct('all');setYear('all');setSearch('');}}>Reset</button>}</div>
-      <div className="table-wrap"><table><thead><tr><th>APPROVAL DATE</th><th>DEVELOPMENT</th><th>PRODUCT</th><th>EVIDENCE</th><th><span className="sr-only">Inspect event</span></th></tr></thead><tbody>{events.map(e=><tr key={e.id}><td className="date-cell">{date(e.approval_date)}</td><td><button className="event-title" onClick={()=>inspect(e)}>{e.title}</button><div className="event-subtitle">{e.trial_names.join(' · ')}</div></td><td><div className="product-pills">{e.product_ids.map(id=><span key={id} className={'pill '+id.split('-')[0]}>{corpus.products.find(p=>p.id===id)?.name??id}</span>)}</div></td><td><span className="evidence-count"><Icon name="book" size={14}/>{e.trial_ids.length} {e.trial_ids.length===1?'trial':'trials'}</span><small className="status-note">{e.original_verified?'Original checked':e.source_reviewed?'Field review recorded':'Browser reviewed'}</small></td><td><button className="row-arrow" aria-label={'Inspect '+e.title} onClick={()=>inspect(e)}><Icon name="arrow"/></button></td></tr>)}</tbody></table>{!events.length&&<div className="empty"><Icon name="search" size={30}/><h3>No events match these filters</h3><p>This selected collection is not a complete approval history.</p></div>}</div>
-     </section>
-     <section className="bottom-note"><Icon name="book" size={17}/><p>Every development links to an official FDA source. Trial records are separate snapshots; absence from this collection does not establish absence of an approval.</p><button onClick={()=>setTab('evaluation')}>Method & evaluation <Icon name="arrow" size={14}/></button></section>
-    </>}
-    {tab==='investigate'&&<section className="investigation"><div className="eyebrow"><span/> EVIDENCE-LED RESEARCH</div><h1>Ask a better<br/><em>competitive question.</em></h1><p className="intro-copy">The agent resolves products, investigates documented events and checks supporting evidence before assembling a brief.</p><div className="question-box"><label htmlFor="question">YOUR INVESTIGATION</label><textarea id="question" maxLength={1600} rows={5} value={question} onChange={e=>setQuestion(e.target.value)}/><div className="question-footer"><span>{product==='all'?'All watchlist formulations':corpus.products.find(p=>p.id===product)?.name} · US sources · {date(corpus.cutoff)}</span><button className="primary" disabled={busy||question.trim().length<8} onClick={run}>{busy?<><span className="spinner"/> Investigating…</>:<>Run investigation <Icon name="arrow"/></>}</button></div></div><div className="starter-questions">{starters.map((q,i)=><button key={q} onClick={()=>{setQuestion(q);setProduct('all');}}><span>0{i+1}</span>{['Compare approval populations','Distinguish SC formulations','Review KEYTRUDA events'][i]}<Icon name="arrow" size={15}/></button>)}</div>
-     {busy&&<div className="loading" role="status"><span className="spinner"/> Checking the selected evidence. A bounded investigation may take up to a minute.</div>}
-     {error&&<div className="error" role="alert"><strong>Investigation unavailable</strong><p>{error}</p><p>You can continue exploring the source records in the event feed.</p></div>}
-     {result&&<article className="brief"><div className="brief-header"><div><div className="eyebrow">{result.status.toUpperCase()} · {result.mode.toUpperCase()} INVESTIGATION</div><h2>{result.title}</h2></div><button className="secondary" onClick={download}><Icon name="download"/> Export brief</button></div><div className="brief-meta">{result.model} · {(result.usage.latency_ms/1000).toFixed(1)} seconds · {result.usage.model_calls} model calls · {result.cutoff} corpus cutoff</div>
-       <h3>Documented facts</h3>{result.products.map(p=><div className="product-fact" key={p.id}><strong>{p.name}</strong><span>{p.ingredient}</span><span>{p.route}</span></div>)}{result.facts.map(e=><div className="fact" key={e.id}><span className="fact-date">{date(e.approval_date)}</span><h4>{e.title}</h4><p>{e.population_summary}</p>{e.evidence_notes.map(n=><p className="qualifier" key={n}>{n}</p>)}<a href={e.source_url} target="_blank" rel="noreferrer">FDA announcement <Icon name="external" size={12}/></a></div>)}{!result.facts.length&&!result.products.length&&<p>No supported factual answer was selected.</p>}
-       {!!result.trials.length&&<><h3>Supporting trial records</h3>{result.trials.map(t=><div className="trial-fact" key={t.id}><a href={t.source_url} target="_blank" rel="noreferrer">{t.id} <Icon name="external" size={12}/></a><span>{t.available?`${t.status} · acquired ${t.snapshot_at?.slice(0,10)}`:'FDA-cited identifier; registry snapshot unavailable'}</span></div>)}</>}
-       {!!result.commercial_relevance.length&&<><h3>Possible commercial relevance <span className="hypothesis">For review</span></h3><ul>{result.commercial_relevance.map(x=><li key={x}>{x}</li>)}</ul></>}{!!result.follow_up_questions.length&&<><h3>Follow-up questions</h3><ul>{result.follow_up_questions.map(x=><li key={x}>{x}</li>)}</ul></>}
-       <div className="limitations"><h3>What the evidence does not establish</h3><ul>{result.limitations.map(x=><li key={x}>{x}</li>)}</ul></div>
-       <details><summary>Inspect supporting passages ({result.evidence.length})</summary>{result.evidence.map(e=><div className="source-passage" key={e.id}><small>{e.is_original_excerpt?(e.source_format==='selected-browser-publisher-text'?'SELECTED PUBLISHER PROOF':'ORIGINAL SOURCE EXCERPT'):'BROWSER-REVIEWED PARAPHRASE'} · {e.id}</small><p>{e.text}</p><a href={e.source_url} target="_blank" rel="noreferrer">Open source <Icon name="external" size={12}/></a></div>)}</details>
-       <details><summary>Tool activity ({result.trace.length} calls)</summary>{result.trace.map((t,i)=><div className="trace" key={i}><strong>{i+1}. {t.name}</strong><code>{JSON.stringify(t.arguments)}</code>{t.error&&<span>{t.error}</span>}</div>)}</details>
-      </article>}
-    </section>}
-    {tab==='evaluation'&&<section className="evaluation"><div className="eyebrow"><span/> TRANSPARENT EVALUATION</div><h1>Measured performance.<br/><em>Visible limitations.</em></h1><p className="intro-copy">A frozen, developer-authored task set compares the tool-using agent with a retrieval-and-response baseline on the same evidence corpus and model.</p><div className="evaluation-banner"><span className="tag">{evaluation.status==='not_run'?'NOT RUN':evaluation.status.toUpperCase()}</span><p>{evaluation.summary}</p></div><div className="stats evaluation-stats"><div><span>Development tasks</span><strong>{evaluation.development_tasks}</strong><small>Prompt and tool development</small></div><div><span>Held-out tasks</span><strong>{evaluation.held_out_tasks}</strong><small>Grouped by related event / trial</small></div><div><span>Agent completed</span><strong>{evaluation.completed_agent_tasks}</strong><small>Of {evaluation.held_out_tasks} planned tasks</small></div><div><span>Baseline completed</span><strong>{evaluation.completed_baseline_tasks}</strong><small>Same corpus and model</small></div></div>
-      {evaluation.agent_success_rate!==undefined&&<div className="score-row"><div>Agent strict task success<strong>{(evaluation.agent_success_rate*100).toFixed(1)}%</strong></div><div>Baseline strict task success<strong>{((evaluation.baseline_success_rate??0)*100).toFixed(1)}%</strong></div></div>}
-      <div className="method-grid"><section><h2>What gets checked</h2><ul><li>Correct event selection, date filters and complete result sets.</li><li>Product and formulation identity.</li><li>Links between regulatory events and cited trials.</li><li>Supporting citations, refusal behavior and unsupported conclusions.</li><li>Latency, model calls and token usage for every run.</li></ul></section><section><h2>What the scores mean</h2><p>Reference labels are developer-authored and checked against linked sources. This is a portfolio task set with no independent clinical adjudication. Quote presence and answer correctness are separate checks.</p><p>Results from incomplete runs will be labelled as partial. No general clinical accuracy or commercial impact claim is made.</p></section><section><h2>Source boundaries</h2><p>FDA announcement dates refer to US regulatory events. The collection is selective, and trial snapshots reflect their retrieval date. Separate trial results cannot establish a direct treatment comparison.</p></section><section><h2>Reproduce the work</h2><p>The repository contains source acquisition, checksums, SQL warehouse construction, agent tools and the evaluation runner. Live model runs are opt-in; ordinary tests use isolated fixtures.</p><a href="https://github.com/f20230125-sudo/-signaldesk-ai" target="_blank" rel="noreferrer">View repository <Icon name="external" size={13}/></a></section></div>
-      {evaluation.cases.length>0&&<details><summary>Case-level evaluation results ({evaluation.cases.length})</summary><pre className="case-results">{JSON.stringify(evaluation.cases,null,2)}</pre></details>}
-    </section>}
-    <footer>SignalDesk AI <span>Independent portfolio work · Public US evidence · No MSD affiliation</span></footer>
-   </main>
-  </div>
-  {selected&&<div className="drawer-overlay" onClick={()=>setSelected(null)}><aside className="drawer" role="dialog" aria-modal="true" aria-labelledby="event-detail-title" onClick={e=>e.stopPropagation()} onKeyDown={e=>{if(e.key==='Escape')setSelected(null);if(e.key==='Tab'){const nodes=e.currentTarget.querySelectorAll<HTMLElement>('a[href],button:not([disabled]),[tabindex="0"]');const first=nodes[0],last=nodes[nodes.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last?.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first?.focus();}}}} tabIndex={-1}><div className="drawer-top"><span className="eyebrow">EVENT EVIDENCE</span><button className="icon-button" aria-label="Close event details" autoFocus onClick={()=>setSelected(null)}><Icon name="close"/></button></div><span className="fact-date">{date(selected.approval_date)} · UNITED STATES</span><h2 id="event-detail-title">{selected.title}</h2><div className="product-pills">{selected.product_ids.map(id=><span className={'pill '+id.split('-')[0]} key={id}>{corpus.products.find(p=>p.id===id)?.name}</span>)}</div><h3>Approved population</h3><p>{selected.population_summary}</p><h3>Evidence notes</h3><ul>{selected.evidence_notes.map(n=><li key={n}>{n}</li>)}</ul><h3>FDA-cited trial identifiers</h3>{selected.trial_ids.map(id=><div className="trial-link" key={id}><a href={`https://clinicaltrials.gov/study/${id}`} target="_blank" rel="noreferrer">{id} <Icon name="external" size={13}/></a><small>{corpus.trials.find(t=>t.id===id)?.available?'Registry snapshot acquired':'Registry snapshot not yet acquired'}</small></div>)}<a className="source-link" href={selected.source_url} target="_blank" rel="noreferrer">Read the FDA announcement <Icon name="external"/></a><button className="primary" onClick={()=>{openInvestigation(`Investigate the FDA announcement "${selected.title}" dated ${selected.approval_date}. Include its approved population, important qualifiers and supporting trial identifiers.`);setProduct('all');setSelected(null);}}>Investigate this event <Icon name="arrow"/></button><p className="drawer-disclaimer">{selected.original_verified?'Original announcement bytes were acquired and checked.':selected.source_reviewed?'Approval fields were developer-reviewed against FDA publisher text. Saved proof excerpts are selective; full HTML was not acquired.':'This is a browser-reviewed summary. Open the FDA announcement to inspect the original source.'}</p></aside></div>}
- </div>;
+
+function viewUrl(view: FeedState) {
+  const params = new URLSearchParams();
+  if (view.tab !== 'feed') params.set('view', view.tab);
+  if (view.product !== 'all') params.set('product', view.product);
+  if (view.year !== 'all') params.set('year', view.year);
+  if (view.search) params.set('search', view.search);
+  if (view.sort !== 'latest') params.set('sort', view.sort);
+  return window.location.pathname + (params.size ? '?' + params.toString() : '');
+}
+
+export default function Workspace({ corpus, evaluation }: { corpus: Corpus; evaluation: Evaluation }) {
+  const [view, setView] = useState<FeedState>(initialView);
+  const [selected, setSelected] = useState<Event | null>(null);
+  const [question, setQuestion] = useState(starters[0].question);
+  const [busy, setBusy] = useState(false);
+  const [result, setResult] = useState<Investigation | null>(null);
+  const [resultQuestion, setResultQuestion] = useState('');
+  const [error, setError] = useState('');
+  const [copyStatus, setCopyStatus] = useState('');
+  const main = useRef<HTMLElement>(null);
+  const previousTab = useRef<View>('feed');
+  const copyTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const inFlight = useRef(false);
+
+  useEffect(() => {
+    const restore = () => { setView(readView(corpus)); setSelected(null); };
+    restore();
+    window.addEventListener('popstate', restore);
+    return () => window.removeEventListener('popstate', restore);
+  }, [corpus]);
+  useEffect(() => {
+    document.title = viewLabels[view.tab] + ' · SignalDesk AI';
+    if (previousTab.current !== view.tab) {
+      main.current?.querySelector<HTMLElement>('h1')?.focus({ preventScroll: true });
+      window.scrollTo({ top: 0 });
+      previousTab.current = view.tab;
+    }
+  }, [view.tab]);
+  useEffect(() => () => { if (copyTimer.current) clearTimeout(copyTimer.current); }, []);
+
+  function changeView(patch: Partial<FeedState>, push = false) {
+    const next = { ...view, ...patch };
+    const url = viewUrl(next);
+    if (url !== window.location.pathname + window.location.search) {
+      if (push) window.history.pushState(null, '', url);
+      else window.history.replaceState(null, '', url);
+    }
+    setView(next);
+  }
+  function navigate(tab: View) { changeView({ tab }, true); setSelected(null); }
+  function investigate(event?: Event) {
+    if (event && !busy) {
+      setQuestion(`Investigate the FDA announcement "${event.title}" dated ${event.approval_date}. Include its approved population, important qualifiers and supporting trial identifiers.`);
+      changeView({ tab: 'investigate', product: 'all' }, true);
+    } else navigate('investigate');
+    setSelected(null);
+    if (!busy) setError('');
+  }
+
+  const events = useMemo(() => {
+    const found = findEvents(corpus, {
+      ...(view.product !== 'all' ? { products: [view.product] } : {}),
+      ...(view.year !== 'all' ? { start: view.year + '-01-01', end: view.year + '-12-31' } : {}),
+      ...(view.search.trim() ? { condition: view.search.trim() } : {}),
+    });
+    return view.sort === 'oldest' ? found.reverse() : found;
+  }, [corpus, view.product, view.year, view.search, view.sort]);
+
+  async function run() {
+    if (inFlight.current || question.trim().length < 8) return;
+    inFlight.current = true;
+    setBusy(true); setError('');
+    const submittedQuestion = question;
+    try {
+      const response = await fetch('/api/investigate', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ question: submittedQuestion, filters: { ...(view.product !== 'all' ? { products: [view.product] } : {}) } }), signal: AbortSignal.timeout(65000) });
+      const data: unknown = await response.json();
+      if (!response.ok) {
+        const message = data && typeof data === 'object' && 'error' in data && typeof data.error === 'string' ? data.error : 'Live investigations are currently unavailable.';
+        throw new Error(message);
+      }
+      if (!data || typeof data !== 'object' || !('facts' in data) || !Array.isArray(data.facts) || !('status' in data)) throw new Error('The investigation returned an invalid response.');
+      setResult(data as Investigation); setResultQuestion(submittedQuestion);
+    } catch (failure) { setError(failure instanceof Error ? failure.message : 'The investigation could not complete.'); }
+    finally { inFlight.current = false; setBusy(false); }
+  }
+  function download() {
+    if (!result) return;
+    const url = URL.createObjectURL(new Blob([exportBrief(result)], { type: 'text/markdown;charset=utf-8' }));
+    const anchor = document.createElement('a'); anchor.href = url; anchor.download = 'SignalDesk-Brief.md'; anchor.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
+  async function copyView() {
+    try { await navigator.clipboard.writeText(window.location.origin + viewUrl(view)); setCopyStatus('Link copied'); }
+    catch { setCopyStatus('Copy the link from your address bar'); }
+    if (copyTimer.current) clearTimeout(copyTimer.current);
+    copyTimer.current = setTimeout(() => setCopyStatus(''), 4000);
+  }
+
+  return <div className="shell">
+    <a className="skip-link" href="#main-content">Skip to content</a>
+    <aside className="sidebar">
+      <a href="/" className="brand" aria-label="SignalDesk home"><span className="brand-mark"><Icon name="signal" size={23} /></span><span>SignalDesk<span className="brand-ai">AI</span></span></a>
+      <div className="workspace-label"><span>RESEARCH WORKSPACE</span><span className="preview-label">Portfolio</span></div>
+      <nav aria-label="Main navigation">{(['feed', 'investigate', 'evaluation'] as const).map(tab => <button key={tab} className={'nav-button ' + (view.tab === tab ? 'active' : '')} aria-current={view.tab === tab ? 'page' : undefined} onClick={() => navigate(tab)}><Icon name={tab === 'feed' ? 'signal' : tab === 'investigate' ? 'investigate' : 'chart'} /><span>{viewLabels[tab]}</span>{tab === 'feed' && <span className="nav-count">{corpus.events.length}</span>}{tab === 'investigate' && busy && <span className="nav-working" aria-label="Investigation running" />}</button>)}</nav>
+      <section className="watchlist" aria-labelledby="watchlist-title"><div className="watchlist-heading"><h2 id="watchlist-title">Tracked formulations</h2><span>{corpus.products.length}</span></div>
+        {corpus.products.map(product => <button key={product.id} className={'watch-item ' + (view.product === product.id ? 'chosen' : '')} aria-pressed={view.product === product.id} onClick={() => changeView({ tab: 'feed', product: product.id, year: 'all', search: '' }, view.tab !== 'feed')}><span className={'product-dot ' + product.id.split('-')[0]} /><span className="watch-name">{product.name}<small>{product.route}</small></span><span className="watch-count" aria-label={corpus.events.filter(event => event.product_ids.includes(product.id)).length + ' developments'}>{corpus.events.filter(event => event.product_ids.includes(product.id)).length}</span></button>)}
+        <button className="reset-watch" onClick={() => changeView({ tab: 'feed', product: 'all', year: 'all', search: '' }, view.tab !== 'feed')}>All formulations<Icon name="arrow" size={15} /></button>
+      </section>
+      <div className="sidebar-bottom"><div><Icon name="book" size={16} /><span>Public US evidence</span></div><p>Snapshot {formatDate(corpus.cutoff)}<br />Independent research project</p><a href={repository} target="_blank" rel="noreferrer">Project repository<Icon name="external" size={13} /><span className="sr-only"> (opens in new tab)</span></a></div>
+    </aside>
+    <div className="main-shell"><header className="topbar"><div className="breadcrumb"><span>Workspace</span><Icon name="chevron" size={13} /><strong>{viewLabels[view.tab]}</strong></div><div className="topbar-right"><span className="jurisdiction">US oncology</span><span className="snapshot"><Icon name="clock" size={14} />{formatDate(corpus.cutoff)}</span><button className="copy-view" onClick={copyView}><Icon name="link" size={15} /><span>Copy view link</span></button><span className="sr-only" role="status">{copyStatus}</span>{copyStatus && <span className="copy-feedback" aria-hidden="true">{copyStatus}</span>}</div></header>
+      <main id="main-content" ref={main} tabIndex={-1}>
+        {view.tab === 'feed' && <EventFeed corpus={corpus} events={events} view={view} onChange={changeView} onInspect={setSelected} onInvestigate={() => investigate()} onEvaluation={() => navigate('evaluation')} />}
+        {view.tab === 'investigate' && <InvestigationView corpus={corpus} product={view.product} question={question} busy={busy} error={error} result={result} resultQuestion={resultQuestion} onProduct={product => changeView({ product })} onQuestion={setQuestion} onRun={run} onExport={download} onBrowse={() => navigate('feed')} />}
+        {view.tab === 'evaluation' && <EvaluationView evaluation={evaluation} />}
+        <footer className="site-footer"><span>SignalDesk AI <span className="footer-divider">/</span> Independent portfolio work</span><span>Public US evidence · No MSD affiliation</span></footer>
+      </main>
+    </div>
+    {selected && <EvidenceDrawer event={selected} corpus={corpus} onClose={() => setSelected(null)} onInvestigate={investigate} />}
+  </div>;
 }
