@@ -12,10 +12,13 @@ export function EvidenceDrawer({ event, corpus, onClose, onInvestigate }: { even
     return () => { node?.close(); document.body.style.overflow = previousOverflow; };
   }, []);
   const passages = corpus.evidence.filter(passage => passage.event_id === event.id);
+  // Close while the native dialog is still connected so the browser can return
+  // focus to its opener before React removes the panel.
+  const dismiss = () => { dialog.current?.close(); onClose(); };
 
-  return <dialog ref={dialog} className="drawer" aria-labelledby="event-detail-title" onCancel={e => { e.preventDefault(); onClose(); }} onClick={e => { if (e.target === e.currentTarget) onClose(); }}>
+  return <dialog ref={dialog} className="drawer" aria-labelledby="event-detail-title" onCancel={e => { e.preventDefault(); dismiss(); }} onClick={e => { if (e.target === e.currentTarget) dismiss(); }}>
     <div className="drawer-surface">
-      <header className="drawer-top"><span><Icon name="document" size={17} />Evidence record</span><button className="icon-button" aria-label="Close event details" onClick={onClose} autoFocus><Icon name="close" size={20} /></button></header>
+      <header className="drawer-top"><span><Icon name="document" size={17} />Evidence record</span><button className="icon-button" aria-label="Close event details" onClick={dismiss} autoFocus><Icon name="close" size={20} /></button></header>
       <div className="drawer-body">
         <div className="record-meta"><time dateTime={event.approval_date}>{formatDate(event.approval_date)}</time><span>United States · FDA</span></div>
         <h2 id="event-detail-title">{event.title}</h2>
@@ -30,7 +33,7 @@ export function EvidenceDrawer({ event, corpus, onClose, onInvestigate }: { even
         {passages.length > 0 && <details className="record-passages"><summary>Supporting passages ({passages.length})</summary>{passages.map(passage => <div className="source-passage" key={passage.id}><span className="passage-label">{passage.is_original_excerpt ? 'Selected publisher proof' : 'Reviewed paraphrase'}</span><p>{passage.text}</p></div>)}</details>}
         <p className="drawer-disclaimer">Developer review is not independent clinical adjudication. Separate trials do not establish treatment superiority.</p>
       </div>
-      <footer className="drawer-actions"><a className="secondary" href={event.source_url} target="_blank" rel="noreferrer">Read the FDA announcement<Icon name="external" size={16} /><span className="sr-only"> (opens in new tab)</span></a><button className="primary" onClick={() => onInvestigate(event)}>Investigate this event<Icon name="arrow" size={16} /></button></footer>
+      <footer className="drawer-actions"><a className="secondary" href={event.source_url} target="_blank" rel="noreferrer">Read the FDA announcement<Icon name="external" size={16} /><span className="sr-only"> (opens in new tab)</span></a><button className="primary" onClick={() => { dialog.current?.close(); onInvestigate(event); }}>Investigate this event<Icon name="arrow" size={16} /></button></footer>
     </div>
   </dialog>;
 }
