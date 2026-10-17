@@ -15,7 +15,7 @@ const corpus=JSON.parse(fs.readFileSync(path.join(root,'data/corpus.json'),'utf8
 if(corpus.mode!=='original-sources'&&!args.includes('--allow-seed'))throw new Error('Original acquisition must complete before the final benchmark. --allow-seed is for separately labelled development runs only.');
 if(split==='test'&&corpus.mode!=='original-sources')throw new Error('The held-out benchmark requires original verified sources.');
 const tasks=(JSON.parse(fs.readFileSync(path.join(root,'data/evaluation/tasks.json'),'utf8')).tasks as Task[]).filter(t=>t.split===split);
-const model=geminiModel(key,process.env.GEMINI_MODEL??'gemini-2.5-flash-lite');
+const model=geminiModel(key,process.env.GEMINI_MODEL??'gemini-3.5-flash-lite');
 const hash=createHash('sha256');for(const p of ['data/corpus.json','data/evaluation/tasks.json','lib/agent.ts','lib/model.ts','lib/tools.ts','lib/retrieval.ts','lib/scoring.ts'])hash.update(fs.readFileSync(path.join(root,p)));
 hash.update(model.name);hash.update(split);const fingerprint=hash.digest('hex');
 const dir=path.join(root,'reports/runs',fingerprint);fs.mkdirSync(dir,{recursive:true});
@@ -28,7 +28,7 @@ if(!Number.isFinite(callInterval)||callInterval<0||callInterval>15000)throw new 
 for(const task of tasks){for(const mode of ['baseline','agent'] as const){
  const file=path.join(dir,`${task.id}-${mode}.json`);if(fs.existsSync(file)&&JSON.parse(fs.readFileSync(file,'utf8')).completed)continue;
  const result=await investigate(corpus,task.question,task.filters,model,{mode,beforeCall:async()=>{const delay=callInterval-(Date.now()-lastCallAt);if(delay>0)await new Promise(resolve=>setTimeout(resolve,delay));lastCallAt=Date.now();}});
- const interrupted=result.status==='unavailable'&&/allowance|quota|rate limit/i.test(result.error??'');
+ const interrupted=result.status==='unavailable'&&/allowance|quota|rate limit|Model service unavailable \((?:400|401|403|404)\)/i.test(result.error??'');
  const row={task_id:task.id,category:task.category,mode,fingerprint,completed:!interrupted,result,score:scoreTask(task,result)};
  fs.writeFileSync(file,JSON.stringify(row,null,2));console.log(task.id,mode,result.status,interrupted?'quota interrupted':'recorded');
  if(interrupted){stopped=true;break;}
