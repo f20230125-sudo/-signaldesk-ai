@@ -1,0 +1,30 @@
+{
+  "scope": "Development integration attempts only; automatic checks are not audited answer accuracy.",
+  "held_out_run": false,
+  "attempts": [
+    {
+      "run_id": 39029936943,
+      "run_attempt": 1,
+      "model": "gemini-2.5-flash-lite",
+      "http_status": 404,
+      "usable_responses": 0
+    },
+    {
+      "run_id": 39030337100,
+      "run_attempt": 1,
+      "model": "gemini-3.5-flash-lite",
+      "fingerprint": "5656134f78b657833876fe80931deca8ec597827b8981bafa26022720febedb0",
+      "agent": {
+        "recorded": 20,
+        "usable": 6,
+        "automatic_fields_passed": 6
+      },
+      "baseline": {
+        "recorded": 20,
+        "usable": 5,
+        "automatic_fields_passed": 0
+      },
+      "semantic_audit": "pending"
+    }
+  ]
+}
