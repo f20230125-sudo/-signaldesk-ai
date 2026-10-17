@@ -19,6 +19,15 @@ const model=geminiModel(key,process.env.GEMINI_MODEL??'gemini-3.5-flash-lite');
 const hash=createHash('sha256');for(const p of ['data/corpus.json','data/evaluation/tasks.json','lib/agent.ts','lib/model.ts','lib/tools.ts','lib/retrieval.ts','lib/scoring.ts'])hash.update(fs.readFileSync(path.join(root,p)));
 hash.update(model.name);hash.update(split);const fingerprint=hash.digest('hex');
 const dir=path.join(root,'reports/runs',fingerprint);fs.mkdirSync(dir,{recursive:true});
+const publicReport=path.join(root,split==='test'?'data/evaluation/report.json':'reports/development-evaluation.json');
+if(fs.existsSync(publicReport)){
+ const previous=JSON.parse(fs.readFileSync(publicReport,'utf8'));
+ if(previous.fingerprint===fingerprint&&Array.isArray(previous.cases))for(const row of previous.cases){
+  if(!row.completed||row.fingerprint!==fingerprint||!tasks.some(t=>t.id===row.task_id)||!['agent','baseline'].includes(row.mode))continue;
+  const file=path.join(dir,`${row.task_id}-${row.mode}.json`);
+  if(!fs.existsSync(file))fs.writeFileSync(file,JSON.stringify(row,null,2));
+ }
+}
 const auditPath=path.join(dir,'manual-audit.json');
 const audit=fs.existsSync(auditPath)?JSON.parse(fs.readFileSync(auditPath,'utf8')):{};
 let stopped=false;
@@ -39,7 +48,7 @@ for(const row of cases){const decision=audit[`${row.task_id}-${row.mode}`];const
 const completed=(mode:string)=>cases.filter(c=>c.mode===mode&&c.completed);
 const manuallyScored=cases.every(c=>!c.completed||c.score.strict_pass!==null);
 const complete=completed('agent').length===tasks.length&&completed('baseline').length===tasks.length;
-const report={status:complete&&manuallyScored?'complete':cases.length?'partial':'not_run',development_tasks:20,held_out_tasks:40,split,corpus_mode:corpus.mode,acquired_sources:corpus.acquisition,completed_agent_tasks:completed('agent').length,completed_baseline_tasks:completed('baseline').length,model:model.name,fingerprint,
+const report={status:complete&&manuallyScored?'complete':cases.length?'partial':'not_run',development_tasks:20,held_out_tasks:40,split,corpus_mode:corpus.mode,acquired_sources:corpus.acquisition,completed_agent_tasks:completed('agent').length,completed_baseline_tasks:completed('baseline').length,usable_agent_responses:cases.filter(c=>c.mode==='agent'&&c.result.status!=='unavailable').length,usable_baseline_responses:cases.filter(c=>c.mode==='baseline'&&c.result.status!=='unavailable').length,model:model.name,fingerprint,
  summary:complete&&manuallyScored?'Full paired run completed and developer semantic audit recorded.':'Evaluation is partial until both systems complete every task and each answer receives a recorded semantic audit. Automatic field checks are not general answer accuracy.',cases,
  ...(complete&&manuallyScored?Object.fromEntries(['agent','baseline'].flatMap(mode=>{const rows=completed(mode),success=rows.filter(r=>r.score.strict_pass).length;return [[`${mode}_success_rate`,success/rows.length],[`${mode}_wilson_95`,wilson(success,rows.length)]];})):{})};
 const dest=split==='test'?path.join(root,'data/evaluation/report.json'):path.join(dir,'development-report.json');fs.writeFileSync(dest,JSON.stringify(report,null,2));
