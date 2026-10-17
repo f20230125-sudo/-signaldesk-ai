@@ -5,6 +5,7 @@ import {executeTool,findEvents,resolveProduct,validateFilters} from '../lib/tool
 import {investigate,validateDraft} from '../lib/agent.ts';
 import {geminiModel} from '../lib/model.ts';
 import {boundedLimit,reserve,visitorKey} from '../lib/quota.ts';
+import {retrieve} from '../lib/retrieval.ts';
 import type {Corpus,Draft,Model,ModelReply,ToolTrace} from '../lib/types.ts';
 const corpus=JSON.parse(fs.readFileSync(new URL('../data/corpus.json',import.meta.url),'utf8')) as Corpus;
 const event=corpus.events.find(e=>e.id==='fda-2024-08-15-imfinzi')!;
@@ -15,6 +16,7 @@ const trace:ToolTrace[]=[
  {name:'get_trial',arguments:{trial_ids:event.trial_ids},result:executeTool(corpus,{name:'get_trial',arguments:{trial_ids:event.trial_ids}}),elapsed_ms:0}
 ];
 test('Approval date boundaries are inclusive and never use snapshot date',()=>{const r=findEvents(corpus,{start:'2024-08-15',end:'2024-08-15'});assert.deepEqual(r.map(e=>e.id),[event.id]);});
+test('Baseline retrieval indexes approval dates and product identity as well as passage text',()=>{const results=retrieve(corpus,'IMFINZI 2024-08-15',2);assert(results.length);assert.equal(results[0].event_id,event.id);});
 test('Impossible dates, unknown filters, unknown products and inverted ranges are rejected',()=>{for(const f of [{start:'2024-02-30'},{sql:'DROP'},{products:['unknown']},{start:'2025-01-01',end:'2024-01-01'}])assert.throws(()=>validateFilters(f,corpus));});
 test('Exact SC formulation remains distinct; ingredient aliases expose ambiguity',()=>{assert.equal(resolveProduct(corpus,'KEYTRUDA QLEX').matches[0].id,'keytruda-qlex');assert.equal(resolveProduct(corpus,'pembrolizumab').ambiguous,true);assert.equal(resolveProduct(corpus,'KEYTRUDA').matches.length,1);});
 test('Trial and event IDs are validated, arbitrary extra arguments rejected',()=>{for(const c of [{name:'get_trial',arguments:{trial_ids:['NCT1']}},{name:'read_evidence',arguments:{event_ids:['fake']}},{name:'resolve_product',arguments:{query:'imfinzi',url:'http://internal'}}])assert.throws(()=>executeTool(corpus,c as never));});

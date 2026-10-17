@@ -12,9 +12,9 @@ The initial collection contains **29 real FDA announcements, eight product formu
 
 The collection contains **30 acquired ClinicalTrials.gov snapshots and eight product identities matched to Drugs@FDA records**. FDA's announcement site blocked automated downloading; its 29 event summaries remain browser-reviewed paraphrases. Original announcement checks are pending. Every downloaded record has a SHA-256 receipt, and the app states its source limitations.
 
-The agent, evidence tools, public-app source and frozen **20-development / 40-held-out** task set are implemented. **Real-model evaluation has not run**, and no model accuracy result is claimed. The app requires a server-side free-tier Gemini key and persistent request allowance before it enables live investigations. Public deployment is not yet verified.
+The agent, evidence tools, public-app source and frozen **20-development / 40-held-out** task set are implemented. **Gemini 3.5 Flash-Lite key access and structured generation are verified.** A first paired development run exposed grounding, formatting and retrieval issues; diagnostic results are retained in [evaluation attempts](reports/evaluation-attempts.json). Development fixes are being checked in a follow-up run. The held-out benchmark and semantic audits remain pending, and no validated accuracy result is claimed. Public deployment is not yet verified.
 
-Verification: **21 agent/tool/scoring tests and five Python checks passed**, with one original-source integrity check explicitly skipped in the source-only checkout. The full framework typecheck, database migration generation and web build passed in [GitHub Actions](https://github.com/f20230125-sudo/-signaldesk-ai/actions/runs/39029463599). Browser QA and public deployment remain pending. See the [validation record](docs/validation.md).
+Verification: **23 agent/tool/scoring tests and seven Python checks passed**, with one original-source integrity check explicitly skipped in the source-only checkout. The full framework typecheck, database migration generation and web build passed in [GitHub Actions](https://github.com/f20230125-sudo/-signaldesk-ai/actions). The generated D1 migration is committed and exercised by the quota checks. Browser QA and public deployment remain pending. See the [validation record](docs/validation.md).
 
 ## Investigation workflow
 
