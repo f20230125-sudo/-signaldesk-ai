@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "scope": "Local production build in GitHub Actions; not a public deployment check",
+  "playwright_version": "1.64.0",
+  "checks": [
+    "Feed renders all 29 announcements",
+    "Source-review label visible",
+    "SC formulation filter remains distinct",
+    "Approval-year filter uses event dates",
+    "Evidence drawer and official link available",
+    "Drawer restores keyboard focus",
+    "Evaluation limitations visible",
+    "Mobile page avoids horizontal viewport overflow",
+    "Malformed JSON rejected",
+    "Cross-origin request rejected",
+    "Real-model browser investigation succeeds",
+    "Live answer contains both compared approval events",
+    "Export contains sources and limitations",
+    "No browser JavaScript exceptions",
+    "API key absent from rendered document",
+    "API key absent from client script bundles",
+    "Persistent visitor quota enforced",
+    "Quota survives runtime restart"
+  ],
+  "real_model": "gemini-3.5-flash-lite",
+  "public_deployment_verified": false
+}
