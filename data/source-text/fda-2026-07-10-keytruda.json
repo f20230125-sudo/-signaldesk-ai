@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "event_id": "fda-2026-07-10-keytruda",
+  "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-or-pembrolizumab-and-berahyaluronidase-alfa-pmph-each-enfortumab-vedotin",
+  "captured_at": "2026-10-17T12:40:00Z",
+  "capture_format": "browser-extracted-publisher-text",
+  "selection_notice": "Selected verbatim publisher excerpts; browser text normalization, not original HTTP HTML bytes.",
+  "paragraphs": [
+    "On July 10, 2026,",
+    "evaluated in KEYNOTE-B15/EV-304 (NCT04700124),",
+    "cystectomy (surgery to remove the bladder) for adults with muscle invasive bladder cancer (MIBC)."
+  ],
+  "quoted_word_count": 22,
+  "field_checks": {
+    "approval_date": true,
+    "trial_ids": true,
+    "population_summary": true,
+    "qualifiers": true
+  },
+  "reviewer": "Codex source review (developer; not independent clinical adjudication)",
+  "review_notes": "The extension reaches cystectomy candidates regardless of cisplatin eligibility. The newly cited study enrolled cisplatin-eligible patients. The short saved excerpts prove selected details; review used the longer browser-readable announcement, and the excerpts are not a complete regulatory record."
+}

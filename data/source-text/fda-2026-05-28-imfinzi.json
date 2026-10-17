@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "event_id": "fda-2026-05-28-imfinzi",
+  "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-durvalumab-combination-bacillus-calmette-guerin-high-risk-non-muscle-invasive-bladder",
+  "captured_at": "2026-10-17T12:40:00Z",
+  "capture_format": "browser-extracted-publisher-text",
+  "selection_notice": "Selected verbatim publisher excerpts; browser text normalization, not original HTTP HTML bytes.",
+  "paragraphs": [
+    "On May 28, 2026,",
+    "the POTOMAC study (NCT03528694),",
+    "for the treatment of adult patients with BCG-naïve, high-risk non-muscle invasive bladder cancer (NMIBC)."
+  ],
+  "quoted_word_count": 22,
+  "field_checks": {
+    "approval_date": true,
+    "trial_ids": true,
+    "population_summary": true,
+    "qualifiers": true
+  },
+  "reviewer": "Codex source review (developer; not independent clinical adjudication)",
+  "review_notes": "BCG-naive high-risk NMIBC is the intended population. Prior BCG failure is not the population described. The short saved excerpts prove selected details; review used the longer browser-readable announcement, and the excerpts are not a complete regulatory record."
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "event_id": "fda-2025-03-19-keytruda",
+  "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-her2-positive-gastric-or-gastroesophageal-junction-adenocarcinoma",
+  "captured_at": "2026-10-17T12:40:00Z",
+  "capture_format": "browser-extracted-publisher-text",
+  "selection_notice": "Selected verbatim publisher excerpts; browser text normalization, not original HTTP HTML bytes.",
+  "paragraphs": [
+    "On March 19, 2025,",
+    "evaluated in KEYNOTE-811 (NCT03615326),",
+    "metastatic HER2-positive gastric or gastroesophageal junction (GEJ) adenocarcinoma whose tumors express PD-L1 (CPS ≥1)."
+  ],
+  "quoted_word_count": 22,
+  "field_checks": {
+    "approval_date": true,
+    "trial_ids": true,
+    "population_summary": true,
+    "qualifiers": true
+  },
+  "reviewer": "Codex source review (developer; not independent clinical adjudication)",
+  "review_notes": "This is traditional approval of a previously accelerated indication. HER2-positive disease and PD-L1 CPS threshold remain required. The short saved excerpts prove selected details; review used the longer browser-readable announcement, and the excerpts are not a complete regulatory record."
+}

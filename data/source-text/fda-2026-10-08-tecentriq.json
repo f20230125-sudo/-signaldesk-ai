@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "event_id": "fda-2026-10-08-tecentriq",
+  "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-atezolizumab-combination-chemotherapy-stage-iii-mismatch-repair-deficient-colon-cancer",
+  "captured_at": "2026-10-17T12:40:00Z",
+  "capture_format": "browser-extracted-publisher-text",
+  "selection_notice": "Selected verbatim publisher excerpts; browser text normalization, not original HTTP HTML bytes.",
+  "paragraphs": [
+    "On October 8, 2026,",
+    "evaluated in ATOMIC/ML39057 (NCT02912559),",
+    "years of age and older with Stage III mismatch repair deficient (dMMR) colon cancer."
+  ],
+  "quoted_word_count": 22,
+  "field_checks": {
+    "approval_date": true,
+    "trial_ids": true,
+    "population_summary": true,
+    "qualifiers": true
+  },
+  "reviewer": "Codex source review (developer; not independent clinical adjudication)",
+  "review_notes": "The IV combination permits patients from age two. The SC combination starts at twelve with a forty-kilogram minimum, which must remain formulation-specific. The short saved excerpts prove selected details; review used the longer browser-readable announcement, and the excerpts are not a complete regulatory record."
+}

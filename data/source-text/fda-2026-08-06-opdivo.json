@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "event_id": "fda-2026-08-06-opdivo",
+  "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-vusolimogene-oderparepvec-wtpg-combination-nivolumab-melanoma",
+  "captured_at": "2026-10-17T12:40:00Z",
+  "capture_format": "browser-extracted-publisher-text",
+  "selection_notice": "Selected verbatim publisher excerpts; browser text normalization, not original HTTP HTML bytes.",
+  "paragraphs": [
+    "On August 6, 2026,",
+    "evaluated in IGNYTE (NCT03767348),",
+    "cutaneous melanoma who experienced disease progression on a programmed death receptor-1 (PD-1)-blocking antibody-based regimen."
+  ],
+  "quoted_word_count": 22,
+  "field_checks": {
+    "approval_date": true,
+    "trial_ids": true,
+    "population_summary": true,
+    "qualifiers": true
+  },
+  "reviewer": "Codex source review (developer; not independent clinical adjudication)",
+  "review_notes": "This is an accelerated approval of the viral therapy with nivolumab after PD-1 regimen progression; post-approval benefit verification remains required. The short saved excerpts prove selected details; review used the longer browser-readable announcement, and the excerpts are not a complete regulatory record."
+}

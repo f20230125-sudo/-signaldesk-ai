@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "event_id": "fda-2026-02-10-keytruda",
+  "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-paclitaxel-platinum-resistant-epithelial-ovarian-fallopian-tube-or",
+  "captured_at": "2026-10-17T12:40:00Z",
+  "capture_format": "browser-extracted-publisher-text",
+  "selection_notice": "Selected verbatim publisher excerpts; browser text normalization, not original HTTP HTML bytes.",
+  "paragraphs": [
+    "On February 10, 2026,",
+    "evaluated in KEYNOTE-B96 (NCT05116189),",
+    "an FDA-authorized test, and who have received one or two prior systemic treatment regimens."
+  ],
+  "quoted_word_count": 22,
+  "field_checks": {
+    "approval_date": true,
+    "trial_ids": true,
+    "population_summary": true,
+    "qualifiers": true
+  },
+  "reviewer": "Codex source review (developer; not independent clinical adjudication)",
+  "review_notes": "The ovarian-related indication requires platinum resistance, PD-L1 CPS at least one, and one or two prior systemic regimens. Both formulations are named. The short saved excerpts prove selected details; review used the longer browser-readable announcement, and the excerpts are not a complete regulatory record."
+}

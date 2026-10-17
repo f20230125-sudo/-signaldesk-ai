@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "event_id": "fda-2024-06-17-keytruda",
+  "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-chemotherapy-primary-advanced-or-recurrent-endometrial-carcinoma",
+  "captured_at": "2026-10-17T12:40:00Z",
+  "capture_format": "browser-extracted-publisher-text",
+  "selection_notice": "Selected verbatim publisher excerpts; browser text normalization, not original HTTP HTML bytes.",
+  "paragraphs": [
+    "On June 17, 2024,",
+    "evaluated in KEYNOTE-868/NRG-GY018 (NCT03914612),",
+    "followed by single-agent pembrolizumab, for adult patients with primary advanced or recurrent endometrial carcinoma."
+  ],
+  "quoted_word_count": 22,
+  "field_checks": {
+    "approval_date": true,
+    "trial_ids": true,
+    "population_summary": true,
+    "qualifiers": true
+  },
+  "reviewer": "Codex source review (developer; not independent clinical adjudication)",
+  "review_notes": "The indication paragraph is not limited to dMMR. The study reports both mismatch-repair cohorts separately. The short saved excerpts prove selected details; review used the longer browser-readable announcement, and the excerpts are not a complete regulatory record."
+}

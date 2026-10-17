@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "event_id": "fda-2025-09-19-keytruda-qlex",
+  "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-and-berahyaluronidase-alfa-pmph-subcutaneous-injection",
+  "captured_at": "2026-10-17T12:40:00Z",
+  "capture_format": "browser-extracted-publisher-text",
+  "selection_notice": "Selected verbatim publisher excerpts; browser text normalization, not original HTTP HTML bytes.",
+  "paragraphs": [
+    "On September 19, 2025,",
+    "in Study MK-3475A-D77 (NCT05722015),",
+    "intravenous formulation of pembrolizumab (Keytruda, Merck). See the prescribing information for the specific indications."
+  ],
+  "quoted_word_count": 22,
+  "field_checks": {
+    "approval_date": true,
+    "trial_ids": true,
+    "population_summary": true,
+    "qualifiers": true
+  },
+  "reviewer": "Codex source review (developer; not independent clinical adjudication)",
+  "review_notes": "The SC product covers specified solid-tumor indications from age twelve. The cited study's molecular exclusions cannot be generalized across all Qlex indications. The short saved excerpts prove selected details; review used the longer browser-readable announcement, and the excerpts are not a complete regulatory record."
+}

@@ -1,6 +1,7 @@
 import type {Corpus,Draft,Filters,Investigation,Model,ToolCall,ToolTrace} from './types.ts';
 import {executeTool,findEvents,InputError,validateFilters} from './tools.ts';
 import {retrieve} from './retrieval.ts';
+import {verifiedSourceCorpus} from './source-status.ts';
 
 const OUTPUT='Return only JSON with title:string, event_ids:string[], product_ids:string[], evidence_ids:string[], trial_ids:string[], commercial_relevance:string[], follow_up_questions:string[], limitations:string[]. Use empty arrays when evidence is unavailable. All IDs must have appeared in tool results. No invented facts or numerical outcome/commercial claims in interpretations. Exact clinical identifiers from selected sources may be referenced; express date references in words. Facts will be rendered from source records.';
 const SYSTEM=`You are SignalDesk, an oncology commercial intelligence investigation agent. Investigate using the available tools, then return a brief. ${OUTPUT}
@@ -77,10 +78,11 @@ export async function investigate(corpus:Corpus,question:string,filters:Filters,
   const fallback:Draft={title:'Investigation unavailable',event_ids:[],product_ids:[],evidence_ids:[],trial_ids:[],commercial_relevance:[],follow_up_questions:[],limitations:[error??'The model did not produce a verified brief.']};
   const result=draft??fallback;
   const limitations=[...result.limitations,corpus.collection_notice];
-  if(corpus.mode!=='original-sources')limitations.push('FDA announcement summaries are browser-reviewed paraphrases; original-byte checks remain pending. Trial availability is stated separately in each registry record.');
+  if(!verifiedSourceCorpus(corpus))limitations.push('FDA field verification is incomplete. Trial availability is stated separately in each registry record.');
+  if(corpus.mode==='source-reviewed')limitations.push('Approval fields were developer-reviewed against FDA publisher text with selected proof excerpts. Full original HTML bytes were not acquired, and no independent clinical adjudication was performed.');
   const selectedTrials=corpus.trials.filter(t=>result.trial_ids.includes(t.id));
   if(selectedTrials.some(t=>!t.available))limitations.push('Some FDA-cited trial identifiers have no acquired registry snapshot; current trial status is unavailable.');
-  return {...result,limitations:[...new Set(limitations)],id:crypto.randomUUID(),status:!draft?'unavailable':!result.event_ids.length&&!result.product_ids.length||selectedTrials.some(t=>!t.available)||corpus.mode!=='original-sources'?'partial':'complete',model:model.name,mode,generated_at:new Date().toISOString(),corpus_mode:corpus.mode,cutoff:corpus.cutoff,facts:corpus.events.filter(e=>result.event_ids.includes(e.id)),products:corpus.products.filter(p=>result.product_ids.includes(p.id)),evidence:corpus.evidence.filter(e=>result.evidence_ids.includes(e.id)),trials:selectedTrials,trace,usage:{input_tokens:input,output_tokens:output,model_calls:calls,latency_ms:Date.now()-started},...(!draft&&error?{error}:{})};
+  return {...result,limitations:[...new Set(limitations)],id:crypto.randomUUID(),status:!draft?'unavailable':!result.event_ids.length&&!result.product_ids.length||selectedTrials.some(t=>!t.available)||!verifiedSourceCorpus(corpus)?'partial':'complete',model:model.name,mode,generated_at:new Date().toISOString(),corpus_mode:corpus.mode,cutoff:corpus.cutoff,facts:corpus.events.filter(e=>result.event_ids.includes(e.id)),products:corpus.products.filter(p=>result.product_ids.includes(p.id)),evidence:corpus.evidence.filter(e=>result.evidence_ids.includes(e.id)),trials:selectedTrials,trace,usage:{input_tokens:input,output_tokens:output,model_calls:calls,latency_ms:Date.now()-started},...(!draft&&error?{error}:{})};
 }
 export function exportBrief(r:Investigation):string{
   return `# ${r.title}\n\nGenerated ${r.generated_at} · ${r.model} · ${r.status}\n\n## Documented events\n\n`+r.facts.map(e=>`- **${e.approval_date}: ${e.title}**\n  ${e.population_summary}\n  FDA-cited trial IDs: ${e.trial_ids.join(', ')}\n  Source: ${e.source_url}`).join('\n\n')+`\n\n## Possible commercial relevance\n\n${r.commercial_relevance.map(x=>'- '+x).join('\n')}\n\n## Follow-up questions\n\n${r.follow_up_questions.map(x=>'- '+x).join('\n')}\n\n## Limits\n\n${r.limitations.map(x=>'- '+x).join('\n')}\n`;

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "fda-2026-06-24-keytruda",
+  "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-sacituzumab-govitecan-hziy-monotherapy-and-combination-pembrolizumab-first-line",
+  "captured_at": "2026-10-17T12:40:00Z",
+  "capture_format": "browser-extracted-publisher-text",
+  "selection_notice": "Selected verbatim publisher excerpts; browser text normalization, not original HTTP HTML bytes.",
+  "paragraphs": [
+    "On June 24, 2026,",
+    "evaluated in ASCENT-03 (NCT05382299),",
+    "evaluated in ASCENT-04/KEYNOTE-D19 (NCT05382286),",
+    "or metastatic TNBC who are not candidates for PD-1 or PD-L1 inhibitor-based therapy."
+  ],
+  "quoted_word_count": 25,
+  "field_checks": {
+    "approval_date": true,
+    "trial_ids": true,
+    "population_summary": true,
+    "qualifiers": true
+  },
+  "reviewer": "Codex source review (developer; not independent clinical adjudication)",
+  "review_notes": "The page contains two separate indications and two studies. Only ASCENT-04/KEYNOTE-D19 supports the pembrolizumab combination; ASCENT-03 supports monotherapy. The short saved excerpts prove selected details; review used the longer browser-readable announcement, and the excerpts are not a complete regulatory record."
+}

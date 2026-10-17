@@ -1,0 +1,51 @@
+name: Authorized paired development and held-out evaluation
+on:
+  push:
+    paths: ['.github/workflows/evaluation-launch.yml']
+permissions:
+  contents: write
+concurrency:
+  group: signaldesk-real-model-evaluation
+  cancel-in-progress: false
+jobs:
+  paired:
+    runs-on: ubuntu-latest
+    timeout-minutes: 65
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Verify model access
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: gemini-3.5-flash-lite
+        run: node --experimental-strip-types tools/check-model.ts
+      - name: Run frozen development and held-out tasks
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: gemini-3.5-flash-lite
+          SIGNALDESK_LIVE_EVAL: '1'
+        run: |
+          node --experimental-strip-types tools/evaluate.ts --dev
+          node --experimental-strip-types tools/evaluate.ts
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: signaldesk-paired-evaluation
+          path: |
+            reports/runs/
+            reports/development-evaluation.json
+            reports/model-access.json
+            data/evaluation/report.json
+      - name: Save case-level responses pending semantic review
+        if: always()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/development-evaluation.json reports/model-access.json data/evaluation/report.json
+          git diff --cached --quiet || git commit -m 'Record frozen paired model responses awaiting semantic audit'
+          git pull --rebase origin main
+          git push
