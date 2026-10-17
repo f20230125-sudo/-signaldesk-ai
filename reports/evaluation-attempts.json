@@ -25,6 +25,23 @@
         "automatic_fields_passed": 0
       },
       "semantic_audit": "pending"
+    },
+    {
+      "run_id": 39030337100,
+      "run_attempt": 2,
+      "model": "gemini-3.5-flash-lite",
+      "fingerprint": "19b309bf2df7ee48ce4773f791e433192cb916ba29e2c3e3ba339e3f063943b5",
+      "agent": {
+        "recorded": 20,
+        "usable": 17,
+        "automatic_fields_passed": 17
+      },
+      "baseline": {
+        "recorded": 20,
+        "usable": 11,
+        "automatic_fields_passed": 8
+      },
+      "semantic_audit": "not performed; retained as development diagnostic"
     }
   ]
 }
