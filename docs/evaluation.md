@@ -37,4 +37,6 @@ Every answer requires a semantic review recorded in `reports/runs/<fingerprint>/
 
 Strict success is the automatic check AND semantic audit. The public report remains partial until all 40 paired tasks and audits are complete. Only a complete audited test run publishes strict success rates and Wilson intervals. Small, related, developer-authored tasks do not establish clinical accuracy or general commercial performance.
 
+Alternatively, record the full review object in `reports/semantic-audit-development.json` or `reports/semantic-audit-held-out.json`, with `fingerprint`, `reviewed_at`, `review_protocol`, and `decisions` keyed by case/system. Run `node --experimental-strip-types tools/audit-results.ts --dev` (development) or omit `--dev` (held-out). This offline command verifies the current source fingerprint, requires all paired cases and review decisions, recomputes automatic checks, attaches each review to the public report, and calculates strict scores without calling a model.
+
 The target is at least 34/40 strict agent successes. Report actual scores and failures even when the target or baseline comparison is unfavorable. Do not tune prompts on failed held-out cases and present the same set as untouched.
