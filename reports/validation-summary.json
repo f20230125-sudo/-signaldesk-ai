@@ -16,10 +16,19 @@
     "development": 20,
     "held_out": 40,
     "freeze_check": "passed",
-    "real_model_status": "paired_run_in_progress",
-    "held_out_status": "paired_run_in_progress",
+    "real_model_status": "complete_with_codex_assisted_source_support_review",
+    "held_out_status": "complete_target_not_met",
     "development_run": 39030337100,
-    "paired_run": 39033933026
+    "paired_run": 39033933026,
+    "reviewed_responses": 120,
+    "independent_human_adjudication": false,
+    "independent_clinical_adjudication": false,
+    "held_out_agent_strict": 17,
+    "held_out_baseline_strict": 19,
+    "held_out_tasks": 40,
+    "target_agent_strict": 34,
+    "development_agent_strict": 11,
+    "development_baseline_strict": 10
   },
   "source_corpus": {
     "events": 29,
@@ -42,7 +51,11 @@
     "workflow_run": 39034901430,
     "scope": "Local production build in Chromium with real model; not a public deployment"
   },
-  "public_deployment": "not_published",
+  "public_deployment": {
+    "status": "not_published",
+    "reason": "Sites source synchronization connection unavailable; alternative hosting plugin not connected",
+    "public_url_verified": false
+  },
   "framework_typecheck": "passed_github_actions_39034901446",
   "migration_generation": "generated_and_committed",
   "source_acquisition_run": 39029801385

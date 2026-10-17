@@ -1,0 +1,136 @@
+{
+  "development": {
+    "fingerprint": "eb06fb90e6c2abbfa667ffb22aeed4d7382e5c120a4ceab7f6bb25e4ab2abd29",
+    "model": "gemini-3.5-flash-lite",
+    "systems": {
+      "agent": {
+        "tasks": 20,
+        "strict_successes": 11,
+        "automatic_successes": 13,
+        "unavailable_responses": 7,
+        "wilson_95": [
+          0.3420820083075997,
+          0.7418049791429071
+        ],
+        "median_paced_latency_seconds": 19.32,
+        "model_calls": 74,
+        "input_tokens": 120331,
+        "output_tokens": 12912
+      },
+      "baseline": {
+        "tasks": 20,
+        "strict_successes": 10,
+        "automatic_successes": 15,
+        "unavailable_responses": 5,
+        "wilson_95": [
+          0.2992949144298199,
+          0.7007050855701801
+        ],
+        "median_paced_latency_seconds": 1.61,
+        "model_calls": 20,
+        "input_tokens": 197463,
+        "output_tokens": 6988
+      }
+    },
+    "category_strict_successes": {
+      "event-date": {
+        "agent": 4,
+        "baseline": 5
+      },
+      "trial-link": {
+        "agent": 7,
+        "baseline": 5
+      }
+    },
+    "paired_outcomes": {
+      "both_pass": 4,
+      "agent_only_pass": 7,
+      "baseline_only_pass": 6,
+      "both_fail": 3
+    }
+  },
+  "held-out": {
+    "fingerprint": "4bba4413928221970fb1db81b59492e8ea55afbc53a99e4b25be709157c1ad29",
+    "model": "gemini-3.5-flash-lite",
+    "systems": {
+      "agent": {
+        "tasks": 40,
+        "strict_successes": 17,
+        "automatic_successes": 20,
+        "unavailable_responses": 15,
+        "wilson_95": [
+          0.28509168524815875,
+          0.5780519956394001
+        ],
+        "median_paced_latency_seconds": 19.6,
+        "model_calls": 150,
+        "input_tokens": 352674,
+        "output_tokens": 29149
+      },
+      "baseline": {
+        "tasks": 40,
+        "strict_successes": 19,
+        "automatic_successes": 23,
+        "unavailable_responses": 14,
+        "wilson_95": [
+          0.32935229550181694,
+          0.6250289314607027
+        ],
+        "median_paced_latency_seconds": 1.75,
+        "model_calls": 40,
+        "input_tokens": 400329,
+        "output_tokens": 15293
+      }
+    },
+    "category_strict_successes": {
+      "cross-trial-inference": {
+        "agent": 1,
+        "baseline": 0
+      },
+      "event-date": {
+        "agent": 4,
+        "baseline": 7
+      },
+      "formulation": {
+        "agent": 5,
+        "baseline": 6
+      },
+      "historical-status": {
+        "agent": 0,
+        "baseline": 0
+      },
+      "injection": {
+        "agent": 0,
+        "baseline": 1
+      },
+      "jurisdiction": {
+        "agent": 0,
+        "baseline": 1
+      },
+      "trial-link": {
+        "agent": 6,
+        "baseline": 4
+      },
+      "unsupported-impact": {
+        "agent": 1,
+        "baseline": 0
+      }
+    },
+    "paired_outcomes": {
+      "both_pass": 11,
+      "agent_only_pass": 6,
+      "baseline_only_pass": 8,
+      "both_fail": 15
+    }
+  },
+  "limitations": [
+    "Developer-authored, related portfolio tasks with Codex-assisted source-support review; no independent human or clinical adjudication.",
+    "Source verification uses selected publisher proof and developer field reviews; original FDA HTML acquisition remains incomplete.",
+    "Model call budgets differ: one baseline call versus at most four agent calls.",
+    "Reported latency includes benchmark pacing and is not production response time.",
+    "Held-out failures are retained; prompts were not tuned against this held-out run.",
+    "Local production browser QA and public deployment are separate checks.",
+    "The development set covers date/event and trial-link tasks; formulation and refusal categories are only in the held-out set.",
+    "Exact empty-selection references can fail otherwise appropriate refusals that include supported product or event cards."
+  ]
+}
