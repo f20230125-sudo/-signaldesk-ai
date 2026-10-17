@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="770" viewBox="0 0 1120 770" role="img" aria-labelledby="title description">
+  <title id="title">SignalDesk AI architecture</title>
+  <desc id="description">FDA announcements, ClinicalTrials.gov and Drugs@FDA feed Python acquisition with checksum receipts, DuckDB quality checks and a versioned corpus. Typed evidence tools connect the corpus to a bounded Gemini investigation agent. The agent serves the evidence workspace and paired evaluation. Server-side D1 quotas protect model calls.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8 Z" fill="#718491"/></marker>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; }
+      .card { fill: #ffffff; stroke: #d5dfe3; stroke-width: 1.5; }
+      .label { fill: #183342; font-size: 19px; font-weight: 700; }
+      .detail { fill: #526974; font-size: 15px; }
+      .step { fill: #10756f; font-size: 11px; font-weight: 700; letter-spacing: 1.4px; }
+      .link { fill: none; stroke: #718491; stroke-width: 2; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1120" height="770" rx="20" fill="#f6f8f7"/>
+  <text x="32" y="49" fill="#183342" font-size="29" font-weight="700">SignalDesk AI</text>
+  <text x="32" y="78" class="detail">From public evidence to source-backed investigation</text>
+  <text x="1088" y="49" text-anchor="end" class="step">ARCHITECTURE</text>
+
+  <g class="link">
+    <path d="M200 192 V250"/>
+    <path d="M560 192 V224 H200" marker-end="none"/>
+    <path d="M920 192 V224 H560" marker-end="none"/>
+    <path d="M368 300 H392"/>
+    <path d="M728 300 H752"/>
+    <path d="M920 350 V389 H560 V424" marker-start="url(#arrow)"/>
+    <path d="M368 477 H392" marker-start="url(#arrow)"/>
+    <path d="M752 477 H728" stroke-dasharray="6 5"/>
+    <path d="M560 530 V598"/>
+    <path d="M392 507 H380 V570 H200 V598"/>
+  </g>
+
+  <g>
+    <rect x="32" y="112" width="336" height="80" rx="12" class="card"/>
+    <text x="52" y="144" class="label">FDA announcements</text>
+    <text x="52" y="170" class="detail">Approval events and populations</text>
+    <rect x="392" y="112" width="336" height="80" rx="12" class="card"/>
+    <text x="412" y="144" class="label">ClinicalTrials.gov</text>
+    <text x="412" y="170" class="detail">Dated registry snapshots</text>
+    <rect x="752" y="112" width="336" height="80" rx="12" class="card"/>
+    <text x="772" y="144" class="label">Drugs@FDA</text>
+    <text x="772" y="170" class="detail">Product and formulation metadata</text>
+  </g>
+
+  <g>
+    <rect x="32" y="250" width="336" height="100" rx="12" class="card"/>
+    <text x="52" y="275" class="step">ACQUIRE</text>
+    <text x="52" y="301" class="label">Python source pipeline</text>
+    <text x="52" y="327" class="detail">Original bytes and SHA-256 receipts</text>
+    <rect x="392" y="250" width="336" height="100" rx="12" class="card"/>
+    <text x="412" y="275" class="step">VALIDATE AND VERSION</text>
+    <text x="412" y="301" class="label">DuckDB and evidence corpus</text>
+    <text x="412" y="327" class="detail">SQL quality gates and provenance</text>
+    <rect x="752" y="250" width="336" height="100" rx="12" class="card"/>
+    <text x="772" y="275" class="step">RETRIEVE</text>
+    <text x="772" y="301" class="label">Typed evidence tools</text>
+    <text x="772" y="327" class="detail">Products, events, passages and trials</text>
+  </g>
+
+  <g>
+    <rect x="32" y="424" width="336" height="106" rx="12" class="card"/>
+    <text x="52" y="450" class="step">MODEL SERVICE</text>
+    <text x="52" y="477" class="label">Free-tier Gemini</text>
+    <text x="52" y="504" class="detail">API key stays on the server</text>
+    <rect x="392" y="424" width="336" height="106" rx="12" fill="#e1f0eb" stroke="#10756f" stroke-width="2"/>
+    <text x="412" y="450" class="step">INVESTIGATE AND GROUND</text>
+    <text x="412" y="477" class="label">Bounded investigation agent</text>
+    <text x="412" y="504" class="detail">4 model calls / 8 tools / 60 seconds</text>
+    <rect x="752" y="424" width="336" height="106" rx="12" class="card"/>
+    <text x="772" y="450" class="step">ENFORCE ALLOWANCES</text>
+    <text x="772" y="477" class="label">Server API and D1 quotas</text>
+    <text x="772" y="504" class="detail">Visitor requests and model-call caps</text>
+  </g>
+
+  <g>
+    <rect x="32" y="598" width="336" height="100" rx="12" class="card"/>
+    <text x="52" y="623" class="step">EXPLORE AND EXPORT</text>
+    <text x="52" y="650" class="label">Evidence workspace</text>
+    <text x="52" y="676" class="detail">Source records and exported briefs</text>
+    <rect x="392" y="598" width="336" height="100" rx="12" class="card"/>
+    <text x="412" y="623" class="step">MEASURE</text>
+    <text x="412" y="650" class="label">Paired task evaluation</text>
+    <text x="412" y="676" class="detail">Agent versus retrieval baseline</text>
+    <text x="772" y="625" class="step">SOURCE BOUNDARIES</text>
+    <text x="772" y="652" class="detail">Facts come from observed records.</text>
+    <text x="772" y="677" class="detail">Unavailable evidence stays explicit.</text>
+  </g>
+  <text x="32" y="742" fill="#526974" font-size="13">Architecture overview. Source verification, evaluation and deployment status are documented separately.</text>
+</svg>

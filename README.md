@@ -28,19 +28,9 @@ For example, the Imfinzi and Opdivo resectable NSCLC announcements identify diff
 
 ## Architecture
 
-```mermaid
-flowchart LR
-    FDA[Official FDA announcements] --> P[Python acquisition and SHA-256 receipts]
-    CT[ClinicalTrials.gov records] --> P
-    DF[Drugs@FDA metadata] --> P
-    P --> SQL[DuckDB warehouse and source checks]
-    SQL --> C[Versioned evidence corpus]
-    C --> T[Typed evidence tools]
-    G[Free-tier Gemini] --> A[Bounded investigation agent]
-    T <--> A
-    A --> UI[Evidence workspace and exported brief]
-    A --> E[Paired task evaluation]
-```
+![SignalDesk AI architecture: public sources flow through acquisition, validation and typed evidence tools to a bounded Gemini agent, evidence workspace and paired evaluation.](docs/architecture.svg)
+
+[View full-size diagram](docs/architecture.svg) · [Editable Mermaid source](docs/architecture.mmd)
 
 Python prepares the data. The TypeScript agent and its tools run unchanged in the evaluation runner and hosted application. Facts are hydrated from observed source records. Referenced event, passage, product and trial IDs are validated; unavailable evidence stays unavailable. Generated numeric interpretation is rejected.
 

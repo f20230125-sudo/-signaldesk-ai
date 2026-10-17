@@ -1,0 +1,12 @@
+flowchart LR
+    FDA["Official FDA announcements"] --> P["Python acquisition and SHA-256 receipts"]
+    CT["ClinicalTrials.gov records"] --> P
+    DF["Drugs@FDA metadata"] --> P
+    P --> SQL["DuckDB warehouse and source checks"]
+    SQL --> C["Versioned evidence corpus"]
+    C --> T["Typed evidence tools"]
+    G["Free-tier Gemini"] <--> A["Bounded investigation agent"]
+    T <--> A
+    Q["Server API and D1 quotas"] -.-> A
+    A --> UI["Evidence workspace and exported brief"]
+    A --> E["Paired task evaluation"]
