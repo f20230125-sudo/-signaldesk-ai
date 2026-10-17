@@ -33,7 +33,10 @@ export default function Workspace({corpus,evaluation}:{corpus:Corpus;evaluation:
  const openInvestigation=(q:string)=>{setQuestion(q);setTab('investigate');setError('');};
  async function run(){setBusy(true);setError('');setResult(null);
   try{const response=await fetch('/api/investigate',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({question,filters:{...(product!=='all'?{products:[product]}:{})}}),signal:AbortSignal.timeout(65000)});
-   const data=await response.json();if(!response.ok)throw new Error(data.error??'Live investigations are currently unavailable.');setResult(data);
+   const data:unknown=await response.json();
+   if(!response.ok){const message=data&&typeof data==='object'&&'error' in data&&typeof data.error==='string'?data.error:'Live investigations are currently unavailable.';throw new Error(message);}
+   if(!data||typeof data!=='object'||!('facts' in data)||!Array.isArray(data.facts)||!('status' in data))throw new Error('The investigation returned an invalid response.');
+   setResult(data as Investigation);
   }catch(e){setError(e instanceof Error?e.message:'The investigation could not complete.');}finally{setBusy(false);}
  }
  function download(){if(!result)return;const url=URL.createObjectURL(new Blob([exportBrief(result)],{type:'text/markdown;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='SignalDesk-Brief.md';a.click();URL.revokeObjectURL(url);}

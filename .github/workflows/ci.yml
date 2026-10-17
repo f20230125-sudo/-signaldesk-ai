@@ -25,6 +25,7 @@ jobs:
       - run: npx tsc --noEmit
       - run: npm run build
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: signaldesk-web-build
           path: |
