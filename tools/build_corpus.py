@@ -51,6 +51,9 @@ def build(seed_only=False):
     seed=json.loads((ROOT/'data/seed-events.json').read_text(encoding='utf-8'))
     mp=ROOT/'data/source-manifest.json'
     manifest=json.loads(mp.read_text(encoding='utf-8')) if mp.exists() else {'sources':[],'complete':False}
+    if seed_only:
+        retained=[s for s in manifest['sources'] if (ROOT/s['path']).is_file()]
+        manifest={**manifest,'sources':retained,'complete':bool(manifest.get('complete')) and len(retained)==len(manifest['sources'])}
     by_url={s['url']:s for s in manifest['sources']}
     if not seed_only and not manifest.get('complete'):raise ValueError('Complete original acquisition is required; seed mode must be explicit')
     events=[];evidence=[];trials=[];checks=[]

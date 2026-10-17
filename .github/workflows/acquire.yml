@@ -1,12 +1,6 @@
 name: Acquire original SignalDesk sources
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - data/seed-events.json
-      - tools/acquire.py
-      - tools/build_corpus.py
-      - .github/workflows/acquire.yml
 permissions:
   contents: write
 jobs:
