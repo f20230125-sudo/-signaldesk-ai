@@ -1,5 +1,7 @@
 # Vercel deployment
 
+The public evidence dashboard is live at **https://signaldesk-ai-phi.vercel.app**. Production deployment `dpl_D4DhAVAfJ4quqQTBqjfUrELDPnp6` built commit `20d5c16d9fd42cd716c347c2734b9802b93f579b` and reached READY. Thirteen unauthenticated HTTP checks passed. Live AI is paused until its production secrets and persistent Redis quota database are configured; hosted real-model and interactive browser verification remain pending.
+
 SignalDesk now has a standard Next.js build for Vercel alongside its retained Sites/Cloudflare build. The Vercel configuration runs `npm run build:vercel` and uses the Next.js preset. Use Node 24 and the repository root directory.
 
 ## Import
