@@ -1,39 +1,49 @@
 {
   "node_tests": {
-    "passed": 23,
+    "passed": 24,
     "failed": 0
   },
   "python_tests": {
-    "passed": 7,
+    "passed": 9,
     "skipped": 1,
     "failed": 0,
     "acquisition_workflow_passed": 6
   },
-  "source_syntax_files": 22,
+  "source_syntax_files": 25,
   "strict_core_modules": 7,
   "sql_quality_checks": 8,
   "benchmark": {
     "development": 20,
     "held_out": 40,
     "freeze_check": "passed",
-    "real_model_status": "gemini_3_5_access_verified_development_diagnostic",
-    "held_out_status": "not_run_pending_original_announcements",
-    "development_run": 39030337100
+    "real_model_status": "paired_run_in_progress",
+    "held_out_status": "paired_run_in_progress",
+    "development_run": 39030337100,
+    "paired_run": 39033933026
   },
   "source_corpus": {
     "events": 29,
     "cited_trial_ids": 30,
-    "mode": "browser-reviewed-seed",
+    "mode": "source-reviewed",
     "original_acquisition": "partial_fda_announcements_blocked_by_publisher",
     "registry_snapshots": 30,
     "product_identities_verified": 8,
     "original_records_acquired": 35,
-    "original_announcements_verified": 0
+    "original_announcements_verified": 0,
+    "publisher_field_reviews": 29,
+    "proof_format": "Selected browser publisher text; original HTML remains unacquired",
+    "proof_excerpts": 29,
+    "evidence_passages": 87
   },
-  "full_framework_build": "passed_github_actions_39029463599",
-  "browser_qa": "pending",
+  "full_framework_build": "passed_github_actions_39034901446",
+  "browser_qa": {
+    "status": "passed",
+    "checks": 18,
+    "workflow_run": 39034901430,
+    "scope": "Local production build in Chromium with real model; not a public deployment"
+  },
   "public_deployment": "not_published",
-  "framework_typecheck": "passed_github_actions_39029463599",
+  "framework_typecheck": "passed_github_actions_39034901446",
   "migration_generation": "generated_and_committed",
   "source_acquisition_run": 39029801385
 }
