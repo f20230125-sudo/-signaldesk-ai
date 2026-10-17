@@ -11,10 +11,14 @@
       "ingredient": "pembrolizumab",
       "company": "Merck & Co. / MSD",
       "route": "intravenous",
-      "identity_verified": false,
-      "application_numbers": [],
-      "identity_source_url": null,
-      "fda_ingredient_names": []
+      "identity_verified": true,
+      "application_numbers": [
+        "BLA125514"
+      ],
+      "identity_source_url": "https://api.fda.gov/drug/drugsfda.json?search=products.brand_name:KEYTRUDA&limit=100",
+      "fda_ingredient_names": [
+        "PEMBROLIZUMAB"
+      ]
     },
     {
       "id": "keytruda-qlex",
@@ -22,10 +26,15 @@
       "ingredient": "pembrolizumab and berahyaluronidase alfa-pmph",
       "company": "Merck & Co. / MSD",
       "route": "subcutaneous",
-      "identity_verified": false,
-      "application_numbers": [],
-      "identity_source_url": null,
-      "fda_ingredient_names": []
+      "identity_verified": true,
+      "application_numbers": [
+        "BLA761467"
+      ],
+      "identity_source_url": "https://api.fda.gov/drug/drugsfda.json?search=products.brand_name:KEYTRUDA&limit=100",
+      "fda_ingredient_names": [
+        "BERAHYALURONIDASE ALFA-PMPH",
+        "PEMBROLIZUMAB"
+      ]
     },
     {
       "id": "opdivo",
@@ -33,10 +42,15 @@
       "ingredient": "nivolumab",
       "company": "Bristol Myers Squibb",
       "route": "intravenous",
-      "identity_verified": false,
-      "application_numbers": [],
-      "identity_source_url": null,
-      "fda_ingredient_names": []
+      "identity_verified": true,
+      "application_numbers": [
+        "BLA125527",
+        "BLA125554"
+      ],
+      "identity_source_url": "https://api.fda.gov/drug/drugsfda.json?search=products.brand_name:OPDIVO&limit=100",
+      "fda_ingredient_names": [
+        "NIVOLUMAB"
+      ]
     },
     {
       "id": "opdivo-qvantig",
@@ -44,10 +58,16 @@
       "ingredient": "nivolumab and hyaluronidase-nvhy",
       "company": "Bristol Myers Squibb",
       "route": "subcutaneous",
-      "identity_verified": false,
-      "application_numbers": [],
-      "identity_source_url": null,
-      "fda_ingredient_names": []
+      "identity_verified": true,
+      "application_numbers": [
+        "BLA761381",
+        "BLA761429"
+      ],
+      "identity_source_url": "https://api.fda.gov/drug/drugsfda.json?search=products.brand_name:OPDIVO&limit=100",
+      "fda_ingredient_names": [
+        "HYALURONIDASE-NVHY",
+        "NIVOLUMAB"
+      ]
     },
     {
       "id": "imfinzi",
@@ -55,10 +75,14 @@
       "ingredient": "durvalumab",
       "company": "AstraZeneca",
       "route": "intravenous",
-      "identity_verified": false,
-      "application_numbers": [],
-      "identity_source_url": null,
-      "fda_ingredient_names": []
+      "identity_verified": true,
+      "application_numbers": [
+        "BLA761069"
+      ],
+      "identity_source_url": "https://api.fda.gov/drug/drugsfda.json?search=products.brand_name:IMFINZI&limit=100",
+      "fda_ingredient_names": [
+        "DURVALUMAB"
+      ]
     },
     {
       "id": "tecentriq",
@@ -66,10 +90,15 @@
       "ingredient": "atezolizumab",
       "company": "Genentech / Roche",
       "route": "intravenous",
-      "identity_verified": false,
-      "application_numbers": [],
-      "identity_source_url": null,
-      "fda_ingredient_names": []
+      "identity_verified": true,
+      "application_numbers": [
+        "BLA761034",
+        "BLA761041"
+      ],
+      "identity_source_url": "https://api.fda.gov/drug/drugsfda.json?search=products.brand_name:TECENTRIQ&limit=100",
+      "fda_ingredient_names": [
+        "ATEZOLIZUMAB"
+      ]
     },
     {
       "id": "tecentriq-hybreza",
@@ -77,10 +106,14 @@
       "ingredient": "atezolizumab and hyaluronidase-tqjs",
       "company": "Genentech / Roche",
       "route": "subcutaneous",
-      "identity_verified": false,
-      "application_numbers": [],
-      "identity_source_url": null,
-      "fda_ingredient_names": []
+      "identity_verified": true,
+      "application_numbers": [
+        "BLA761347"
+      ],
+      "identity_source_url": "https://api.fda.gov/drug/drugsfda.json?search=products.brand_name:TECENTRIQ&limit=100",
+      "fda_ingredient_names": [
+        "ATEZOLIZUMAB AND HYALURONIDASE-TQJS"
+      ]
     },
     {
       "id": "libtayo",
@@ -88,10 +121,14 @@
       "ingredient": "cemiplimab-rwlc",
       "company": "Regeneron",
       "route": "intravenous",
-      "identity_verified": false,
-      "application_numbers": [],
-      "identity_source_url": null,
-      "fda_ingredient_names": []
+      "identity_verified": true,
+      "application_numbers": [
+        "BLA761097"
+      ],
+      "identity_source_url": "https://api.fda.gov/drug/drugsfda.json?search=products.brand_name:LIBTAYO&limit=100",
+      "fda_ingredient_names": [
+        "CEMIPLIMAB-RWLC"
+      ]
     }
   ],
   "events": [
@@ -1392,8 +1429,24 @@
       "linked_event_ids": [
         "fda-2024-09-17-keytruda"
       ],
-      "available": false,
-      "snapshot_at": null
+      "available": true,
+      "snapshot_at": "2026-10-17T11:44:27.416809+00:00",
+      "sha256": "2e38bc1b405cc71823daed353c4b6c23f5f1152526e2110e2aadacc5f2129643",
+      "title": "Pembrolizumab in Patients With Advanced Malignant Pleural Mesothelioma",
+      "status": "COMPLETED",
+      "last_update_posted": "2024-12-10",
+      "phase": [
+        "PHASE2",
+        "PHASE3"
+      ],
+      "conditions": [
+        "Mesothelioma"
+      ],
+      "enrollment": {
+        "count": 520,
+        "type": "ACTUAL"
+      },
+      "sponsor": "Canadian Cancer Trials Group"
     },
     {
       "id": "NCT02912559",
@@ -1402,8 +1455,26 @@
       "linked_event_ids": [
         "fda-2026-10-08-tecentriq"
       ],
-      "available": false,
-      "snapshot_at": null
+      "available": true,
+      "snapshot_at": "2026-10-17T11:44:28.445467+00:00",
+      "sha256": "4bb48462f0c78e84db9f7bae95294b6ae20218bce5c2a3f963565689a00bb8ae",
+      "title": "Combination Chemotherapy With or Without Atezolizumab in Treating Patients With Stage III Colon Cancer and Deficient DNA Mismatch Repair",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "last_update_posted": "2026-10-01",
+      "phase": [
+        "PHASE3"
+      ],
+      "conditions": [
+        "Colon Adenocarcinoma",
+        "DNA Repair Disorder",
+        "Lynch Syndrome",
+        "Stage III Colon Cancer AJCC v8"
+      ],
+      "enrollment": {
+        "count": 712,
+        "type": "ACTUAL"
+      },
+      "sponsor": "National Cancer Institute (NCI)"
     },
     {
       "id": "NCT03036098",
@@ -1412,8 +1483,23 @@
       "linked_event_ids": [
         "fda-2024-03-06-opdivo"
       ],
-      "available": false,
-      "snapshot_at": null
+      "available": true,
+      "snapshot_at": "2026-10-17T11:44:29.476114+00:00",
+      "sha256": "9d90bf46e57d942769ab04e52b53d7b9b39f75ebcae98527e238b91dd969c7cd",
+      "title": "Study of Nivolumab in Combination With Ipilimumab or Standard of Care Chemotherapy Compared to the Standard of Care Chemotherapy Alone in Treatment of Participants With Untreated Inoperable or Metastatic Urothelial Cancer",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "last_update_posted": "2026-03-06",
+      "phase": [
+        "PHASE3"
+      ],
+      "conditions": [
+        "Urothelial Cancer"
+      ],
+      "enrollment": {
+        "count": 1314,
+        "type": "ACTUAL"
+      },
+      "sponsor": "Bristol-Myers Squibb"
     },
     {
       "id": "NCT03528694",
@@ -1422,8 +1508,23 @@
       "linked_event_ids": [
         "fda-2026-05-28-imfinzi"
       ],
-      "available": false,
-      "snapshot_at": null
+      "available": true,
+      "snapshot_at": "2026-10-17T11:44:30.505594+00:00",
+      "sha256": "4dc1334cd7d1226b6e387c56743bec4ccf3e576f4f7bbbf29e3e88c2a8f1d9bd",
+      "title": "Assessment of Efficacy and Safety of Durvalumab Plus BCG Compared to the Standard Therapy With BCG in Non-muscle Invasive Bladder Cancer",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "last_update_posted": "2026-07-07",
+      "phase": [
+        "PHASE3"
+      ],
+      "conditions": [
+        "Non-muscle-invasive Bladder Cancer"
+      ],
+      "enrollment": {
+        "count": 1018,
+        "type": "ACTUAL"
+      },
+      "sponsor": "AstraZeneca"
     },
     {
       "id": "NCT03615326",
@@ -1432,8 +1533,24 @@
       "linked_event_ids": [
         "fda-2025-03-19-keytruda"
       ],
-      "available": false,
-      "snapshot_at": null
+      "available": true,
+      "snapshot_at": "2026-10-17T11:44:31.532155+00:00",
+      "sha256": "738d2f18cc061bc114c68683839cbde9386aff5f7c2fa6f426fe73f90ccf8d4e",
+      "title": "Pembrolizumab/Placebo Plus Trastuzumab Plus Chemotherapy in Human Epidermal Growth Factor Receptor 2 Positive (HER2+) Advanced Gastric or Gastroesophageal Junction (GEJ) Adenocarcinoma (MK-3475-811/KEYNOTE-811)",
+      "status": "COMPLETED",
+      "last_update_posted": "2026-08-26",
+      "phase": [
+        "PHASE3"
+      ],
+      "conditions": [
+        "Gastric Neoplasms",
+        "Gastroesophageal Junction Adenocarcinoma"
+      ],
+      "enrollment": {
+        "count": 738,
+        "type": "ACTUAL"
+      },
+      "sponsor": "Merck Sharp & Dohme LLC"
     },
     {
       "id": "NCT03703297",
@@ -1442,8 +1559,23 @@
       "linked_event_ids": [
         "fda-2024-12-04-imfinzi"
       ],
-      "available": false,
-      "snapshot_at": null
+      "available": true,
+      "snapshot_at": "2026-10-17T11:44:32.556320+00:00",
+      "sha256": "e92090e53893ddb7882c45de56d806ed6513fe62d13f70bc0dec6682c46f009f",
+      "title": "Study of Durvalumab + Tremelimumab, Durvalumab, and Placebo in Limited Stage Small-Cell Lung Cancer in Patients Who Have Not Progressed Following Concurrent Chemoradiation Therapy",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "last_update_posted": "2025-11-21",
+      "phase": [
+        "PHASE3"
+      ],
+      "conditions": [
+        "Small Cell Lung Cancer"
+      ],
+      "enrollment": {
+        "count": 730,
+        "type": "ACTUAL"
+      },
+      "sponsor": "AstraZeneca"
     },
     {
       "id": "NCT03732677",
@@ -1452,8 +1584,23 @@
       "linked_event_ids": [
         "fda-2025-03-28-imfinzi"
       ],
-      "available": false,
-      "snapshot_at": null
+      "available": true,
+      "snapshot_at": "2026-10-17T11:44:33.580192+00:00",
+      "sha256": "3bf20a20e2722a22bdb4ac4663eb48008e0f57fa63366075cb149dc04a77d8e3",
+      "title": "Durvalumab+ Gemcitabine/Cisplatin (Neoadjuvant Treatment) and Durvalumab (Adjuvant Treatment) in Patients With MIBC",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "last_update_posted": "2026-10-15",
+      "phase": [
+        "PHASE3"
+      ],
+      "conditions": [
+        "Muscle Invasive Bladder Cancer"
+      ],
+      "enrollment": {
+        "count": 1063,
+        "type": "ACTUAL"
+      },
+      "sponsor": "AstraZeneca"
     },
     {
       "id": "NCT03735121",
@@ -1462,8 +1609,23 @@
       "linked_event_ids": [
         "fda-2024-09-12-tecentriq-hybreza"
       ],
-      "available": false,
-      "snapshot_at": null
+      "available": true,
+      "snapshot_at": "2026-10-17T11:44:34.604769+00:00",
+      "sha256": "68cfc30f458e27db901f01cc47fb8318335f696139c43f51bcf58f7cfa06526d",
+      "title": "A Study to Investigate Atezolizumab Subcutaneous in Patients With Previously Treated Locally Advanced or Metastatic Non-Small Cell Lung Cancer",
+      "status": "COMPLETED",
+      "last_update_posted": "2025-12-05",
+      "phase": [
+        "PHASE3"
+      ],
+      "conditions": [
+        "Non-Small Cell Lung Cancer"
+      ],
+      "enrollment": {
+        "count": 438,
+        "type": "ACTUAL"
+      },
+      "sponsor": "Hoffmann-La Roche"
     },
     {
       "id": "NCT03765918",
@@ -1472,8 +1634,23 @@
       "linked_event_ids": [
         "fda-2025-06-12-keytruda"
       ],
-      "available": false,
-      "snapshot_at": null
+      "available": true,
+      "snapshot_at": "2026-10-17T11:44:35.632277+00:00",
+      "sha256": "888c984ec35c2e0271ba081a1503c6d80f9f0a6b349ce791b0e132cab6bbcdf4",
+      "title": "Study of Pembrolizumab Given Prior to Surgery and in Combination With Radiotherapy Given Post-surgery for Advanced Head and Neck Squamous Cell Carcinoma (MK-3475-689)",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "last_update_posted": "2026-07-31",
+      "phase": [
+        "PHASE3"
+      ],
+      "conditions": [
+        "Head and Neck Neoplasms"
+      ],
+      "enrollment": {
+        "count": 714,
+        "type": "ACTUAL"
+      },
+      "sponsor": "Merck Sharp & Dohme LLC"
     },
     {
       "id": "NCT03767348",
@@ -1482,8 +1659,26 @@
       "linked_event_ids": [
         "fda-2026-08-06-opdivo"
       ],
-      "available": false,
-      "snapshot_at": null
+      "available": true,
+      "snapshot_at": "2026-10-17T11:44:36.658093+00:00",
+      "sha256": "a4182456a84bc65a9ebeb61c2801cf975924264fe906a23481e5d84df5a9f241",
+      "title": "Study of RP1 Monotherapy and RP1 in Combination With Nivolumab (IGNYTE)",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "last_update_posted": "2026-02-13",
+      "phase": [
+        "PHASE2"
+      ],
+      "conditions": [
+        "Non-Small Cell Lung Cancer (NSCLC)",
+        "Microsatellite Instability-High (MSI-H)",
+        "Non-melanoma Skin Cancer (NMSC)",
+        "Cutaneous Melanoma"
+      ],
+      "enrollment": {
+        "count": 340,
+        "type": "ESTIMATED"
+      },
+      "sponsor": "Replimune, Inc."
     },
     {
       "id": "NCT03800134",
@@ -1492,8 +1687,23 @@
       "linked_event_ids": [
         "fda-2024-08-15-imfinzi"
       ],
-      "available": false,
-      "snapshot_at": null
+      "available": true,
+      "snapshot_at": "2026-10-17T11:44:37.679661+00:00",
+      "sha256": "7837b0ae02193069efea39688a0ccc1e7a54c3f46bacc83bd7d6ac98d5e9e41b",
+      "title": "A Study of Neoadjuvant/Adjuvant Durvalumab for the Treatment of Patients With Resectable Non-small Cell Lung Cancer",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "last_update_posted": "2025-06-11",
+      "phase": [
+        "PHASE3"
+      ],
+      "conditions": [
+        "Non-Small Cell Lung Cancer"
+      ],
+      "enrollment": {
+        "count": 825,
+        "type": "ACTUAL"
+      },
+      "sponsor": "AstraZeneca"
     },
     {
       "id": "NCT03907488",
@@ -1502,8 +1712,32 @@
       "linked_event_ids": [
         "fda-2026-03-20-opdivo"
       ],
-      "available": false,
-      "snapshot_at": null
+      "available": true,
+      "snapshot_at": "2026-10-17T11:44:38.702739+00:00",
+      "sha256": "2af4a47c8d2bb99ea6c095dc1a799a9427b972a9163948c72228cc605905e83e",
+      "title": "Immunotherapy (Nivolumab or Brentuximab Vedotin) Plus Combination Chemotherapy in Treating Patients With Newly Diagnosed Stage III-IV Classic Hodgkin Lymphoma",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "last_update_posted": "2026-10-01",
+      "phase": [
+        "PHASE3"
+      ],
+      "conditions": [
+        "Ann Arbor Stage III Hodgkin Lymphoma",
+        "Ann Arbor Stage III Lymphocyte-Depleted Classic Hodgkin Lymphoma",
+        "Ann Arbor Stage III Mixed Cellularity Classic Hodgkin Lymphoma",
+        "Ann Arbor Stage III Nodular Sclerosis Classic Hodgkin Lymphoma",
+        "Ann Arbor Stage IV Hodgkin Lymphoma",
+        "Ann Arbor Stage IV Lymphocyte-Depleted Classic Hodgkin Lymphoma",
+        "Ann Arbor Stage IV Mixed Cellularity Classic Hodgkin Lymphoma",
+        "Ann Arbor Stage IV Nodular Sclerosis Classic Hodgkin Lymphoma",
+        "Classic Hodgkin Lymphoma",
+        "Lymphocyte-Rich Classic Hodgkin Lymphoma"
+      ],
+      "enrollment": {
+        "count": 994,
+        "type": "ACTUAL"
+      },
+      "sponsor": "National Cancer Institute (NCI)"
     },
     {
       "id": "NCT03914612",
@@ -1512,8 +1746,38 @@
       "linked_event_ids": [
         "fda-2024-06-17-keytruda"
       ],
-      "available": false,
-      "snapshot_at": null
+      "available": true,
+      "snapshot_at": "2026-10-17T11:44:39.732724+00:00",
+      "sha256": "ed6bc27f7942876949008d6dd217ab8922439c476df09904f4771bdc65f5c26d",
+      "title": "Testing the Addition of the Immunotherapy Drug Pembrolizumab to the Usual Chemotherapy Treatment (Paclitaxel and Carboplatin) in Stage III-IV or Recurrent Endometrial Cancer",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "last_update_posted": "2026-07-31",
+      "phase": [
+        "PHASE3"
+      ],
+      "conditions": [
+        "Endometrial Clear Cell Adenocarcinoma",
+        "Endometrial Dedifferentiated Carcinoma",
+        "Endometrial Endometrioid Adenocarcinoma",
+        "Endometrial Mixed Cell Adenocarcinoma",
+        "Endometrial Serous Adenocarcinoma",
+        "Endometrial Undifferentiated Carcinoma",
+        "Recurrent Endometrial Adenocarcinoma",
+        "Recurrent Endometrial Carcinoma",
+        "Recurrent Endometrial Clear Cell Adenocarcinoma",
+        "Recurrent Endometrial Dedifferentiated Carcinoma",
+        "Recurrent Endometrial Endometrioid Adenocarcinoma",
+        "Recurrent Endometrial Mixed Cell Adenocarcinoma",
+        "Recurrent Endometrial Serous Adenocarcinoma",
+        "Recurrent Endometrial Undifferentiated Carcinoma",
+        "Stage III Uterine Corpus Carcinoma or Carcinosarcoma AJCC v8",
+        "Stage IV Uterine Corpus Carcinoma or Carcinosarcoma AJCC v8"
+      ],
+      "enrollment": {
+        "count": 813,
+        "type": "ACTUAL"
+      },
+      "sponsor": "National Cancer Institute (NCI)"
     },
     {
       "id": "NCT03924895",
@@ -1522,8 +1786,23 @@
       "linked_event_ids": [
         "fda-2025-11-21-keytruda"
       ],
-      "available": false,
-      "snapshot_at": null
+      "available": true,
+      "snapshot_at": "2026-10-17T11:44:40.756233+00:00",
+      "sha256": "3d7099711f461c696a84a4ab18fdeccb56e4dd6d677f092f3ef6b7c5cdd07da8",
+      "title": "Perioperative Pembrolizumab (MK-3475) Plus Cystectomy or Perioperative Pembrolizumab Plus Enfortumab Vedotin Plus Cystectomy Versus Cystectomy Alone in Participants Who Are Cisplatin-ineligible or Decline Cisplatin With Muscle-invasive Bladder Cancer (MK-3475-905/KEYNOTE-905/EV-303)",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "last_update_posted": "2026-06-30",
+      "phase": [
+        "PHASE3"
+      ],
+      "conditions": [
+        "Urinary Bladder Cancer, Muscle-invasive"
+      ],
+      "enrollment": {
+        "count": 595,
+        "type": "ACTUAL"
+      },
+      "sponsor": "Merck Sharp & Dohme LLC"
     },
     {
       "id": "NCT03969004",
@@ -1532,8 +1811,23 @@
       "linked_event_ids": [
         "fda-2025-10-08-libtayo"
       ],
-      "available": false,
-      "snapshot_at": null
+      "available": true,
+      "snapshot_at": "2026-10-17T11:44:41.775314+00:00",
+      "sha256": "be71427ad3e989f34cf1d3deb2cfc5e037343fba3e5f24a12bb4ff9cfd807413",
+      "title": "Study of Adjuvant Cemiplimab Versus Placebo After Surgery and Radiation Therapy in Patients With High Risk Cutaneous Squamous Cell Carcinoma",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "last_update_posted": "2026-03-27",
+      "phase": [
+        "PHASE3"
+      ],
+      "conditions": [
+        "Cutaneous Squamous Cell Carcinoma"
+      ],
+      "enrollment": {
+        "count": 415,
+        "type": "ACTUAL"
+      },
+      "sponsor": "Regeneron Pharmaceuticals"
     },
     {
       "id": "NCT04008030",
@@ -1542,8 +1836,23 @@
       "linked_event_ids": [
         "fda-2025-04-08-opdivo"
       ],
-      "available": false,
-      "snapshot_at": null
+      "available": true,
+      "snapshot_at": "2026-10-17T11:44:42.800897+00:00",
+      "sha256": "50d372d7203d0c75215e2417988abe093bc7e9fcb76c0d4654922eb50c15e04f",
+      "title": "A Study of Nivolumab, Nivolumab Plus Ipilimumab, or Investigator's Choice Chemotherapy for the Treatment of Participants With Deficient Mismatch Repair (dMMR)/Microsatellite Instability High (MSI-H) Metastatic Colorectal Cancer (mCRC)",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "last_update_posted": "2026-08-20",
+      "phase": [
+        "PHASE3"
+      ],
+      "conditions": [
+        "Metastatic Colorectal Cancer"
+      ],
+      "enrollment": {
+        "count": 839,
+        "type": "ACTUAL"
+      },
+      "sponsor": "Bristol-Myers Squibb"
     },
     {
       "id": "NCT04025879",
@@ -1552,8 +1861,23 @@
       "linked_event_ids": [
         "fda-2024-10-03-opdivo"
       ],
-      "available": false,
-      "snapshot_at": null
+      "available": true,
+      "snapshot_at": "2026-10-17T11:44:43.821845+00:00",
+      "sha256": "da117a537d8acd6233f09ea2d9c32caa1548df8152a0535677d1ecdd626a4b26",
+      "title": "A Study of Neoadjuvant Chemotherapy Plus Nivolumab Versus Neoadjuvant Chemotherapy Plus Placebo, Followed by Surgical Removal and Adjuvant Treatment With Nivolumab or Placebo for Participants With Surgically Removable Early Stage Non-small Cell Lung Cancer",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "last_update_posted": "2026-08-26",
+      "phase": [
+        "PHASE3"
+      ],
+      "conditions": [
+        "Carcinoma, Non-Small-Cell Lung"
+      ],
+      "enrollment": {
+        "count": 461,
+        "type": "ACTUAL"
+      },
+      "sponsor": "Bristol-Myers Squibb"
     },
     {
       "id": "NCT04039607",
@@ -1562,8 +1886,23 @@
       "linked_event_ids": [
         "fda-2025-04-11-opdivo"
       ],
-      "available": false,
-      "snapshot_at": null
+      "available": true,
+      "snapshot_at": "2026-10-17T11:44:44.842771+00:00",
+      "sha256": "4ad8918a2c6237516ecc92b8f9b6b2a207c963def139edf132151a1f1e3b7ab0",
+      "title": "A Study of Nivolumab in Combination With Ipilimumab in Participants With Advanced Hepatocellular Carcinoma",
+      "status": "COMPLETED",
+      "last_update_posted": "2026-08-25",
+      "phase": [
+        "PHASE3"
+      ],
+      "conditions": [
+        "Hepatocellular Carcinoma"
+      ],
+      "enrollment": {
+        "count": 732,
+        "type": "ACTUAL"
+      },
+      "sponsor": "Bristol-Myers Squibb"
     },
     {
       "id": "NCT04221945",
@@ -1572,8 +1911,23 @@
       "linked_event_ids": [
         "fda-2024-01-12-keytruda"
       ],
-      "available": false,
-      "snapshot_at": null
+      "available": true,
+      "snapshot_at": "2026-10-17T11:44:45.870822+00:00",
+      "sha256": "38d6f58e5218a820f0a706cd931ef7f3710cc00823cc4ce45a42b6517525a366",
+      "title": "Study of Chemoradiotherapy With or Without Pembrolizumab (MK-3475) For The Treatment of Locally Advanced Cervical Cancer (MK-3475-A18/KEYNOTE-A18/ENGOT-cx11/GOG-3047)",
+      "status": "COMPLETED",
+      "last_update_posted": "2026-02-20",
+      "phase": [
+        "PHASE3"
+      ],
+      "conditions": [
+        "Uterine Cervical Neoplasms"
+      ],
+      "enrollment": {
+        "count": 1060,
+        "type": "ACTUAL"
+      },
+      "sponsor": "Merck Sharp & Dohme LLC"
     },
     {
       "id": "NCT04269200",
@@ -1582,8 +1936,23 @@
       "linked_event_ids": [
         "fda-2024-06-14-imfinzi"
       ],
-      "available": false,
-      "snapshot_at": null
+      "available": true,
+      "snapshot_at": "2026-10-17T11:44:46.899662+00:00",
+      "sha256": "2222d40e3c7315e6014133aa188d0f865f73a9f6eea7580403af1d5632e6f4a2",
+      "title": "Durvalumab With or Without Olaparib as Maintenance Therapy After First-Line Treatment of Advanced and Recurrent Endometrial Cancer",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "last_update_posted": "2026-08-07",
+      "phase": [
+        "PHASE3"
+      ],
+      "conditions": [
+        "Endometrial Neoplasms"
+      ],
+      "enrollment": {
+        "count": 805,
+        "type": "ACTUAL"
+      },
+      "sponsor": "AstraZeneca"
     },
     {
       "id": "NCT04592913",
@@ -1592,8 +1961,24 @@
       "linked_event_ids": [
         "fda-2025-11-25-imfinzi"
       ],
-      "available": false,
-      "snapshot_at": null
+      "available": true,
+      "snapshot_at": "2026-10-17T11:44:47.922915+00:00",
+      "sha256": "277c35813593b5d6162052a78461bcf573c6b411cf450bcb91a39aeb376e2900",
+      "title": "Assessing Durvalumab and FLOT Chemotherapy in Resectable Gastric and Gastroesophageal Junction Cancer",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "last_update_posted": "2025-12-24",
+      "phase": [
+        "PHASE3"
+      ],
+      "conditions": [
+        "Gastrointestinal Neoplasms",
+        "Esophagogastric Junction"
+      ],
+      "enrollment": {
+        "count": 957,
+        "type": "ACTUAL"
+      },
+      "sponsor": "AstraZeneca"
     },
     {
       "id": "NCT04660344",
@@ -1602,8 +1987,23 @@
       "linked_event_ids": [
         "fda-2026-05-15-tecentriq"
       ],
-      "available": false,
-      "snapshot_at": null
+      "available": true,
+      "snapshot_at": "2026-10-17T11:44:48.950599+00:00",
+      "sha256": "cc7f8c429fcff160d002cafcd447e26a6a6a4d9e52837481ca736efa1f255649",
+      "title": "A Study of Atezolizumab Versus Placebo as Adjuvant Therapy in Participants With High-risk Muscle-invasive Bladder Cancer (MIBC) Who Are ctDNA Positive Following Cystectomy",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "last_update_posted": "2026-09-28",
+      "phase": [
+        "PHASE3"
+      ],
+      "conditions": [
+        "Muscle-invasive Bladder Cancer"
+      ],
+      "enrollment": {
+        "count": 761,
+        "type": "ACTUAL"
+      },
+      "sponsor": "Hoffmann-La Roche"
     },
     {
       "id": "NCT04700124",
@@ -1612,8 +2012,23 @@
       "linked_event_ids": [
         "fda-2026-07-10-keytruda"
       ],
-      "available": false,
-      "snapshot_at": null
+      "available": true,
+      "snapshot_at": "2026-10-17T11:44:49.973405+00:00",
+      "sha256": "e42f37d328c56d0fcef7c337593e7d22a83a96d7ba1aa5a0b7b5af4e31baf46b",
+      "title": "Perioperative Enfortumab Vedotin (EV) Plus Pembrolizumab (MK-3475) Versus Neoadjuvant Chemotherapy for Cisplatin-Eligible Muscle Invasive Bladder Cancer (MIBC) (MK-3475-B15/ KEYNOTE-B15 / EV-304)",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "last_update_posted": "2026-07-16",
+      "phase": [
+        "PHASE3"
+      ],
+      "conditions": [
+        "Bladder Cancer"
+      ],
+      "enrollment": {
+        "count": 808,
+        "type": "ACTUAL"
+      },
+      "sponsor": "Merck Sharp & Dohme LLC"
     },
     {
       "id": "NCT04810078",
@@ -1622,8 +2037,23 @@
       "linked_event_ids": [
         "fda-2024-12-27-opdivo-qvantig"
       ],
-      "available": false,
-      "snapshot_at": null
+      "available": true,
+      "snapshot_at": "2026-10-17T11:44:50.998783+00:00",
+      "sha256": "b0e3c34f1f2c2f28f019681791d30647224378f6b065a36e871ce4752dee33ae",
+      "title": "A Study of Subcutaneous Nivolumab Versus Intravenous Nivolumab in Participants With Previously Treated Clear Cell Renal Cell Carcinoma That is Advanced or Has Spread",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "last_update_posted": "2026-09-22",
+      "phase": [
+        "PHASE3"
+      ],
+      "conditions": [
+        "Clear Cell Renal Cell Carcinoma"
+      ],
+      "enrollment": {
+        "count": 681,
+        "type": "ACTUAL"
+      },
+      "sponsor": "Bristol-Myers Squibb"
     },
     {
       "id": "NCT05091567",
@@ -1632,8 +2062,23 @@
       "linked_event_ids": [
         "fda-2025-10-02-tecentriq"
       ],
-      "available": false,
-      "snapshot_at": null
+      "available": true,
+      "snapshot_at": "2026-10-17T11:44:52.026969+00:00",
+      "sha256": "85041ec0a9ea8e0e984c8a35e7ee610acfedf4550f3ea9f5ebc4df1e2435ad4f",
+      "title": "A Phase III, Open-Label Study of Maintenance Lurbinectedin in Combination With Atezolizumab Compared With Atezolizumab in Participants With Extensive-Stage Small-Cell Lung Cancer",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "last_update_posted": "2026-09-09",
+      "phase": [
+        "PHASE3"
+      ],
+      "conditions": [
+        "Small-Cell Lung Cancer"
+      ],
+      "enrollment": {
+        "count": 660,
+        "type": "ACTUAL"
+      },
+      "sponsor": "Hoffmann-La Roche"
     },
     {
       "id": "NCT05116189",
@@ -1642,8 +2087,25 @@
       "linked_event_ids": [
         "fda-2026-02-10-keytruda"
       ],
-      "available": false,
-      "snapshot_at": null
+      "available": true,
+      "snapshot_at": "2026-10-17T11:44:53.057792+00:00",
+      "sha256": "8685077caa82188d3d7ce55fb087002db6fefa054c8458b7f71f04f3b1afeca4",
+      "title": "Pembrolizumab/Placebo Plus Paclitaxel With or Without Bevacizumab for Platinum-resistant Recurrent Ovarian Cancer (MK-3475-B96/KEYNOTE-B96/ENGOT-ov65).",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "last_update_posted": "2026-03-09",
+      "phase": [
+        "PHASE3"
+      ],
+      "conditions": [
+        "Ovarian Cancer",
+        "Carcinoma, Ovarian Epithelial",
+        "Fallopian Tube Neoplasms"
+      ],
+      "enrollment": {
+        "count": 643,
+        "type": "ACTUAL"
+      },
+      "sponsor": "Merck Sharp & Dohme LLC"
     },
     {
       "id": "NCT05239728",
@@ -1652,8 +2114,23 @@
       "linked_event_ids": [
         "fda-2026-06-12-keytruda"
       ],
-      "available": false,
-      "snapshot_at": null
+      "available": true,
+      "snapshot_at": "2026-10-17T11:44:54.082019+00:00",
+      "sha256": "56cef41ddd13a52b1a466316c23ed2793c8e71aadcf76664aef0bbcf626ca6d4",
+      "title": "A Study of Belzutifan (MK-6482) Plus Pembrolizumab (MK-3475) Versus Placebo Plus Pembrolizumab in Participants With Clear Cell Renal Cell Carcinoma Post Nephrectomy (MK-6482-022)",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "last_update_posted": "2026-05-15",
+      "phase": [
+        "PHASE3"
+      ],
+      "conditions": [
+        "Carcinoma, Renal Cell"
+      ],
+      "enrollment": {
+        "count": 1800,
+        "type": "ESTIMATED"
+      },
+      "sponsor": "Merck Sharp & Dohme LLC"
     },
     {
       "id": "NCT05382286",
@@ -1662,8 +2139,24 @@
       "linked_event_ids": [
         "fda-2026-06-24-keytruda"
       ],
-      "available": false,
-      "snapshot_at": null
+      "available": true,
+      "snapshot_at": "2026-10-17T11:44:55.112262+00:00",
+      "sha256": "62ca9afb59e89b2139ff655bb12b87f39c2947113854975596a445abebf527d6",
+      "title": "Study of Sacituzumab Govitecan-hziy and Pembrolizumab Versus Treatment of Physician's Choice and Pembrolizumab in Patients With Previously Untreated, Locally Advanced Inoperable or Metastatic Triple-Negative Breast Cancer",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "last_update_posted": "2025-09-18",
+      "phase": [
+        "PHASE3"
+      ],
+      "conditions": [
+        "Triple Negative Breast Cancer",
+        "PD-L1 Positive"
+      ],
+      "enrollment": {
+        "count": 443,
+        "type": "ACTUAL"
+      },
+      "sponsor": "Gilead Sciences"
     },
     {
       "id": "NCT05382299",
@@ -1672,8 +2165,24 @@
       "linked_event_ids": [
         "fda-2026-06-24-keytruda"
       ],
-      "available": false,
-      "snapshot_at": null
+      "available": true,
+      "snapshot_at": "2026-10-17T11:44:56.136266+00:00",
+      "sha256": "c67fcdeea8653c8e2fa4501ab0aa63edf9413fec60bf5626f3a183a5e410ed08",
+      "title": "Study of Sacituzumab Govitecan-hziy Versus Treatment of Physician's Choice in Patients With Previously Untreated Locally Advanced Inoperable or Metastatic Triple-Negative Breast Cancer",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "last_update_posted": "2026-04-06",
+      "phase": [
+        "PHASE3"
+      ],
+      "conditions": [
+        "Triple Negative Breast Cancer",
+        "PD-L1 Negative"
+      ],
+      "enrollment": {
+        "count": 623,
+        "type": "ACTUAL"
+      },
+      "sponsor": "Gilead Sciences"
     },
     {
       "id": "NCT05722015",
@@ -1682,13 +2191,28 @@
       "linked_event_ids": [
         "fda-2025-09-19-keytruda-qlex"
       ],
-      "available": false,
-      "snapshot_at": null
+      "available": true,
+      "snapshot_at": "2026-10-17T11:44:57.162279+00:00",
+      "sha256": "7befebab7c1cd98581683075a55534c2f47ab6798b30be97f4501a8bae0b763d",
+      "title": "A Study of Subcutaneous (SC) Pembrolizumab Coformulated With Berahyaluronidase Alfa (MK-3475A) vs Intravenous Pembrolizumab in Adult Participants With Metastatic Non-small Cell Lung Cancer (NSCLC) (MK-3475A-D77)",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "last_update_posted": "2026-08-26",
+      "phase": [
+        "PHASE3"
+      ],
+      "conditions": [
+        "Metastatic Non-small Cell Lung Cancer"
+      ],
+      "enrollment": {
+        "count": 377,
+        "type": "ACTUAL"
+      },
+      "sponsor": "Merck Sharp & Dohme LLC"
     }
   ],
   "acquisition": {
-    "expected": 0,
-    "acquired": 0,
+    "expected": 64,
+    "acquired": 35,
     "complete": false
   }
 }
