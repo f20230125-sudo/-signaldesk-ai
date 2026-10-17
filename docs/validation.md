@@ -11,8 +11,8 @@
 | Source coverage | 29 real FDA announcements reviewed through browser research; 30 cited NCT IDs |
 | Original FDA/registry/Drugs@FDA acquisition | Pending; current corpus is explicitly marked `browser-reviewed-seed` |
 | Model inference and paired evaluation | Not run; no configured Gemini key |
-| Full framework typecheck and web build | Pending; required packages are missing from the offline dependency cache |
-| D1 migration generation and application | Pending complete framework dependencies |
+| Full framework typecheck and web build | Passed in GitHub Actions run 39029463599, commit ba7a9f005127b025445f8ffcdfa8919a28e71662 |
+| D1 migration generation and application | Generation passed in that run; hosted application pending publication |
 | Browser layout and keyboard QA | Pending a working web build |
 | Public hosting and five fresh investigations | Pending; Sites source synchronization is blocked by current outbound networking restrictions |
 

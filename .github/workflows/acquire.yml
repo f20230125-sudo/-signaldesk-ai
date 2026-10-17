@@ -23,9 +23,22 @@ jobs:
         with:
           node-version: '24'
       - run: pip install -e '.[test]'
-      - run: python tools/acquire.py
-      - run: python tools/build_corpus.py
+      - name: Acquire original publisher bytes
+        id: acquisition
+        continue-on-error: true
+        run: python tools/acquire.py
+      - name: Build corpus with explicit provenance
+        env:
+          ACQUISITION_OUTCOME: ${{ steps.acquisition.outcome }}
+        run: |
+          if [ "$ACQUISITION_OUTCOME" = 'success' ]; then
+            python tools/build_corpus.py
+          else
+            python tools/build_corpus.py --seed-only
+          fi
       - run: python -m pytest -q tests/python
+        env:
+          SIGNALDESK_REQUIRE_RAW: '1'
       - run: node --experimental-strip-types --test tests/*.test.ts
       - run: node tools/check-freeze.mjs
       - name: Retain original bytes and acquisition receipts
@@ -44,5 +57,5 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add data/corpus.json data/source-manifest.json reports/source-validation.json reports/data-quality.json
-          git diff --cached --quiet || git commit -m 'Update verified FDA and ClinicalTrials evidence corpus'
+          git diff --cached --quiet || git commit -m 'Update source acquisition receipts and labelled evidence corpus'
           git push
