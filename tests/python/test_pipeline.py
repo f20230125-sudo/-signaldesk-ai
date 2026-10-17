@@ -1,0 +1,43 @@
+import hashlib
+import json
+import sqlite3
+from pathlib import Path
+
+import pytest
+from tools.build_corpus import parse_html
+
+ROOT=Path(__file__).resolve().parents[2]
+
+def test_parser_ignores_navigation_and_scripts():
+    html=b'<html><nav>wrong</nav><main><h1>Approval</h1><p>On August 15, 2024, FDA approved <strong>durvalumab</strong>.</p><script>ignore</script></main></html>'
+    assert parse_html(html)==['Approval','On August 15, 2024, FDA approved durvalumab.']
+
+def test_parser_refuses_changed_page_shape():
+    with pytest.raises(ValueError):parse_html(b'<html>Access denied</html>')
+
+def test_seed_has_unique_real_source_identifiers():
+    events=json.loads((ROOT/'data/seed-events.json').read_text(encoding='utf-8'))['events']
+    assert len(events)==len({e['id'] for e in events})==len({e['source_url'] for e in events})
+    assert all(e['source_url'].startswith('https://www.fda.gov/drugs/') for e in events)
+    assert all('2024-01-01'<=e['approval_date']<='2026-10-17' for e in events)
+
+def test_corpus_never_marks_unacquired_trial_as_available():
+    corpus=json.loads((ROOT/'data/corpus.json').read_text(encoding='utf-8'))
+    for t in corpus['trials']:
+        if t['available']:assert t.get('sha256') and t['snapshot_at']
+        else:assert not t.get('status')
+    for e in corpus['events']:
+        if e['original_verified']:assert e['source_sha256']
+
+def test_atomic_quota_limit():
+    db=sqlite3.connect(':memory:');db.execute('CREATE TABLE quotas(key TEXT PRIMARY KEY,count INTEGER NOT NULL,expires INTEGER NOT NULL)')
+    sql='INSERT INTO quotas (key,count,expires) VALUES (?,1,?) ON CONFLICT(key) DO UPDATE SET count=count+1 WHERE count < ? RETURNING count'
+    assert db.execute(sql,['global',100,2]).fetchone()==(1,)
+    assert db.execute(sql,['global',100,2]).fetchone()==(2,)
+    assert db.execute(sql,['global',100,2]).fetchone() is None
+
+def test_original_checksums_when_acquired():
+    manifest=ROOT/'data/source-manifest.json'
+    if not manifest.exists():pytest.skip('Original acquisition has not run')
+    for s in json.loads(manifest.read_text(encoding='utf-8'))['sources']:
+        assert hashlib.sha256((ROOT/s['path']).read_bytes()).hexdigest()==s['sha256']

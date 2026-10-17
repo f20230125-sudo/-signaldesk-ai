@@ -1,0 +1,10 @@
+{
+  "version": "v1",
+  "seed_sha256": "b67a33bba3077b2d92af15273d7ed973438aa978d4799706c151c279f5c109d3",
+  "tasks_sha256": "5a4f786f5018b15e599b994d027a9e7e92907979f347d17e5675ac83a7ca852b",
+  "development_tasks": 20,
+  "held_out_tasks": 40,
+  "development_groups": 10,
+  "held_out_reference_events": 16,
+  "shared_trial_leakage": false
+}

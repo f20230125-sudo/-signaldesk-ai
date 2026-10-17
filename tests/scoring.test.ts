@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {scoreTask,wilson} from '../lib/scoring.ts';
+import type {Task} from '../lib/scoring.ts';
+import type {Investigation} from '../lib/types.ts';
+const task:Task={id:'fixture',split:'test',category:'event-date',question:'fixture',filters:{},event_group:'fixture',expected:{event_ids:['observed'],product_ids:[],trial_ids:[],requires_limitations:false,manual_review_required:true}};
+const result={event_ids:['observed'],product_ids:[],trial_ids:[],facts:[{id:'observed',product_ids:[]}],evidence:[{event_id:'observed'}],limitations:[],status:'complete'} as unknown as Investigation;
+test('Automatic field success never becomes strict semantic success without review',()=>{const s=scoreTask(task,result);assert.equal(s.automatic_pass,true);assert.equal(s.strict_pass,null);assert.equal(s.manual_review_required,true);});
+test('Wrong or extra event selections fail, even when cited evidence exists',()=>{assert.equal(scoreTask(task,{...result,event_ids:['different']}).automatic_pass,false);assert.equal(scoreTask(task,{...result,event_ids:['observed','extra']}).automatic_pass,false);});
+test('Unavailable model response is not counted as a correct task',()=>{assert.equal(scoreTask(task,{...result,status:'unavailable'}).automatic_pass,false);});
+test('Wilson interval handles zero tasks and finite small samples',()=>{assert.equal(wilson(0,0),null);const interval=wilson(34,40)!;assert(interval[0]<.85&&interval[1]>.85);assert(interval[0]>=0&&interval[1]<=1);});

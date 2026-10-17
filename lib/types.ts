@@ -1,0 +1,14 @@
+export type Product = { id: string; name: string; ingredient: string; company: string; route: string; identity_verified?:boolean; application_numbers?:string[]; identity_source_url?:string|null; fda_ingredient_names?:string[] };
+export type Event = { id: string; approval_date: string; title: string; source_url: string; product_ids: string[]; population_summary: string; trial_ids: string[]; trial_names: string[]; evidence_notes: string[]; evidence_ids: string[]; original_verified: boolean; source_sha256: string | null; jurisdiction: string };
+export type Evidence = { id: string; event_id: string; text: string; source_url: string; is_original_excerpt: boolean; source_sha256: string | null };
+export type Trial = { id: string; source_url: string; api_url: string; available: boolean; snapshot_at: string | null; linked_event_ids: string[]; title?: string; status?: string; phase?: string[]; conditions?: string[]; enrollment?: {count?: number;type?: string}; sponsor?: string; last_update_posted?: string };
+export type Corpus = {schema_version:number; cutoff:string;period_start:string;mode:string;collection_notice:string;products:Product[];events:Event[];evidence:Evidence[];trials:Trial[];acquisition:{expected:number;acquired:number;complete:boolean}};
+export type Filters = {products?:string[];start?:string;end?:string;condition?:string};
+export type ToolName = 'resolve_product'|'find_events'|'read_evidence'|'get_trial'|'compare_events';
+export type ToolCall = {name:ToolName;arguments:Record<string,unknown>};
+export type ToolTrace = {name:ToolName;arguments:Record<string,unknown>;result:unknown;elapsed_ms:number;error?:string};
+export type Draft = {title:string;event_ids:string[];product_ids:string[];evidence_ids:string[];trial_ids:string[];commercial_relevance:string[];follow_up_questions:string[];limitations:string[]};
+export type Investigation = Draft & {id:string;status:'complete'|'partial'|'unavailable';model:string;mode:'agent'|'baseline';generated_at:string;corpus_mode:string;cutoff:string;facts:Event[];products:Product[];evidence:Evidence[];trials:Trial[];trace:ToolTrace[];usage:{input_tokens:number;output_tokens:number;model_calls:number;latency_ms:number};error?:string};
+export type ModelReply = {calls:ToolCall[];draft?:Draft;input_tokens:number;output_tokens:number};
+export type ModelInput = {system:string;question:string;history:{role:string;content:string}[];finalOnly:boolean};
+export type Model = {name:string;generate:(input:ModelInput,signal:AbortSignal)=>Promise<ModelReply>};

@@ -1,0 +1,10 @@
+{
+  "status": "not_run",
+  "development_tasks": 20,
+  "held_out_tasks": 40,
+  "completed_agent_tasks": 0,
+  "completed_baseline_tasks": 0,
+  "model": null,
+  "summary": "The real-model benchmark has not run. No task-success or accuracy result is claimed.",
+  "cases": []
+}

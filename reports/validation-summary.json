@@ -1,0 +1,29 @@
+{
+  "node_tests": {
+    "passed": 21,
+    "failed": 0
+  },
+  "python_tests": {
+    "passed": 5,
+    "skipped": 1,
+    "failed": 0
+  },
+  "source_syntax_files": 21,
+  "strict_core_modules": 7,
+  "sql_quality_checks": 8,
+  "benchmark": {
+    "development": 20,
+    "held_out": 40,
+    "freeze_check": "passed",
+    "real_model_status": "not_run"
+  },
+  "source_corpus": {
+    "events": 29,
+    "cited_trial_ids": 30,
+    "mode": "browser-reviewed-seed",
+    "original_acquisition": "pending"
+  },
+  "full_framework_build": "pending_missing_dependencies",
+  "browser_qa": "pending",
+  "public_deployment": "not_published"
+}
