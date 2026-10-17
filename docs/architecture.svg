@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1120" height="770" viewBox="0 0 1120 770" role="img" aria-labelledby="title description">
   <title id="title">SignalDesk AI architecture</title>
-  <desc id="description">FDA announcements, ClinicalTrials.gov and Drugs@FDA feed Python acquisition with checksum receipts, DuckDB quality checks and a versioned corpus. Typed evidence tools connect the corpus to a bounded Gemini investigation agent. The agent serves the evidence workspace and paired evaluation. Server-side D1 quotas protect model calls.</desc>
+  <desc id="description">FDA publisher field reviews, ClinicalTrials.gov and Drugs@FDA feed the evidence pipeline with checksum receipts, DuckDB quality checks and a versioned corpus. Typed evidence tools connect the corpus to a bounded Gemini investigation agent. The agent serves the evidence workspace and paired evaluation. Server-side D1 quotas protect model calls.</desc>
   <defs>
     <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8 Z" fill="#718491"/></marker>
     <style>
@@ -45,8 +45,8 @@
   <g>
     <rect x="32" y="250" width="336" height="100" rx="12" class="card"/>
     <text x="52" y="275" class="step">ACQUIRE</text>
-    <text x="52" y="301" class="label">Python source pipeline</text>
-    <text x="52" y="327" class="detail">Original bytes and SHA-256 receipts</text>
+    <text x="52" y="301" class="label">Acquisition and field review</text>
+    <text x="52" y="327" class="detail">Registry bytes, FDA proof and hashes</text>
     <rect x="392" y="250" width="336" height="100" rx="12" class="card"/>
     <text x="412" y="275" class="step">VALIDATE AND VERSION</text>
     <text x="412" y="301" class="label">DuckDB and evidence corpus</text>

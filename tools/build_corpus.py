@@ -129,17 +129,22 @@ def build(seed_only=False):
     out=ROOT/'reports';out.mkdir(exist_ok=True)
     (out/'source-validation.json').write_text(json.dumps({'events':len(events),'trials':len(trials),
         'original_events_verified':sum(e['original_verified'] for e in events),'product_identities_verified':sum(p['identity_verified'] for p in products),'checks':checks,'mode':corpus['mode']},indent=2),encoding='utf-8',newline='\n')
-    warehouse=ROOT/'data/warehouse';warehouse.mkdir(exist_ok=True)
-    con=duckdb.connect(str(warehouse/'signaldesk.duckdb'))
-    for name,rows in [('events',events),('trials',trials),('products',products),('evidence',evidence)]:
-        path=warehouse/f'{name}.json';path.write_text(json.dumps(rows),encoding='utf-8',newline='\n')
-        con.execute(f"CREATE OR REPLACE TABLE {name} AS SELECT * FROM read_json_auto(?)",[str(path)])
-    quality=con.execute((ROOT/'sql/quality.sql').read_text(encoding='utf-8')).fetchall()
-    if any(not passed for _,passed in quality):raise ValueError('SQL quality failure: '+str(quality))
-    (out/'data-quality.json').write_text(json.dumps([{'check':name,'passed':passed} for name,passed in quality],indent=2),encoding='utf-8',newline='\n')
-    con.close()
+    refresh_warehouse(corpus)
     print(json.dumps({'events':len(events),'trials':len(trials),'evidence_passages':len(evidence),'mode':corpus['mode']}))
     return corpus
+
+
+def refresh_warehouse(corpus,root=None):
+    root=root or ROOT
+    warehouse=root/'data/warehouse';warehouse.mkdir(exist_ok=True)
+    con=duckdb.connect(str(warehouse/'signaldesk.duckdb'))
+    for name,rows in [(name,corpus[name]) for name in ('events','trials','products','evidence')]:
+        path=warehouse/f'{name}.json';path.write_text(json.dumps(rows),encoding='utf-8',newline='\n')
+        con.execute(f"CREATE OR REPLACE TABLE {name} AS SELECT * FROM read_json_auto(?)",[str(path)])
+    quality=con.execute((root/'sql/quality.sql').read_text(encoding='utf-8')).fetchall()
+    if any(not passed for _,passed in quality):raise ValueError('SQL quality failure: '+str(quality))
+    (root/'reports/data-quality.json').write_text(json.dumps([{'check':name,'passed':passed} for name,passed in quality],indent=2),encoding='utf-8',newline='\n')
+    con.close()
 
 
 if __name__=='__main__':
