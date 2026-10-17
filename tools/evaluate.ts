@@ -22,9 +22,12 @@ const dir=path.join(root,'reports/runs',fingerprint);fs.mkdirSync(dir,{recursive
 const auditPath=path.join(dir,'manual-audit.json');
 const audit=fs.existsSync(auditPath)?JSON.parse(fs.readFileSync(auditPath,'utf8')):{};
 let stopped=false;
+let lastCallAt=0;
+const callInterval=Number(process.env.SIGNALDESK_EVAL_CALL_INTERVAL_MS??6000);
+if(!Number.isFinite(callInterval)||callInterval<0||callInterval>15000)throw new Error('Evaluation call interval must be between zero and fifteen thousand milliseconds.');
 for(const task of tasks){for(const mode of ['baseline','agent'] as const){
  const file=path.join(dir,`${task.id}-${mode}.json`);if(fs.existsSync(file)&&JSON.parse(fs.readFileSync(file,'utf8')).completed)continue;
- const result=await investigate(corpus,task.question,task.filters,model,{mode});
+ const result=await investigate(corpus,task.question,task.filters,model,{mode,beforeCall:async()=>{const delay=callInterval-(Date.now()-lastCallAt);if(delay>0)await new Promise(resolve=>setTimeout(resolve,delay));lastCallAt=Date.now();}});
  const interrupted=result.status==='unavailable'&&/allowance|quota|rate limit/i.test(result.error??'');
  const row={task_id:task.id,category:task.category,mode,fingerprint,completed:!interrupted,result,score:scoreTask(task,result)};
  fs.writeFileSync(file,JSON.stringify(row,null,2));console.log(task.id,mode,result.status,interrupted?'quota interrupted':'recorded');
@@ -36,8 +39,9 @@ for(const row of cases){const decision=audit[`${row.task_id}-${row.mode}`];const
 const completed=(mode:string)=>cases.filter(c=>c.mode===mode&&c.completed);
 const manuallyScored=cases.every(c=>!c.completed||c.score.strict_pass!==null);
 const complete=completed('agent').length===tasks.length&&completed('baseline').length===tasks.length;
-const report={status:complete&&manuallyScored?'complete':cases.length?'partial':'not_run',development_tasks:20,held_out_tasks:40,split,completed_agent_tasks:completed('agent').length,completed_baseline_tasks:completed('baseline').length,model:model.name,fingerprint,
+const report={status:complete&&manuallyScored?'complete':cases.length?'partial':'not_run',development_tasks:20,held_out_tasks:40,split,corpus_mode:corpus.mode,acquired_sources:corpus.acquisition,completed_agent_tasks:completed('agent').length,completed_baseline_tasks:completed('baseline').length,model:model.name,fingerprint,
  summary:complete&&manuallyScored?'Full paired run completed and developer semantic audit recorded.':'Evaluation is partial until both systems complete every task and each answer receives a recorded semantic audit. Automatic field checks are not general answer accuracy.',cases,
  ...(complete&&manuallyScored?Object.fromEntries(['agent','baseline'].flatMap(mode=>{const rows=completed(mode),success=rows.filter(r=>r.score.strict_pass).length;return [[`${mode}_success_rate`,success/rows.length],[`${mode}_wilson_95`,wilson(success,rows.length)]];})):{})};
 const dest=split==='test'?path.join(root,'data/evaluation/report.json'):path.join(dir,'development-report.json');fs.writeFileSync(dest,JSON.stringify(report,null,2));
+if(split==='dev')fs.writeFileSync(path.join(root,'reports/development-evaluation.json'),JSON.stringify(report,null,2));
 console.log(JSON.stringify({status:report.status,agent:report.completed_agent_tasks,baseline:report.completed_baseline_tasks,manual_audit_required:!manuallyScored}));

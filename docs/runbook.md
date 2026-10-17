@@ -6,7 +6,7 @@
 
 `python tools/build_corpus.py` verifies hashes, checks that the stated approval dates and cited NCT IDs occur in the original announcement, and writes a versioned corpus and DuckDB warehouse. It fails on a seed/source discrepancy. A date discrepancy must be reviewed against the original body, not silently normalized to an index date.
 
-`--seed-only` permits browser-reviewed summaries for development; it never invents trial status or labels a summary as an original quotation. Original sources can be acquired through the repository's explicit acquisition workflow when local networking is unavailable. Source artifacts retain original bytes; checked derived outputs can then be committed.
+`--seed-only` permits browser-reviewed summaries for development; it never invents trial status or labels a summary as an original quotation. The acquisition workflow retains verified registry and Drugs@FDA records even when announcement downloads fail, and builds with this explicit flag. The corpus stays in `browser-reviewed-seed` mode until all original announcements pass validation. Original-byte checks run against the retained artifact during acquisition; a source-only checkout explicitly skips that integration check.
 
 ## Model and public endpoint
 
@@ -21,6 +21,8 @@ Request allowances fail closed if the database is unavailable. IP addresses are 
 The app uses the Sites Vinext starter. Preserve its `sites()` integration and persisted project identity in `.openai/hosting.json`. Build with the supported Sites helper, synchronize the exact source state and publish only the matching saved version. Verify five fresh real-model investigations after publication. An allocated Site URL is not proof of successful deployment.
 
 Current workspace restrictions block outbound sockets and the Sites source synchronization endpoint. Full dependency installation also needs packages absent from the local cache. These are explicit delivery gates; do not mark hosting or browser QA complete without observed results.
+
+GitHub Actions has independently completed a full dependency installation, framework typecheck, migration generation and production web build. This verifies buildability but does not synchronize the source to Sites or publish the app.
 
 ## Delivery archive
 

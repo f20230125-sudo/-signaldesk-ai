@@ -1,5 +1,9 @@
 name: Run opt-in SignalDesk evaluation
 on:
+  # Updating this workflow on main explicitly starts a development run.
+  push:
+    branches: [main]
+    paths: [.github/workflows/evaluate.yml]
   workflow_dispatch:
     inputs:
       split:
@@ -7,14 +11,20 @@ on:
         type: choice
         options: [development, held-out]
         default: development
+      allow_seed:
+        description: Allow clearly labelled browser-reviewed summaries for development only
+        type: boolean
+        default: true
 permissions:
-  contents: read
+  contents: write
 jobs:
   evaluate:
     runs-on: ubuntu-latest
     timeout-minutes: 35
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
@@ -23,10 +33,15 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: gemini-2.5-flash-lite
           SIGNALDESK_LIVE_EVAL: '1'
-          EVALUATION_SPLIT: ${{ inputs.split }}
+          EVALUATION_SPLIT: ${{ inputs.split || 'development' }}
+          ALLOW_SEED: ${{ github.event_name == 'push' || inputs.allow_seed }}
         run: |
           if [ "$EVALUATION_SPLIT" = 'development' ]; then
-            node --experimental-strip-types tools/evaluate.ts --dev
+            if [ "$ALLOW_SEED" = 'true' ]; then
+              node --experimental-strip-types tools/evaluate.ts --dev --allow-seed
+            else
+              node --experimental-strip-types tools/evaluate.ts --dev
+            fi
           else
             node --experimental-strip-types tools/evaluate.ts
           fi
@@ -36,4 +51,16 @@ jobs:
           name: signaldesk-real-model-evaluation
           path: |
             reports/runs/
+            reports/development-evaluation.json
             data/evaluation/report.json
+      - name: Save public development results
+        if: always()
+        run: |
+          if [ -f reports/development-evaluation.json ]; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add reports/development-evaluation.json
+            git diff --cached --quiet || git commit -m 'Record real-model development evaluation without held-out claims'
+            git pull --rebase origin main
+            git push
+          fi
