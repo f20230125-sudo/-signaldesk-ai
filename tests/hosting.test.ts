@@ -52,6 +52,18 @@ test('Missing persistent quota prevents any model request',async()=>{
   const body=await response.json() as {error:string};
   assert.equal(response.status,503);assert.match(body.error,/Persistent request allowance/);assert.equal(response.headers.get('cache-control'),'no-store');
 });
+test('Whitespace-only questions are rejected before consuming visitor quota',async()=>{
+  let reservations=0;
+  const response=await handleInvestigation(request({question:'            '}),{...runtime,quota:{reserve:async()=>{reservations++;}}});
+  assert.equal(response.status,400);assert.equal(reservations,0);
+});
+test('Chunked oversized bodies are rejected before consuming visitor quota',async()=>{
+  let reservations=0;
+  const body=new ReadableStream<Uint8Array>({start(controller){controller.enqueue(new TextEncoder().encode('x'.repeat(8193)));controller.close();}});
+  const input=new Request('https://signaldesk.example/api/investigate',{method:'POST',body,duplex:'half'} as RequestInit);
+  const response=await handleInvestigation(input,{...runtime,quota:{reserve:async()=>{reservations++;}}});
+  assert.equal(response.status,413);assert.equal(reservations,0);
+});
 test('Visitor quota is HMAC-hashed and exhaustion prevents model usage',async()=>{
   let observed='';
   const response=await handleInvestigation(request({question:'Review Imfinzi approvals'}),{...runtime,quota:{reserve:async(key)=>{observed=key;throw new QuotaError('Daily allowance exhausted');}}});
