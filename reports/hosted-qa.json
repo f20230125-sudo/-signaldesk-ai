@@ -1,0 +1,157 @@
+{
+  "url": "https://signaldesk-ai-phi.vercel.app",
+  "verified_at": "2026-10-18T04:45:38Z",
+  "environment": "production",
+  "deployment_state": "READY",
+  "commit": "862e8426d86f3910bf9a3fa600f2f12d187be430",
+  "inference_deployment_id": "dpl_Bj6SPakbpCSnRRaCuYDisXrDsUJg",
+  "persistence_deployment_id": "dpl_7NeZtPc6uTWbujtgpMAyB9PNijyT",
+  "runtime_configuration": {
+    "gemini_and_rate_salt": "Production secrets present",
+    "redis": "Production KV_REST_API_URL and KV_REST_API_TOKEN present",
+    "secret_values_retrieved_by_tests": false
+  },
+  "browser": {
+    "url": "https://signaldesk-ai-phi.vercel.app",
+    "checks": [
+      "Public production page responds without sign-in",
+      "First real-model API investigation complete",
+      "First investigation returns expected sourced event",
+      "Feed renders all 29 announcements",
+      "Source-review label visible",
+      "SC formulation remains distinct",
+      "Approval-year filter uses event dates",
+      "Evidence drawer opens and links FDA source",
+      "Keyboard focus returns after closing evidence",
+      "Evaluation limitations remain visible",
+      "Mobile viewport has no horizontal overflow",
+      "Malformed JSON rejected",
+      "Cross-origin request rejected",
+      "Browser displays persistent visitor quota denial",
+      "Unavailable investigation has a clear recovery message",
+      "No browser JavaScript exceptions",
+      "Server credential identifiers absent from client bundle 0jo3lv8klof30.js",
+      "Server credential identifiers absent from client bundle 301ondekkw7c6.js",
+      "Server credential identifiers absent from client bundle turbopack-12u31x50n-6m7.js",
+      "Server credential identifiers absent from client bundle 2corl6wyj4669.js",
+      "Server credential identifiers absent from client bundle 1-o8lr4edb9ue.js",
+      "Server credential identifiers absent from client bundle 0c0hxoamwjsbw.js",
+      "Server credential identifiers absent from client bundle 1kbt14nefgsiq.js",
+      "Export from earlier live browser answer retains sources and limitations"
+    ],
+    "browser_checks_passed": true,
+    "browser_errors": [],
+    "scope": "Public Vercel production UI and API checks. Earlier live browser comparison and export succeeded; remaining live attempts are reported separately.",
+    "model_requests_started_in_this_run": 0
+  },
+  "live_investigations": {
+    "attempted": 5,
+    "completed": 2,
+    "provider_quota_limited": 3,
+    "all_five_completed": false,
+    "model": "gemini-3.5-flash-lite",
+    "cases": [
+      {
+        "case": "api-imfinzi-endometrial",
+        "http_status": 200,
+        "status": "complete",
+        "event_ids": [
+          "fda-2024-06-14-imfinzi"
+        ],
+        "trial_ids": [
+          "NCT04269200"
+        ],
+        "error": null,
+        "usage": {
+          "input_tokens": 7029,
+          "output_tokens": 878,
+          "model_calls": 4,
+          "latency_ms": 4508
+        }
+      },
+      {
+        "case": "browser-resectable-nsclc-comparison",
+        "http_status": 200,
+        "status": "complete",
+        "event_ids": [
+          "fda-2024-08-15-imfinzi",
+          "fda-2024-10-03-opdivo"
+        ],
+        "trial_ids": [
+          "NCT03800134",
+          "NCT04025879"
+        ],
+        "error": null,
+        "usage": {
+          "input_tokens": 10152,
+          "output_tokens": 1194,
+          "model_calls": 4,
+          "latency_ms": 5057
+        }
+      },
+      {
+        "case": "api-opdivo",
+        "http_status": 503,
+        "status": "unavailable",
+        "event_ids": [],
+        "trial_ids": [],
+        "error": "The free model allowance is currently exhausted. Please try again later.",
+        "usage": {
+          "input_tokens": 2414,
+          "output_tokens": 108,
+          "model_calls": 3,
+          "latency_ms": 1450
+        }
+      },
+      {
+        "case": "api-keytruda",
+        "http_status": 503,
+        "status": "unavailable",
+        "event_ids": [],
+        "trial_ids": [],
+        "error": "The free model allowance is currently exhausted. Please try again later.",
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "model_calls": 1,
+          "latency_ms": 144
+        }
+      },
+      {
+        "case": "api-libtayo",
+        "http_status": 503,
+        "status": "unavailable",
+        "event_ids": [],
+        "trial_ids": [],
+        "error": "The free model allowance is currently exhausted. Please try again later.",
+        "usage": {
+          "input_tokens": 913,
+          "output_tokens": 49,
+          "model_calls": 2,
+          "latency_ms": 794
+        }
+      }
+    ],
+    "interpretation": "Hosted integration checks, separate from the frozen benchmark. Two investigations completed with source-backed facts; three returned explicit unavailable responses after Gemini quota errors. The exact provider quota/reset window was not inspected."
+  },
+  "quota": {
+    "sixth_request_http_status": 429,
+    "deployment_id": "dpl_7NeZtPc6uTWbujtgpMAyB9PNijyT",
+    "new_deployment_home_status": 200,
+    "quota_http_status_after_redeploy": 429,
+    "quota_message": "The free investigation allowance is currently exhausted. Please try again after the daily reset.",
+    "quota_persisted_across_redeployment": true,
+    "provider_requests_started": 0
+  },
+  "verification_environment": {
+    "method": "Unauthenticated HTTP requests and Chromium against the public Vercel site",
+    "sandbox_stopped": true,
+    "persistent_sandbox_storage": false
+  },
+  "limitations": [
+    "Gemini free-tier quota errors prevented completion of all five hosted investigations; no provider fallback or paid billing was enabled.",
+    "These integration checks do not establish clinical accuracy or change the frozen evaluation results.",
+    "Browser bundle checks searched for server credential variable names; test code did not retrieve actual secret values.",
+    "Build/runtime log inspection through the Vercel connector remained unavailable for the team scope; public HTTP and browser checks were used."
+  ]
+}

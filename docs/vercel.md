@@ -1,6 +1,6 @@
 # Vercel deployment
 
-The public evidence dashboard is live at **https://signaldesk-ai-phi.vercel.app**. Production deployment `dpl_D4DhAVAfJ4quqQTBqjfUrELDPnp6` built commit `20d5c16d9fd42cd716c347c2734b9802b93f579b` and reached READY. Thirteen unauthenticated HTTP checks passed. Live AI is paused until its production secrets and persistent Redis quota database are configured; hosted real-model and interactive browser verification remain pending.
+The public prototype is live at **https://signaldesk-ai-phi.vercel.app**, with the production Gemini secrets and Upstash Redis connection configured. Hosted verification on October 18, 2026 passed 24 browser/UI/API checks. Two real-model investigations completed with source-backed facts; three additional attempts returned explicit Gemini quota errors. Production deployment `dpl_Bj6SPakbpCSnRRaCuYDisXrDsUJg` verified inference, and `dpl_7NeZtPc6uTWbujtgpMAyB9PNijyT` verified that the visitor limit survives redeployment. Both used commit `862e8426d86f3910bf9a3fa600f2f12d187be430`. See [the full hosted receipt](../reports/hosted-qa.json).
 
 SignalDesk now has a standard Next.js build for Vercel alongside its retained Sites/Cloudflare build. The Vercel configuration runs `npm run build:vercel` and uses the Next.js preset. Use Node 24 and the repository root directory.
 
@@ -27,6 +27,8 @@ A Redis database connected through the Vercel Marketplace may supply `KV_REST_AP
 The quota script atomically checks the allowance, increments and sets expiry in one Redis operation, shared across function instances and deployments using the same database. It stores salted visitor identifiers and counts, never questions or conversation content. The public app's `x-vercel-forwarded-for` header supplies the visitor address on Vercel. Local Node development uses a shared anonymous visitor unless a trusted platform provides it.
 
 Missing Redis credentials, failed storage, missing request protection or missing Gemini credentials pause live investigations. The evidence feed still works. An in-memory quota fallback is deliberately absent. Do not report the AI endpoint as deployed successfully until its real hosted path is tested.
+
+Keep Redis eviction disabled for quota storage so active counters are not removed early. Counters already have an expiry. Each valid investigation attempt consumes a visitor allowance, including an attempt stopped by a model-provider quota. The app's daily cap does not increase the provider's own allowance; inspect the Gemini project's current quota when provider errors occur. No paid billing or model fallback was enabled during deployment.
 
 ## Verify
 
