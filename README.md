@@ -22,6 +22,10 @@ Verification: **31 agent/tool/scoring/hosting tests and nine Python checks passe
 
 ## Investigation workflow
 
+The workspace includes labelled filters, approval-date sorting, shareable filtered views, a source-inspection drawer and a phone layout that keeps records readable. Investigations show their product scope and retain the previous completed brief if a new request fails. The evaluation view provides paired outcomes and review notes without sending full run traces in the initial page. See [design references and UI verification](docs/ui-design.md).
+
+The redesign passed **56 production-build UI checks**, including six automated accessibility scans with no reported violations. Success and quota-error interface states use intercepted frozen-result fixtures; these are separate from live-model validation. See the [UI QA receipt](reports/ui-redesign-qa.json).
+
 1. Filter the event feed by product, indication and approval year.
 2. Open an event to inspect its approved population, evidence notes and cited trial identifiers.
 3. Ask a competitive question. The model resolves products, searches events, reads evidence and requests trial records through typed tools.

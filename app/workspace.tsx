@@ -125,7 +125,7 @@ export default function Workspace({ corpus, evaluation }: { corpus: Corpus; eval
   return <div className="shell">
     <a className="skip-link" href="#main-content">Skip to content</a>
     <aside className="sidebar">
-      <a href="/" className="brand" aria-label="SignalDesk home"><span className="brand-mark"><Icon name="signal" size={23} /></span><span>SignalDesk<span className="brand-ai">AI</span></span></a>
+      <div className="brand-row"><a href="/" className="brand" aria-label="SignalDesk AI home"><span className="brand-mark"><Icon name="signal" size={23} /></span><span>SignalDesk{' '}<span className="brand-ai">AI</span></span></a><button className="mobile-copy" onClick={copyView} aria-label={copyStatus === 'Link copied' ? 'Link copied' : 'Copy link to this view'}><Icon name="link" size={14} />{copyStatus === 'Link copied' ? 'Copied' : 'Copy link'}</button></div>
       <div className="workspace-label"><span>RESEARCH WORKSPACE</span><span className="preview-label">Portfolio</span></div>
       <nav aria-label="Main navigation">{(['feed', 'investigate', 'evaluation'] as const).map(tab => <button key={tab} className={'nav-button ' + (view.tab === tab ? 'active' : '')} aria-current={view.tab === tab ? 'page' : undefined} onClick={() => navigate(tab)}><Icon name={tab === 'feed' ? 'signal' : tab === 'investigate' ? 'investigate' : 'chart'} /><span>{viewLabels[tab]}</span>{tab === 'feed' && <span className="nav-count">{corpus.events.length}</span>}{tab === 'investigate' && busy && <span className="nav-working" aria-label="Investigation running" />}</button>)}</nav>
       <section className="watchlist" aria-labelledby="watchlist-title"><div className="watchlist-heading"><h2 id="watchlist-title">Tracked formulations</h2><span>{corpus.products.length}</span></div>
@@ -142,6 +142,7 @@ export default function Workspace({ corpus, evaluation }: { corpus: Corpus; eval
         <footer className="site-footer"><span>SignalDesk AI <span className="footer-divider">/</span> Independent portfolio work</span><span>Public US evidence · No MSD affiliation</span></footer>
       </main>
     </div>
+    <span className="sr-only mobile-copy-status" role="status">{copyStatus}</span>
     {selected && <EvidenceDrawer event={selected} corpus={corpus} onClose={() => setSelected(null)} onInvestigate={investigate} />}
   </div>;
 }
